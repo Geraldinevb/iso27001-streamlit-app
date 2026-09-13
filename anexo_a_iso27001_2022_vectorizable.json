@@ -1,0 +1,1817 @@
+[
+  {
+    "control_id": "ISO_5.1",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.PO-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 ter (deber de información y transparencia: política publicada)",
+    "title": "Políticas de seguridad de la información",
+    "description": "Establecer una dirección de gestión y apoyo para la seguridad de la información, alineada con los requisitos del negocio, leyes y regulaciones, aprobada por la alta dirección y comunicada a todo el personal.",
+    "ejemplos": [
+      "Una empresa de dispositivos médicos redacta una política maestra de seguridad de la información aprobada por gerencia general, que se revisa anualmente y se comunica a todo el personal en la inducción.",
+      "Un retailer publica su política de seguridad en la intranet corporativa y exige acuse de lectura anual de cada empleado, quedando el registro como evidencia para auditoría.",
+      "Una empresa de software mantiene políticas específicas derivadas de la política maestra (ej. política de desarrollo seguro, política de clasificación) para dar cobertura a áreas técnicas concretas.",
+      "Un fabricante de insumos médicos actualiza su política tras un cambio regulatorio relevante (ej. nueva normativa sanitaria), documentando el cambio y la fecha de reaprobación por la dirección."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5, dominios organizacionales)",
+      "iso27000.es (estructura de la norma)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.10",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.PO-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Uso aceptable de la información y otros activos asociados",
+    "description": "Identificar, documentar e implementar reglas para el uso aceptable de la información y de los activos asociados a la información.",
+    "ejemplos": [
+      "Una empresa de software define en su política de uso aceptable que los equipos corporativos no pueden usarse para instalar software no autorizado ni para almacenar datos personales fuera de las herramientas aprobadas.",
+      "Un retailer prohíbe explícitamente el uso de USB personales en los terminales POS y limita el acceso a internet en esos equipos solo a lo estrictamente necesario para operar.",
+      "Una empresa de insumos médicos exige que los datos de pacientes solo se procesen en los sistemas autorizados, prohibiendo su copia a dispositivos personales o servicios de nube no corporativos.",
+      "Una empresa tecnológica define reglas claras sobre el uso de IA generativa con datos de la empresa, prohibiendo subir código fuente propietario a herramientas externas no aprobadas."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre uso aceptable de activos)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.11",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "ID.AM-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Devolución de activos",
+    "description": "Asegurar que el personal y otras partes interesadas devuelvan todos los activos de la organización que estén en su posesión al finalizar su empleo, contrato o acuerdo.",
+    "ejemplos": [
+      "Un retailer incluye en su checklist de salida la devolución de la tablet de inventario, la llave de bodega y la credencial de acceso antes de emitir el finiquito.",
+      "Una empresa tecnológica exige la devolución del laptop corporativo y de cualquier token de autenticación física antes de desactivar el correo del empleado saliente.",
+      "Una empresa de insumos médicos verifica la devolución de dispositivos móviles con acceso a sistemas de trazabilidad antes de cerrar el proceso de desvinculación de un contratista.",
+      "Una empresa de software mantiene un registro de activos asignados por persona, que se contrasta automáticamente contra el checklist de offboarding al momento de la salida."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5, vinculado a A.6.5)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.12",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "ID.AM-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 16 y 16 bis (régimen de datos sensibles)",
+    "title": "Clasificación de la información",
+    "description": "Clasificar la información según las necesidades de confidencialidad, integridad y disponibilidad de la organización, y sus requisitos legales, regulatorios y contractuales.",
+    "ejemplos": [
+      "Una empresa de insumos médicos clasifica los datos de ensayos clínicos como 'confidencial - restringido', mientras que los catálogos de productos son 'público'.",
+      "Un retailer clasifica los datos de tarjetas de pago como 'altamente confidencial', sujeto a controles adicionales según el estándar PCI DSS, distinto de los datos de inventario general.",
+      "Una empresa tecnológica clasifica su código fuente propietario como 'confidencial - interno' y sus documentos de marketing como 'público', aplicando controles de acceso distintos a cada nivel.",
+      "Una empresa de software clasifica los reportes de vulnerabilidades encontradas como 'altamente confidencial' hasta que sean corregidas, limitando su acceso a un grupo reducido."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre clasificación de la información)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.13",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "ID.AM-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Etiquetado de la información",
+    "description": "Desarrollar e implementar un conjunto adecuado de procedimientos para el etiquetado de la información, según el esquema de clasificación adoptado por la organización.",
+    "ejemplos": [
+      "Una empresa de insumos médicos etiqueta digitalmente los documentos de ensayos clínicos con la marca 'CONFIDENCIAL - USO INTERNO' visible en el encabezado del archivo.",
+      "Un retailer configura su sistema de gestión documental para que los reportes con datos de clientes lleven automáticamente una etiqueta de sensibilidad visible al abrir el archivo.",
+      "Una empresa tecnológica usa herramientas de clasificación automática (ej. Microsoft Purview) que etiquetan correos y documentos según el nivel de confidencialidad detectado.",
+      "Una empresa de software etiqueta los repositorios de código que contienen credenciales o secretos con una convención de nombres que alerta al equipo sobre su sensibilidad."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre etiquetado de la información)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.14",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.DS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 15 (cesión de datos personales); Art. 27-28 (transferencia internacional)",
+    "title": "Transferencia de información",
+    "description": "Establecer reglas, procedimientos o acuerdos apropiados para proteger la información transferida dentro de la organización y entre la organización y terceros.",
+    "ejemplos": [
+      "Una empresa de insumos médicos transfiere datos de pacientes a un laboratorio externo únicamente mediante un canal cifrado y bajo un acuerdo de transferencia de datos firmado.",
+      "Un retailer establece que los datos de clientes solo pueden compartirse con proveedores de marketing mediante archivos cifrados y con un contrato que limita el uso de esos datos.",
+      "Una empresa tecnológica prohíbe el envío de credenciales o información sensible por correo sin cifrar, exigiendo el uso de un gestor de secretos o canal seguro aprobado.",
+      "Una empresa de software firma acuerdos de transferencia de datos con cada subcontratista que recibe información de clientes para desarrollo o soporte."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre transferencia de información)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.15",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.AA-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Control de acceso",
+    "description": "Establecer e implementar reglas para controlar el acceso físico y lógico a la información y otros activos asociados, según los requisitos del negocio y de seguridad.",
+    "ejemplos": [
+      "Un retailer aplica el principio de mínimo privilegio: el personal de caja solo puede procesar ventas y devoluciones, sin acceso a reportes financieros o configuración del sistema.",
+      "Una empresa de insumos médicos restringe el acceso a los registros de pacientes solo al personal clínico y administrativo autorizado, con autenticación multifactor obligatoria.",
+      "Una empresa tecnológica define una matriz de control de acceso basada en roles (RBAC) que se revisa cada seis meses para verificar que los permisos sigan siendo apropiados.",
+      "Una empresa de software separa los entornos de desarrollo, prueba y producción, con controles de acceso independientes para cada uno, evitando que un desarrollador acceda directamente a datos reales de clientes."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es/a9-control-de-acceso (contenido general sobre control de acceso)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.16",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.AA-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Gestión de identidad",
+    "description": "Gestionar el ciclo de vida completo de las identidades para permitir la identificación única de personas y sistemas, y habilitar la asignación adecuada de derechos de acceso.",
+    "ejemplos": [
+      "Una empresa tecnológica usa un proveedor de identidad centralizado (ej. Azure AD/Okta) que crea, modifica y desactiva automáticamente las cuentas según el estado del empleado en el sistema de RR.HH.",
+      "Un retailer asigna un usuario único y no compartido a cada cajero en el sistema POS, evitando el uso de cuentas genéricas que dificultan la trazabilidad de transacciones.",
+      "Una empresa de insumos médicos gestiona identidades separadas para personal interno, contratistas y proveedores externos, con distintos niveles de revisión periódica.",
+      "Una empresa de software desactiva automáticamente las cuentas de servicio (no humanas) que llevan más de 90 días sin uso, como parte de su proceso de gestión de identidad."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de identidad y acceso)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.17",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.AA-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Información de autenticación",
+    "description": "Controlar la asignación y gestión de la información de autenticación mediante un proceso de gestión, incluyendo asesoramiento al personal sobre su manejo adecuado.",
+    "ejemplos": [
+      "Una empresa tecnológica exige contraseñas robustas y autenticación multifactor (MFA) para todos los accesos a sistemas críticos, con rotación obligatoria ante sospecha de compromiso.",
+      "Un retailer usa un gestor de contraseñas corporativo para almacenar las credenciales compartidas de sistemas administrativos, evitando contraseñas anotadas en papel.",
+      "Una empresa de insumos médicos capacita a su personal sobre no compartir credenciales de acceso a sistemas de trazabilidad, ni siquiera con compañeros de mayor jerarquía.",
+      "Una empresa de software fuerza el cambio de contraseñas por defecto en todo dispositivo o sistema nuevo antes de ponerlo en producción."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de credenciales)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.18",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.AA-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Derechos de acceso",
+    "description": "Otorgar, revisar, modificar y eliminar los derechos de acceso a la información y otros activos asociados de acuerdo con la política de control de acceso de la organización.",
+    "ejemplos": [
+      "Un retailer revisa trimestralmente los accesos al sistema de inventario central para detectar y eliminar permisos de empleados que ya cambiaron de función o dejaron la empresa.",
+      "Una empresa de insumos médicos revoca de inmediato el acceso a los sistemas de trazabilidad de un empleado que cambia a un área sin necesidad de ese acceso, siguiendo el principio de mínimo privilegio.",
+      "Una empresa tecnológica automatiza la desactivación de accesos a repositorios de código cuando un desarrollador es removido de un proyecto específico.",
+      "Una empresa de software audita los accesos con privilegios administrativos cada mes, documentando la justificación de negocio para cada cuenta con esos privilegios."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es/a9-control-de-acceso (contenido general sobre revisión de derechos de acceso)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.19",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.SC-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 15 bis (tratamiento a través de tercero mandatario o encargado)",
+    "title": "Seguridad de la información en las relaciones con proveedores",
+    "description": "Definir e implementar procesos y procedimientos para gestionar los riesgos de seguridad de la información asociados con el uso de productos o servicios de proveedores.",
+    "ejemplos": [
+      "Una empresa de insumos médicos evalúa la postura de seguridad de sus proveedores de logística y almacenamiento antes de compartir datos de trazabilidad de lotes con ellos.",
+      "Un retailer exige a sus proveedores de plataforma de e-commerce evidencia de certificación PCI DSS antes de integrarlos con su sistema de pagos.",
+      "Una empresa tecnológica mantiene un registro de todos sus proveedores de servicios en la nube, clasificados según el nivel de riesgo que representan para la información que procesan.",
+      "Una empresa de software exige a sus proveedores de desarrollo subcontratado (outsourcing) cumplir con los mismos estándares de seguridad de código que su equipo interno."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre relaciones con proveedores, vinculado a A.5.20-5.22)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.2",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.RR-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Roles y responsabilidades de seguridad de la información",
+    "description": "Definir y asignar roles y responsabilidades de seguridad de la información de acuerdo con las necesidades de la organización.",
+    "ejemplos": [
+      "Una empresa tecnológica nombra formalmente a un Oficial de Seguridad de la Información (CISO) y documenta sus responsabilidades en la matriz RACI del SGSI.",
+      "Un retailer asigna la responsabilidad de revisar los accesos a sistemas de venta a los jefes de tienda, con reporte trimestral al área de TI corporativa.",
+      "Una empresa de insumos médicos designa un responsable de protección de datos (DPO) distinto del responsable de seguridad de TI, evitando conflicto de intereses.",
+      "Una compañía de software documenta en las descripciones de cargo de sus desarrolladores la responsabilidad de seguir el ciclo de vida de desarrollo seguro (SDLC)."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.20",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.SC-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 15 bis, inciso 3° (contrato con el encargado del tratamiento)",
+    "title": "Abordar la seguridad de la información dentro de los acuerdos con proveedores",
+    "description": "Establecer y acordar con cada proveedor los requisitos de seguridad de la información relevantes según el tipo de relación con dicho proveedor.",
+    "ejemplos": [
+      "Una empresa de insumos médicos incluye en el contrato con su proveedor de almacenamiento en frío una cláusula de confidencialidad y de notificación obligatoria ante cualquier incidente que afecte la trazabilidad de lotes.",
+      "Un retailer exige contractualmente a su proveedor de plataforma de pagos el cumplimiento de PCI DSS y el derecho a auditar sus controles de seguridad.",
+      "Una empresa tecnológica incorpora cláusulas de seguridad estándar (cifrado, notificación de incidentes en 24-48h, derecho a auditoría) en todos sus contratos con proveedores de infraestructura cloud.",
+      "Una empresa de software exige a sus proveedores de desarrollo subcontratado firmar un acuerdo que incluye requisitos de seguridad de código y de manejo de credenciales."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 5.19-5.22)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.21",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.SC-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Gestión de la seguridad de la información en la cadena de suministro de TIC",
+    "description": "Gestionar los riesgos de seguridad de la información asociados con la cadena de suministro de productos y servicios TIC.",
+    "ejemplos": [
+      "Una empresa tecnológica exige a sus proveedores de hardware evidencia de la integridad de la cadena de suministro (componentes originales, sin manipulación) antes de instalar equipos en su centro de datos.",
+      "Un retailer evalúa el riesgo de seguridad de los proveedores de software que integra en su plataforma de e-commerce, incluyendo componentes de código abierto de terceros.",
+      "Una empresa de insumos médicos verifica que los proveedores de software para sus equipos de trazabilidad cumplan con estándares de seguridad reconocidos antes de integrarlos a su cadena de suministro digital.",
+      "Una empresa de software mantiene un inventario de dependencias (SBOM - software bill of materials) de terceros usadas en sus productos, para identificar rápidamente si una vulnerabilidad afecta su cadena de suministro."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 5.19-5.22)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.22",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.SC-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 15 bis, inciso 4° (deber del encargado de reportar vulneraciones al responsable)",
+    "title": "Monitoreo, revisión y gestión de cambios de servicios de proveedores",
+    "description": "Monitorear, revisar, evaluar y gestionar regularmente los cambios en las prácticas de seguridad de la información de los proveedores y en la prestación del servicio.",
+    "ejemplos": [
+      "Un retailer revisa anualmente el reporte de seguridad (SOC 2 o certificación ISO 27001) de su proveedor de plataforma de pagos, y evalúa cualquier cambio relevante en su infraestructura.",
+      "Una empresa de insumos médicos audita periódicamente a su proveedor logístico para verificar que mantenga los controles de seguridad acordados sobre los datos de trazabilidad que gestiona.",
+      "Una empresa tecnológica establece reuniones trimestrales de revisión de servicio (SLA/seguridad) con sus proveedores críticos de infraestructura cloud.",
+      "Una empresa de software exige que cualquier cambio significativo en la arquitectura de un proveedor subcontratado sea comunicado y evaluado antes de su implementación."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 5.19-5.22)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.23",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.PS-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 15 bis (tratamiento a través de tercero mandatario o encargado, aplicable a proveedores cloud)",
+    "title": "Seguridad de la información para el uso de servicios en la nube",
+    "description": "Especificar y gestionar los requisitos de seguridad de la información para la adquisición, uso, gestión y salida de servicios en la nube.",
+    "ejemplos": [
+      "Una empresa tecnológica mantiene un inventario ('cloud register') de todos los servicios SaaS, PaaS e IaaS en uso, con un dueño interno asignado a cada uno.",
+      "Un retailer evalúa la certificación de seguridad (ISO 27001 o SOC 2) de su plataforma de e-commerce en la nube antes de firmar el contrato, y define un plan de salida por si necesita migrar de proveedor.",
+      "Una empresa de insumos médicos revisa la ubicación geográfica donde su proveedor cloud almacena los datos de pacientes, para asegurar cumplimiento con la normativa de protección de datos aplicable.",
+      "Una empresa de software define en su matriz de responsabilidad compartida qué controles de seguridad corresponden al proveedor cloud (SaaS) y cuáles a su propio equipo (configuración, usuarios, MFA)."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (5-23-information-security-use-of-cloud-services-2022)",
+      "hightable.io/iso-27001-annex-a-5-23",
+      "grc360.cl/blog/seguridad-nube-controles-iso-27001",
+      "infoproteccion.com/iso-27001/implementacion-control-a-5-23"
+    ]
+  },
+  {
+    "control_id": "ISO_5.24",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "RS.MA-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 sexies; Art. 49, letra f) (mecanismos de reporte a la Agencia)",
+    "title": "Planificación y preparación de la gestión de incidentes de seguridad de la información",
+    "description": "Planificar y preparar la gestión de incidentes de seguridad de la información definiendo roles, responsabilidades y procedimientos.",
+    "ejemplos": [
+      "Una empresa tecnológica mantiene un plan de respuesta a incidentes documentado, con roles definidos (líder de incidente, comunicaciones, forense) y ejercicios de simulación (tabletop) semestrales.",
+      "Un retailer define un procedimiento específico para incidentes que involucren datos de tarjetas de pago, alineado con los requisitos de notificación de PCI DSS.",
+      "Una empresa de insumos médicos prepara un protocolo de respuesta ante un eventual acceso no autorizado a datos de pacientes, incluyendo a quién notificar y en qué plazo.",
+      "Una empresa de software mantiene actualizada una lista de contactos de escalamiento (interno y de proveedores críticos) disponible 24/7 para activar la respuesta ante un incidente fuera de horario laboral."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.25",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "RS.MA-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 sexies, inciso 1° (riesgo razonable como criterio para reportar)",
+    "title": "Evaluación y decisión sobre eventos de seguridad de la información",
+    "description": "Evaluar los eventos de seguridad de la información y decidir si deben clasificarse como incidentes de seguridad de la información.",
+    "ejemplos": [
+      "Un retailer cuenta con un procedimiento que clasifica un intento fallido de acceso al POS como evento menor, pero un acceso exitoso no autorizado como incidente que activa el protocolo de respuesta.",
+      "Una empresa de insumos médicos tiene criterios claros para determinar cuándo un comportamiento anómalo en el sistema de trazabilidad constituye solo una alerta o un incidente que requiere escalamiento inmediato.",
+      "Una empresa tecnológica usa su SOC para triar alertas de seguridad y decidir, según severidad e impacto, cuáles se elevan a incidente formal.",
+      "Una empresa de software documenta cada evaluación de evento (fecha, criterio aplicado, decisión) como evidencia auditable de su proceso de clasificación."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.26",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "RS.MI-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 sexies (deber de reportar vulneraciones a las medidas de seguridad)",
+    "title": "Respuesta a incidentes de seguridad de la información",
+    "description": "Responder a los incidentes de seguridad de la información de acuerdo con procedimientos documentados.",
+    "ejemplos": [
+      "Ante un ransomware detectado, el equipo de TI de una empresa tecnológica aísla de inmediato los sistemas afectados de la red, siguiendo el procedimiento de contención documentado.",
+      "Un retailer que detecta un acceso no autorizado a su base de datos de clientes activa su plan de respuesta: contención, notificación al equipo legal y evaluación de si corresponde notificar a la autoridad de protección de datos.",
+      "Una empresa de insumos médicos, ante la sospecha de exposición de datos de pacientes, ejecuta su procedimiento de respuesta que incluye contención, análisis forense y notificación según los plazos legales aplicables.",
+      "Una empresa de software mantiene un runbook específico para incidentes de fuga de credenciales en repositorios de código, incluyendo rotación inmediata de secretos comprometidos."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.27",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "ID.IM-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 sexies, inciso 2° (medidas adoptadas para precaver incidentes futuros)",
+    "title": "Aprender de los incidentes de seguridad de la información",
+    "description": "Usar el conocimiento obtenido de los incidentes de seguridad de la información para fortalecer y mejorar los controles de seguridad.",
+    "ejemplos": [
+      "Después de un incidente de phishing exitoso, una empresa tecnológica refuerza su programa de concienciación (A.6.3) con simulaciones adicionales dirigidas al área afectada.",
+      "Un retailer, tras detectar fraude en devoluciones, ajusta sus controles de segregación de funciones (A.5.3) en el proceso de caja para evitar que se repita.",
+      "Una empresa de insumos médicos realiza una reunión post-incidente (lecciones aprendidas) tras cada evento relevante, documentando causas raíz y acciones correctivas.",
+      "Una empresa de software actualiza su checklist de revisión de código tras detectar una vulnerabilidad recurrente en producción, para prevenir que vuelva a introducirse."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.28",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "RS.AN-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Recopilación de evidencia",
+    "description": "Establecer e implementar procedimientos para la identificación, recolección, adquisición y preservación de evidencia relacionada con eventos de seguridad de la información.",
+    "ejemplos": [
+      "Ante un incidente de seguridad, el equipo de TI de una empresa tecnológica preserva imágenes forenses de los sistemas afectados antes de reiniciarlos, siguiendo cadena de custodia documentada.",
+      "Un retailer conserva los logs de transacciones y de acceso al POS por el periodo definido en su política, para poder investigar un eventual fraude con evidencia íntegra.",
+      "Una empresa de insumos médicos documenta y preserva los registros de acceso a sistemas de trazabilidad ante cualquier incidente que pueda derivar en un proceso legal o regulatorio.",
+      "Una empresa de software mantiene un procedimiento de recolección de evidencia (logs, capturas, respaldo de sistemas) compatible con los requisitos que pudiera exigir una autoridad si el incidente deriva en denuncia."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.29",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.IR-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra c) (capacidad de restaurar disponibilidad y acceso)",
+    "title": "Seguridad de la información durante la interrupción",
+    "description": "Planificar cómo mantener la seguridad de la información en el nivel apropiado durante una interrupción del negocio.",
+    "ejemplos": [
+      "Durante un corte prolongado de energía, un retailer mantiene procedimientos manuales de venta con registro posterior en el sistema, evitando que la interrupción derive en pérdida o exposición de datos.",
+      "Una empresa de insumos médicos define en su plan de continuidad cómo se seguirá controlando el acceso a datos de trazabilidad si el sistema principal cae, usando un procedimiento alternativo controlado.",
+      "Una empresa tecnológica mantiene sus controles de acceso incluso durante la activación de su sitio de respaldo (disaster recovery), evitando que la urgencia relaje la seguridad.",
+      "Una empresa de software documenta explícitamente qué controles de seguridad no se pueden omitir ni siquiera en un escenario de crisis operativa, como parte de su plan de continuidad."
+    ],
+    "fuentes_referencia": [
+      "sprinto.com/es/iso-27001/business-continuity (contenido general A.5.29-5.30)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.3",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.RR-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Segregación de funciones",
+    "description": "Separar funciones y áreas de responsabilidad en conflicto para reducir el riesgo de acceso no autorizado, modificación indebida o uso incorrecto de los activos de la organización.",
+    "ejemplos": [
+      "En una empresa de software, la persona que desarrolla código no tiene permisos para desplegarlo directamente a producción; ese paso requiere aprobación de otro rol (revisión de pares o pipeline con aprobación).",
+      "Un retailer separa la función de quien registra una venta en el POS de quien autoriza una devolución o anulación de la transacción, para evitar fraude interno.",
+      "Una empresa de insumos médicos separa la función de quien gestiona el inventario físico de la de quien registra los movimientos en el sistema, evitando que una sola persona controle todo el ciclo.",
+      "Una empresa tecnológica exige que el administrador de la base de datos de producción no sea la misma persona que aprueba los cambios de configuración crítica."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre segregación de funciones)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.30",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.IR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra b) y c) (disponibilidad y resiliencia de los sistemas)",
+    "title": "Preparación de las TIC para la continuidad del negocio",
+    "description": "Planificar, implementar, mantener y probar la preparación de las TIC según los objetivos de continuidad del negocio y los requisitos de continuidad de las TIC.",
+    "ejemplos": [
+      "Una empresa tecnológica define un objetivo de tiempo de recuperación (RTO) de 4 horas para sus sistemas críticos y prueba semestralmente su plan de recuperación ante desastres (DRP) mediante simulacros.",
+      "Un retailer con sistema de venta en la nube mantiene un procedimiento de contingencia offline en cada tienda para no detener la operación si se pierde la conexión con el sistema central.",
+      "Una empresa de insumos médicos identifica cuáles de sus sistemas TIC son críticos para la trazabilidad de lotes en un análisis de impacto al negocio (BIA), y les asigna prioridad de recuperación.",
+      "Una empresa de software mantiene copias de respaldo geográficamente distribuidas de sus bases de datos de producción, probando periódicamente la restauración efectiva de esos respaldos."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (5-30-readiness-for-business-continuity-2022, control-5-30-ict-readiness-for-business-continuity)",
+      "dqsglobal.com/es-ar/aprenda/blog/seguridad-tic-para-la-continuidad-del-negocio",
+      "sprinto.com/es/iso-27001/business-continuity"
+    ]
+  },
+  {
+    "control_id": "ISO_5.31",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.OC-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 1° (objeto y ámbito de aplicación); Art. 3° (principios)",
+    "title": "Requisitos legales, estatutarios, reglamentarios y contractuales",
+    "description": "Identificar, documentar y mantener actualizados los requisitos legales, estatutarios, reglamentarios y contractuales relevantes para la seguridad de la información.",
+    "ejemplos": [
+      "Una empresa de insumos médicos mantiene un registro actualizado de las normativas sanitarias y de protección de datos aplicables a cada país donde opera, revisado por su equipo legal.",
+      "Un retailer identifica y documenta los requisitos de PCI DSS y de protección de datos de consumidores aplicables a su operación de e-commerce.",
+      "Una empresa tecnológica mantiene un registro de obligaciones contractuales de seguridad con cada cliente corporativo (ej. cláusulas de SLA de seguridad específicas).",
+      "Una empresa de software actualiza su registro de requisitos legales cada vez que expande operaciones a un nuevo país, incorporando la normativa de protección de datos local."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre cumplimiento legal)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.32",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.OC-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Derechos de propiedad intelectual",
+    "description": "Implementar procedimientos adecuados para proteger los derechos de propiedad intelectual, propios y de terceros.",
+    "ejemplos": [
+      "Una empresa de software mantiene un inventario de licencias de software de terceros usadas en sus productos, verificando que cada uso esté debidamente licenciado.",
+      "Una empresa de insumos médicos protege sus fórmulas y procesos patentados mediante controles de acceso restringido y acuerdos de confidencialidad con el personal de I+D.",
+      "Un retailer verifica que las imágenes y contenido usado en su sitio de e-commerce cuenten con licencia adecuada, evitando el uso no autorizado de material protegido por derechos de autor.",
+      "Una empresa tecnológica capacita a sus desarrolladores sobre el uso adecuado de librerías open source, verificando que las licencias sean compatibles con el uso comercial del producto."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre propiedad intelectual)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.33",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 3°, letra c) (principio de proporcionalidad: plazo de conservación)",
+    "title": "Protección de registros",
+    "description": "Proteger los registros contra pérdida, destrucción, falsificación, acceso no autorizado y divulgación no autorizada, de acuerdo con los requisitos legales, regulatorios, contractuales y de negocio.",
+    "ejemplos": [
+      "Una empresa de insumos médicos conserva los registros de trazabilidad de lotes durante el periodo exigido por la normativa sanitaria, con respaldo cifrado y control de acceso.",
+      "Un retailer protege los registros de transacciones de venta con respaldos periódicos y controles que impiden su modificación posterior sin dejar rastro de auditoría.",
+      "Una empresa tecnológica mantiene los logs de acceso a sistemas críticos con protección contra manipulación (write-once) para asegurar su integridad ante una eventual investigación.",
+      "Una empresa de software conserva los registros de aprobación de cambios en producción de forma inalterable, como evidencia para auditorías de cumplimiento."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de registros)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.34",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 3° (principios) y Art. 14 a 14 septies (obligaciones del responsable) en su integridad",
+    "title": "Privacidad y protección de datos personales (PII)",
+    "description": "Identificar y cumplir los requisitos relacionados con la preservación de la privacidad y la protección de datos personales, según las leyes, regulaciones y requisitos contractuales aplicables.",
+    "ejemplos": [
+      "Una empresa de insumos médicos aplica principios de minimización de datos al recolectar solo la información de pacientes estrictamente necesaria para la trazabilidad, conforme a la normativa de protección de datos aplicable.",
+      "Un retailer implementa un proceso para atender solicitudes de titulares de datos (acceso, rectificación, eliminación) sobre su información personal, dentro de los plazos legales.",
+      "Una empresa tecnológica realiza una evaluación de impacto en la protección de datos (DPIA) antes de lanzar una nueva funcionalidad que procesa datos personales de usuarios.",
+      "Una empresa de software designa un responsable de protección de datos (DPO) y documenta las bases legales para cada tratamiento de datos personales que realiza."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre privacidad y protección de datos)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.35",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.OV-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 51 (certificación, registro y supervisión del modelo de prevención de infracciones)",
+    "title": "Revisión independiente de la seguridad de la información",
+    "description": "Revisar de forma independiente el enfoque de la organización para gestionar la seguridad de la información y su implementación, a intervalos planificados o cuando ocurran cambios significativos.",
+    "ejemplos": [
+      "Una empresa tecnológica contrata una auditoría externa anual de su SGSI, independiente del equipo que lo administra, como parte de su ciclo de mejora continua.",
+      "Un retailer somete su cumplimiento de PCI DSS a una revisión independiente anual por un auditor calificado (QSA), distinto del equipo de TI interno.",
+      "Una empresa de insumos médicos realiza una revisión independiente de sus controles de protección de datos de pacientes tras un cambio regulatorio significativo.",
+      "Una empresa de software incluye la revisión independiente de seguridad como parte de su proceso de certificación o recertificación ISO 27001, realizada por un organismo acreditado externo."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre auditoría interna e independiente)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.36",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.OV-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 48 (prevención de infracciones); Art. 49 (modelo de prevención)",
+    "title": "Cumplimiento de políticas, reglas y estándares de seguridad de la información",
+    "description": "Revisar regularmente el cumplimiento de la política de seguridad de la información de la organización, las políticas específicas por tema, reglas y estándares.",
+    "ejemplos": [
+      "Un retailer realiza auditorías internas trimestrales en tienda para verificar que el personal cumple con las políticas de manejo de datos de clientes y de escritorio limpio.",
+      "Una empresa de insumos médicos revisa periódicamente que los procedimientos operativos de sus plantas cumplan con la política de seguridad de la información vigente.",
+      "Una empresa tecnológica ejecuta revisiones automatizadas de configuración (compliance scanning) para verificar que sus sistemas cumplan los estándares de seguridad definidos.",
+      "Una empresa de software incluye el cumplimiento de sus estándares de codificación segura como parte de la revisión de código antes de cada despliegue."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre cumplimiento normativo interno)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.37",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Procedimientos operativos documentados",
+    "description": "Documentar y poner a disposición del personal que los necesite los procedimientos operativos para las actividades de procesamiento de información.",
+    "ejemplos": [
+      "Una empresa tecnológica documenta el procedimiento paso a paso para el despliegue de código a producción, disponible para todo el equipo de desarrollo.",
+      "Un retailer mantiene documentado el procedimiento de apertura y cierre de caja, incluyendo los pasos de seguridad (conteo, respaldo, bloqueo del sistema).",
+      "Una empresa de insumos médicos documenta el procedimiento operativo para el registro y control de temperatura de las cámaras de conservación de insumos sensibles.",
+      "Una empresa de software mantiene documentado y actualizado el procedimiento de respuesta ante caída de un servicio crítico, accesible para el equipo de guardia (on-call)."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre procedimientos documentados)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.4",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.RR-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Responsabilidades de gestión",
+    "description": "Exigir a la dirección que el personal y contratistas apliquen la seguridad de la información conforme a las políticas y procedimientos establecidos.",
+    "ejemplos": [
+      "El gerente de tienda de un retailer revisa mensualmente con su equipo el cumplimiento de las políticas de manejo de datos de clientes y refuerza las buenas prácticas en las reuniones de equipo.",
+      "La dirección de una empresa de software incluye el cumplimiento de políticas de seguridad como parte de la evaluación de desempeño de los líderes de equipo.",
+      "En una empresa de insumos médicos, cada jefe de área es responsable de asegurar que su equipo complete la capacitación anual obligatoria de seguridad de la información.",
+      "Un gerente de operaciones de una empresa tecnológica exige evidencia de cumplimiento de controles de seguridad antes de aprobar el cierre de un proyecto."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general Anexo A 5)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.5",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.OC-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Contacto con autoridades",
+    "description": "Establecer y mantener contactos apropiados con autoridades relevantes (policiales, reguladoras, de protección de datos) para agilizar la respuesta ante incidentes o requerimientos legales.",
+    "ejemplos": [
+      "Una empresa de insumos médicos mantiene actualizado el contacto directo con la autoridad sanitaria y de protección de datos, para reportar con rapidez un eventual incidente que involucre información de pacientes.",
+      "Un retailer documenta el procedimiento y los datos de contacto de la policía y de la autoridad de protección de datos personales, para activarlo ante un fraude o filtración de datos de clientes.",
+      "Una empresa tecnológica mantiene relación con el CSIRT nacional o sectorial para recibir alertas tempranas de amenazas y reportar incidentes relevantes.",
+      "Una empresa de software con clientes en la UE mantiene contacto documentado con la autoridad de protección de datos correspondiente para cumplir plazos de notificación de brechas (ej. 72 horas bajo RGPD)."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.6",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.OC-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Contacto con grupos de interés especial",
+    "description": "Mantener contacto con grupos de interés especial, foros de seguridad y asociaciones profesionales para estar al tanto de buenas prácticas y nuevas amenazas.",
+    "ejemplos": [
+      "Una empresa tecnológica participa en un foro sectorial de intercambio de inteligencia de amenazas (ISAC) para recibir alertas tempranas relevantes a su industria.",
+      "Un retailer se suscribe a boletines de la asociación de comercio electrónico local sobre fraude y nuevas modalidades de estafa en pagos.",
+      "Una empresa de insumos médicos mantiene membresía en una asociación de la industria de dispositivos médicos que comparte guías de ciberseguridad sectorial (ej. relacionadas con FDA o entes regulatorios).",
+      "El equipo de seguridad de una empresa de software participa regularmente en conferencias y comunidades técnicas (OWASP local, meetups de seguridad) para actualizar su conocimiento."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.7",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "ID.RA-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Inteligencia de amenazas",
+    "description": "Recopilar y analizar información sobre amenazas a la seguridad de la información para producir inteligencia procesable que permita anticipar y mitigar riesgos.",
+    "ejemplos": [
+      "Una empresa tecnológica usa una plataforma de threat intelligence (TIP) para recibir indicadores de compromiso (IoCs) relevantes a las tecnologías que utiliza, y los integra a su SIEM.",
+      "Un retailer monitorea foros y reportes sobre nuevas modalidades de fraude en pagos electrónicos y ajusta sus reglas de detección de fraude en el POS en consecuencia.",
+      "Una empresa de insumos médicos revisa periódicamente alertas de ciberseguridad específicas del sector salud (ransomware dirigido a hospitales y proveedores médicos) y ajusta sus controles preventivos.",
+      "El equipo de seguridad de una empresa de software documenta un proceso mensual de recolección, análisis y difusión de inteligencia de amenazas al equipo de gestión de riesgos, dejando evidencia en minutas."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (5-7-threat-intelligence-2022 y how-to-implement...control-5-7)",
+      "infoproteccion.com/iso-27001/implementacion-control-a-5-7-inteligencia-de-amenazas"
+    ]
+  },
+  {
+    "control_id": "ISO_5.8",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "GV.PO-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
+    "title": "Seguridad de la información en la gestión de proyectos",
+    "description": "Integrar la seguridad de la información en la gestión de proyectos, sin importar el tipo de proyecto, para asegurar que los riesgos se identifiquen y traten a tiempo.",
+    "ejemplos": [
+      "Una empresa de software incluye una evaluación de riesgos de seguridad como requisito obligatorio en la fase de diseño de todo nuevo proyecto de desarrollo, antes de iniciar la codificación.",
+      "Un retailer que implementa un nuevo sistema de punto de venta exige una revisión de seguridad antes del despliegue en tienda, como hito formal del proyecto.",
+      "Una empresa de insumos médicos que desarrolla un nuevo sistema de trazabilidad de lotes incorpora requisitos de protección de datos desde el diseño (privacy by design) en el plan del proyecto.",
+      "Un equipo de TI de una empresa tecnológica incluye una checklist de seguridad como criterio de aceptación (Definition of Done) en cada sprint de sus proyectos ágiles."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5)"
+    ]
+  },
+  {
+    "control_id": "ISO_5.9",
+    "framework": "ISO 27001",
+    "domain": "Organizacional",
+    "nist_mapping": "ID.AM-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 ter, letra d) (categorías de datos tratados)",
+    "title": "Inventario de información y otros activos asociados",
+    "description": "Identificar los activos de información y otros activos asociados de la organización, y mantener un inventario apropiado de ellos.",
+    "ejemplos": [
+      "Un retailer mantiene un inventario actualizado de todos los sistemas que procesan datos de tarjetas de pago (POS, gateway de pago, base de datos de clientes), con dueño asignado a cada uno.",
+      "Una empresa de insumos médicos inventaría los sistemas que almacenan datos de ensayos clínicos y de pacientes, clasificando cada activo según su criticidad.",
+      "Una empresa tecnológica usa una herramienta de gestión de activos (CMDB) que registra automáticamente cada servidor, aplicación y base de datos, con su respectivo propietario.",
+      "Una empresa de software mantiene un inventario de repositorios de código, incluyendo cuáles contienen información sensible o credenciales, y quién es responsable de cada uno."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl (contenido general Anexo A 5)"
+    ]
+  },
+  {
+    "control_id": "ISO_6.1",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "GV.RR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Selección",
+    "description": "Verificar que el personal, contratistas y terceros sean idóneos y confiables para el rol antes de darles acceso a información sensible, de forma proporcional al riesgo del cargo.",
+    "ejemplos": [
+      "Antes de contratar a un administrador de base de datos, RR.HH. solicita verificación de antecedentes penales, comprobación de referencias laborales y confirmación de títulos académicos; a un recepcionista, en cambio, solo se le pide verificación de identidad, porque el nivel de cribado debe ser proporcional al riesgo del puesto y a la información a la que accederá.",
+      "Una empresa incorpora en sus contratos con proveedores de TI la obligación de realizar el mismo proceso de selección a los técnicos externos que tendrán acceso remoto a sus servidores, antes de que presten el servicio.",
+      "Una empresa de insumos médicos exige verificación de antecedentes reforzada (incluyendo referencias profesionales verificadas telefónicamente) para el cargo de responsable de bodega de sustancias controladas.",
+      "Un retailer verifica identidad y antecedentes comerciales antes de contratar personal para el área de manejo de efectivo y conciliación de caja central."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (6-1-screening-2022)",
+      "kymatio.com/es/blog/iso-27001-controles-humanos-anexo-a6-nis2",
+      "pmg-ssi.com/2015/05/iso-27001-seleccion-del-personal"
+    ]
+  },
+  {
+    "control_id": "ISO_6.2",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "GV.RR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 bis, inciso 3° (deber de secreto extendido a dependientes)",
+    "title": "Términos y condiciones de empleo",
+    "description": "Dejar establecidas contractualmente, desde el inicio de la relación laboral, las responsabilidades del trabajador y de la organización en materia de seguridad de la información.",
+    "ejemplos": [
+      "La carta de oferta u oferta de empleo incluye una cláusula específica de confidencialidad y una referencia a la política de seguridad de la información vigente, que el candidato debe firmar antes de su primer día.",
+      "El contrato de trabajo detalla las consecuencias disciplinarias de un incumplimiento de la política de seguridad, alineado con el proceso disciplinario (A.6.4), de modo que el trabajador conoce de antemano las implicancias de una infracción.",
+      "Una empresa tecnológica incluye en el contrato de sus desarrolladores una cláusula específica de propiedad intelectual sobre el código producido durante la relación laboral.",
+      "Un retailer especifica en el contrato de los cajeros las obligaciones de manejo seguro de datos de tarjetas de pago, alineadas con su política PCI DSS interna."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (6-2-terms-and-conditions-of-employment-2022)",
+      "escuelaeuropeaexcelencia.com/2020/03",
+      "isotools.org/2022/08/19"
+    ]
+  },
+  {
+    "control_id": "ISO_6.3",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "PR.AT-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 50, letra d) (formación permanente, función del delegado de protección de datos)",
+    "title": "Concienciación, educación y capacitación en seguridad de la información",
+    "description": "Asegurar que todo el personal reciba formación adecuada a su función y actualizada sobre políticas de seguridad, para reducir el error humano como vector de incidentes.",
+    "ejemplos": [
+      "Una organización lanza simulacros de phishing mensuales y mide la tasa de clics y de reporte por equipo, usando los resultados como evidencia auditable de que el programa de concienciación funciona y mejora con el tiempo.",
+      "Una empresa organiza una 'semana de ciberseguridad' antes de su auditoría de certificación, con una charla diaria de 15 minutos sobre un tema distinto (contraseñas, phishing, escritorio limpio) y retos con puntaje para el personal.",
+      "Una empresa de insumos médicos capacita anualmente a su personal de planta sobre el manejo seguro de datos de trazabilidad, con evaluación práctica al final del curso.",
+      "Un retailer entrena a su personal de tienda en la detección de ingeniería social telefónica (pretexting) usada para obtener datos de clientes o forzar devoluciones fraudulentas."
+    ],
+    "fuentes_referencia": [
+      "smartfense.com/blog/iso-27001-2022-control-6-3-concienciacion",
+      "guardey.com/es/iso27001-security-awareness-training",
+      "blog.usecure.io/es/iso-27001-security-awareness-training"
+    ]
+  },
+  {
+    "control_id": "ISO_6.4",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "GV.RR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 49, letra g) (sanciones administrativas internas del modelo de prevención)",
+    "title": "Proceso disciplinario",
+    "description": "Contar con un procedimiento formal, conocido por el personal, para responder de forma proporcional y documentada ante infracciones a la política de seguridad de la información.",
+    "ejemplos": [
+      "Ante el hallazgo de que un empleado compartió credenciales por conveniencia (sin intención maliciosa), RR.HH. aplica una amonestación y capacitación adicional, en vez de despido, documentando la decisión según la gravedad y la ausencia de dolo.",
+      "La empresa define una escala de respuesta graduada (advertencia verbal, advertencia escrita, suspensión, desvinculación) según la naturaleza, gravedad e intencionalidad del incumplimiento, y la comunica en el reglamento interno.",
+      "Una empresa tecnológica revoca temporalmente el acceso privilegiado de un ingeniero mientras se investiga una denuncia de mal uso, antes de aplicar cualquier sanción definitiva.",
+      "Un retailer documenta en su reglamento interno que el uso indebido de la cuenta de otro cajero constituye falta grave, con consecuencias claramente establecidas."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (6-4-disciplinary-process-2022)",
+      "isotools.org/2022/08/19",
+      "normaiso27001.es/a7-seguridad-relativa-a-los-recursos"
+    ]
+  },
+  {
+    "control_id": "ISO_6.5",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "PR.AA-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 bis, inciso 1° (deber de secreto subsiste tras concluida la relación)",
+    "title": "Responsabilidades después de la terminación o cambio de empleo",
+    "description": "Evitar el acceso residual a información y sistemas una vez que finaliza o cambia la relación laboral o contractual.",
+    "ejemplos": [
+      "El área de TI recibe una notificación automática de RR.HH. el día de la desvinculación y revoca de inmediato el acceso del ex-trabajador en el proveedor de identidad (ej. Azure AD/Okta), lo que corta en cascada el acceso a todas las aplicaciones conectadas por SSO.",
+      "La empresa usa una checklist de salida firmada que registra fecha de revocación de accesos, devolución de equipos (laptop, credenciales, tarjetas de acceso) y recuerda por escrito las obligaciones de confidencialidad que subsisten tras el término del contrato.",
+      "Una empresa tecnológica desactiva automáticamente las llaves API y tokens de acceso a repositorios asociados a un desarrollador el mismo día de su desvinculación.",
+      "Un retailer recupera la tarjeta de acceso a bodega y actualiza los códigos de alarma compartidos cuando un jefe de tienda deja el cargo."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (6-5-responsibilities-after-termination-change-of-employment-2022 y checklist/annex-a-6-5-checklist)",
+      "hightable.io/iso-27001-annex-a-6-5",
+      "checkflow.io/blog/hr-offboarding-checklist"
+    ]
+  },
+  {
+    "control_id": "ISO_6.6",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "PR.AT-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 bis (deber de secreto o confidencialidad)",
+    "title": "Acuerdos de confidencialidad o no divulgación",
+    "description": "Proteger la información confidencial que personal, socios y proveedores conocen en el marco de su relación con la organización, mediante compromisos exigibles de no divulgación.",
+    "ejemplos": [
+      "Ningún proveedor externo obtiene acceso a los sistemas o datos de la empresa hasta que su NDA firmado queda registrado digitalmente en un repositorio central, con fecha de vigencia y revisión periódica.",
+      "La empresa mantiene un registro (NDA register) que cruza la lista de personas con acceso a datos sensibles contra la lista de acuerdos de confidencialidad vigentes, para detectar brechas de cobertura antes de una auditoría.",
+      "Una empresa de insumos médicos exige NDA a los visitantes externos (auditores, proveedores) antes de permitirles el ingreso a áreas donde se manipula información de ensayos clínicos.",
+      "Una empresa tecnológica incluye cláusulas de confidencialidad reforzadas en los contratos de consultores externos que acceden temporalmente a código fuente propietario."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (6-6-confidentiality-or-non-disclosure-agreements-2022 y how-to-implement...control-6-6)",
+      "upguard.com/compliance/iso-27001/6-6"
+    ]
+  },
+  {
+    "control_id": "ISO_6.7",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "PR.AA-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Trabajo remoto",
+    "description": "Garantizar que la información se proteja con el mismo nivel de seguridad quien trabaja fuera de las instalaciones de la organización que dentro de ellas.",
+    "ejemplos": [
+      "La política de teletrabajo exige conexión mediante VPN corporativa con autenticación multifactor (2FA), equipo con antivirus y cifrado de disco, y prohíbe el uso de redes wifi públicas sin VPN para acceder a sistemas corporativos.",
+      "Cada trimestre, TI revisa los accesos remotos activos, los permisos otorgados y los registros de conexión del personal distribuido, y actualiza la política ante cambios operativos (ej. nuevos países o proveedores de teletrabajo).",
+      "Una empresa de insumos médicos permite trabajo remoto solo para roles administrativos, no para quienes gestionan sistemas de trazabilidad de producción, por política de riesgo.",
+      "Una empresa tecnológica exige que el personal remoto conecte solo desde dispositivos con disco cifrado y antivirus corporativo activo, verificado automáticamente antes de otorgar acceso VPN."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (control-6-7-remote-working)",
+      "edorteam.com/iso-27001-teletrabajo-seguro",
+      "escuelaeuropeaexcelencia.com/2019/10/politica-de-acceso-remoto-iso-27001"
+    ]
+  },
+  {
+    "control_id": "ISO_6.8",
+    "framework": "ISO 27001",
+    "domain": "Personas",
+    "nist_mapping": "RS.CO-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 sexies; Art. 49, letra f) (mecanismos de reporte interno)",
+    "title": "Reporte de eventos de seguridad de la información",
+    "description": "Asegurar que el personal informe con rapidez y por un canal conocido cualquier evento o debilidad de seguridad detectada, sin temor a represalias, para permitir una respuesta temprana.",
+    "ejemplos": [
+      "La empresa habilita un botón de 'Reportar phishing' integrado en el cliente de correo, que envía automáticamente el correo sospechoso al equipo de seguridad para su análisis y registro.",
+      "Se implementa un canal de denuncia anónimo (además del canal formal) para que el personal reporte incidentes o incumplimientos sin miedo al proceso disciplinario, lo que en la práctica aumenta el reporte de 'casi incidentes' (near-misses).",
+      "Una empresa de insumos médicos capacita a su personal de planta para reportar de inmediato cualquier acceso sospechoso a los sistemas de control de calidad, incluso fuera de horario.",
+      "Un retailer incluye el reporte de incidentes de seguridad como punto fijo en las reuniones semanales de cada tienda, normalizando su reporte temprano."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (6-8-information-security-event-reporting-2022)",
+      "kymatio.com/es/blog/iso-27001-controles-humanos-anexo-a6-nis2",
+      "isotools.us/2025/05/06"
+    ]
+  },
+  {
+    "control_id": "ISO_7.1",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Perímetros de seguridad física",
+    "description": "Definir y usar perímetros de seguridad para proteger las áreas que contienen información y otros activos, evitando el acceso físico no autorizado.",
+    "ejemplos": [
+      "Un laboratorio de insumos médicos delimita su planta de producción estéril con cercado perimetral, control de acceso único y zona de descontaminación antes del ingreso, separada del área administrativa.",
+      "Una tienda retail establece una zona de 'trastienda' cerrada con llave para el servidor local de punto de venta (POS) y la bóveda de efectivo, separada del área de atención al público.",
+      "Una empresa de desarrollo de software organiza sus oficinas en zonas concéntricas: recepción abierta, área de trabajo con tarjeta de acceso, y sala de servidores con un perímetro adicional de doble puerta ('mantrap').",
+      "Un centro de distribución de dispositivos tecnológicos cerca su bodega con muros perimetrales, cámaras en los límites y un único punto de entrada de camiones controlado por guardia."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (7-2-physical-entry-2022)",
+      "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.10",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies (evitar alteración, destrucción, pérdida o acceso no autorizado)",
+    "title": "Medios de almacenamiento",
+    "description": "Gestionar de forma segura los medios de almacenamiento durante todo su ciclo de vida (adquisición, uso, transporte y eliminación) para evitar la divulgación, modificación, eliminación o destrucción no autorizada de información.",
+    "ejemplos": [
+      "Un retailer que reemplaza sus terminales POS contrata la destrucción certificada de los discos duros antiguos que almacenaron datos de transacciones, con certificado de destrucción por cada equipo.",
+      "Una empresa tecnológica cifra todas las memorias USB corporativas y bloquea por política el uso de medios extraíbles personales en los equipos de desarrollo.",
+      "Un fabricante de insumos médicos mantiene un registro de cadena de custodia para los discos que contienen datos de ensayos clínicos, desde su creación hasta su destrucción final.",
+      "Una empresa de software borra de forma irreversible (wipe) los discos de los laptops antes de reasignarlos a otro empleado o darlos de baja."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (7-10-storage-media-2022 y how-to-implement...control-7-10-storage-media)"
+    ]
+  },
+  {
+    "control_id": "ISO_7.11",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.IR-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Servicios de soporte",
+    "description": "Proteger la información y los activos frente a fallas en servicios de soporte esenciales como energía eléctrica, telecomunicaciones, suministro de agua o climatización.",
+    "ejemplos": [
+      "Un centro de datos de una empresa tecnológica cuenta con generador diésel y UPS redundantes para asegurar la continuidad ante cortes de energía prolongados.",
+      "Una cadena retail instala UPS en sus servidores locales de tienda para permitir un apagado ordenado del sistema de punto de venta ante un corte eléctrico, evitando corrupción de datos de ventas.",
+      "Un laboratorio de insumos médicos mantiene climatización redundante para las cámaras de conservación de muestras que dependen de temperatura controlada, con alarma ante fallas.",
+      "Una empresa de software contrata dos proveedores de conectividad a internet independientes para su oficina principal, evitando que la caída de uno interrumpa el acceso a sistemas críticos."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 7)",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.12",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.IR-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Seguridad del cableado",
+    "description": "Proteger el cableado de energía y telecomunicaciones que transporta datos o soporta servicios de información frente a intercepción, interferencia o daño.",
+    "ejemplos": [
+      "Un centro de datos de una empresa tecnológica separa físicamente el cableado eléctrico del cableado de red para evitar interferencias, y los identifica con etiquetas para facilitar auditorías.",
+      "Un retailer canaliza el cableado de red de sus terminales POS dentro de conductos empotrados en la pared, no expuesto en el piso de venta donde podría ser manipulado.",
+      "Un fabricante de insumos médicos protege el cableado que conecta los equipos de control de calidad con canaletas cerradas y acceso restringido a las salas técnicas.",
+      "Una empresa de software revisa periódicamente los puntos de red no utilizados en sus oficinas y los desactiva para evitar conexiones no autorizadas a través de cableado abandonado."
+    ],
+    "fuentes_referencia": [
+      "iso27000.es/iso27002_11.html",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.13",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Mantenimiento de equipos",
+    "description": "Mantener correctamente los equipos para asegurar su disponibilidad, integridad y confidencialidad continuas de la información que procesan.",
+    "ejemplos": [
+      "Una empresa tecnológica exige que el mantenimiento de servidores lo realice personal autorizado y supervisado, con registro de qué se hizo y quién lo hizo.",
+      "Un retailer programa mantenimiento preventivo periódico de sus terminales POS y cámaras de seguridad, documentando cada intervención en un log de mantenimiento.",
+      "Un laboratorio de insumos médicos mantiene un calendario de calibración y mantenimiento de sus equipos de trazabilidad de lotes, conforme a especificaciones del fabricante.",
+      "Una empresa de software borra o retira temporalmente los discos con información sensible antes de que un técnico externo realice mantenimiento físico a un servidor."
+    ],
+    "fuentes_referencia": [
+      "iso27000.es/iso27002_11.html",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.14",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 3°, letra c) (principio de proporcionalidad: supresión al cumplir el fin)",
+    "title": "Eliminación segura o reutilización de equipos",
+    "description": "Verificar que los equipos que contienen medios de almacenamiento sean revisados antes de su eliminación o reutilización, para asegurar que los datos sensibles y el software con licencia hayan sido eliminados o sobrescritos de forma segura.",
+    "ejemplos": [
+      "Un retailer que da de baja terminales POS antiguos contrata un servicio certificado de borrado seguro (según estándares como NIST 800-88) antes de reciclar o donar los equipos.",
+      "Una empresa tecnológica reasigna laptops entre empleados solo después de un proceso de wipe completo y reinstalación limpia del sistema operativo, verificado por TI.",
+      "Un fabricante de insumos médicos retira las etiquetas de identificación de equipos antes de devolverlos a un proveedor en leasing, además de borrar cualquier dato de producción almacenado.",
+      "Una empresa de software mantiene un registro de destrucción/reutilización de cada activo dado de baja, con evidencia (certificado o checklist firmado) disponible para auditoría."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (7-14-secure-disposal-or-re-use-of-equipment-2022)"
+    ]
+  },
+  {
+    "control_id": "ISO_7.2",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Entrada física",
+    "description": "Asegurar que las áreas seguras estén protegidas con controles de entrada apropiados, de modo que solo el personal autorizado pueda ingresar.",
+    "ejemplos": [
+      "Un hospital exige tarjeta de proximidad y registro de hora de entrada/salida para acceder a la sala de servidores donde se aloja la historia clínica electrónica, con biometría adicional para el personal de TI.",
+      "Un retailer instala un torniquete con lector de credencial para el acceso del personal a la bodega de mercadería de alto valor (electrónica, joyería), separado de la puerta de clientes.",
+      "Una empresa tecnológica usa códigos PIN temporales para visitas y proveedores en su sala de datacenter, que expiran automáticamente al final del día y quedan registrados en el log de accesos.",
+      "Un fabricante de insumos médicos separa físicamente la zona de carga y descarga de camiones de su área de producción y bodega de materia prima, restringiendo el acceso de transportistas solo a la zona de andén."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (7-2-physical-entry-2022)",
+      "linkedin.com/pulse/control-de-acceso-orientación-para-la-aplicación-iso-27001-mereles",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.3",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Seguridad de oficinas, salas e instalaciones",
+    "description": "Diseñar y aplicar medidas de seguridad física adecuadas para oficinas, salas e instalaciones donde se procesa información sensible.",
+    "ejemplos": [
+      "La sala de reuniones donde una farmacéutica discute resultados de ensayos clínicos no confidenciales cuenta con vidrios opacos y aislamiento acústico para evitar fugas de información por observación o escucha.",
+      "La sala de servidores de una tienda online se ubica en un piso sin señalización externa que la identifique como tal, para no llamar la atención de potenciales intrusos.",
+      "Una empresa de software ubica su sala de 'war room' de incidentes de seguridad en un área sin ventanas hacia el exterior y con acceso restringido solo al equipo de respuesta.",
+      "Un centro de distribución médica mantiene su cámara de frío para insumos sensibles a temperatura bajo llave adicional, con acceso limitado al personal de logística autorizado."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (control-7-3, contenido general Anexo A 7)",
+      "isotools.org/2022/08/26/controles-fisicos-en-iso-iec-270022022",
+      "normaiso27001.es/a11-seguridad-fisica-y-del-entorno"
+    ]
+  },
+  {
+    "control_id": "ISO_7.4",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "DE.CM-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Monitoreo de seguridad física",
+    "description": "Supervisar continuamente las instalaciones para detectar y disuadir accesos físicos no autorizados u otras amenazas.",
+    "ejemplos": [
+      "Un retailer instala CCTV con grabación de 90 días en los accesos de bodega y caja, revisado semanalmente por el equipo de prevención de pérdidas.",
+      "Un centro de datos de una empresa tecnológica combina sensores de movimiento, CCTV y alarma perimetral integrada con el SOC, que genera una alerta automática ante intentos de acceso fuera de horario.",
+      "Una planta de insumos médicos monitorea con cámaras las zonas de almacenamiento de sustancias controladas, con revisión de log de accesos cruzada contra los registros de CCTV.",
+      "Una empresa retail con múltiples tiendas centraliza el monitoreo de todas sus sucursales en un centro de control 24/7 que escala incidentes de seguridad física al equipo correspondiente."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles",
+      "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
+      "isotools.org/2022/08/26/controles-fisicos-en-iso-iec-270022022"
+    ]
+  },
+  {
+    "control_id": "ISO_7.5",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.IR-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Protección contra amenazas físicas y ambientales",
+    "description": "Diseñar y aplicar protección física contra desastres naturales, ataques maliciosos o accidentes que puedan afectar la información y los activos.",
+    "ejemplos": [
+      "Un fabricante de insumos médicos instala detección y supresión de incendios independiente en la sala de servidores, separada del sistema general del edificio, para no dañar equipos con agua en caso de incendio en otra área.",
+      "Un centro de datos de una empresa tecnológica ubicada en zona sísmica ancla los racks de servidores y usa UPS con autonomía suficiente para un apagado ordenado ante corte eléctrico.",
+      "Una cadena retail evalúa el riesgo de inundación de sus bodegas antes de definir la ubicación de mercadería sensible o servidores locales, elevando los racks del nivel del suelo.",
+      "Una empresa de dispositivos médicos mantiene un plan de contingencia ambiental (temperatura y humedad controlada) para las áreas donde se almacenan insumos y equipos sensibles a condiciones ambientales."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles",
+      "iso27000.es/iso27002_11.html"
+    ]
+  },
+  {
+    "control_id": "ISO_7.6",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Trabajo en áreas seguras",
+    "description": "Diseñar y aplicar procedimientos para el trabajo que se realiza dentro de áreas seguras, minimizando el riesgo de exposición de información sensible.",
+    "ejemplos": [
+      "En la sala de servidores de una empresa tecnológica, el personal de mantenimiento externo solo puede trabajar acompañado de un empleado autorizado, y no se permite el ingreso de dispositivos personales de grabación.",
+      "Un laboratorio farmacéutico exige que el personal firme un registro de ingreso/salida y siga un protocolo específico para las áreas donde se manipulan fórmulas o insumos confidenciales.",
+      "Una tienda retail limita el trabajo no supervisado dentro de la bóveda de valores a un máximo de dos personas simultáneamente, con registro de la actividad realizada.",
+      "Una empresa de software prohíbe fotografiar o grabar dentro del área donde se exhiben prototipos de hardware no lanzados, incluso a personal interno no autorizado."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
+      "iso27000.es/iso27002_11.html",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.7",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.AT-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Escritorio limpio y pantalla limpia",
+    "description": "Reducir el riesgo de acceso no autorizado, pérdida o daño de información exigiendo que los escritorios y pantallas no queden con información sensible expuesta.",
+    "ejemplos": [
+      "El personal de atención al cliente de un retailer bloquea automáticamente su pantalla de POS tras 2 minutos de inactividad y guarda bajo llave los formularios con datos de tarjetas al final del turno.",
+      "Una empresa tecnológica implementa una política de 'escritorio limpio' que exige guardar bajo llave discos duros externos, notas y documentos impresos con código fuente o credenciales al final de la jornada.",
+      "Un centro de insumos médicos exige que las recetas y fichas de pacientes impresas no queden a la vista sobre los mostradores, y se destruyan en trituradora una vez digitalizadas.",
+      "Una oficina de soporte técnico configura el bloqueo automático de pantalla en todos los equipos tras 5 minutos, y prohíbe dejar notas con contraseñas pegadas al monitor."
+    ],
+    "fuentes_referencia": [
+      "isotools.org/2022/08/26/controles-fisicos-en-iso-iec-270022022",
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
+    ]
+  },
+  {
+    "control_id": "ISO_7.8",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Ubicación y protección de equipos",
+    "description": "Ubicar y proteger los equipos para reducir los riesgos derivados de amenazas y peligros ambientales, y las oportunidades de acceso no autorizado.",
+    "ejemplos": [
+      "Una empresa tecnológica ubica sus servidores de desarrollo lejos de ventanas y tuberías de agua, en un rack con cerradura dentro de la sala de TI.",
+      "Un retailer instala los terminales POS de forma que la pantalla no sea visible desde fuera de la tienda, para evitar que terceros observen datos de pago ingresados.",
+      "Un laboratorio de insumos médicos ubica los equipos de refrigeración con datos de trazabilidad de lotes en un área con acceso restringido y monitoreo de temperatura permanente.",
+      "Una compañía de software coloca las impresoras que manejan documentos confidenciales (contratos, código fuente impreso) en una sala cerrada, no en pasillos de tránsito libre."
+    ],
+    "fuentes_referencia": [
+      "grc360.cl/blog/seguridad-fisica-iso-27001-controles",
+      "iso27000.es/iso27002_11.html"
+    ]
+  },
+  {
+    "control_id": "ISO_7.9",
+    "framework": "ISO 27001",
+    "domain": "Físicos",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Seguridad de los activos fuera de las instalaciones",
+    "description": "Proteger los activos que se utilizan o almacenan fuera de las instalaciones de la organización frente a pérdida, daño, robo o compromiso.",
+    "ejemplos": [
+      "Una empresa tecnológica exige que los laptops que salen de la oficina tengan cifrado de disco completo y un cable de seguridad físico cuando se usan en espacios de coworking.",
+      "Un representante de ventas de insumos médicos que transporta muestras y catálogos con información de precios confidencial usa un maletín con cierre de seguridad y no los deja visibles en el vehículo.",
+      "Un retailer que presta tablets a su personal para inventario en tienda exige devolución y verificación diaria de los dispositivos, con localización remota activada.",
+      "Una empresa de software que permite trabajo remoto entrega una guía de seguridad física del hogar (no dejar el laptop visible en el auto, bloquear pantalla en espacios compartidos)."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 7)",
+      "iso27000.es/iso27002_11.html"
+    ]
+  },
+  {
+    "control_id": "ISO_8.1",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Dispositivos terminales de usuario",
+    "description": "Proteger la información almacenada, procesada o accesible a través de dispositivos terminales de usuario (laptops, móviles, tablets).",
+    "ejemplos": [
+      "Una empresa tecnológica exige cifrado de disco completo y bloqueo automático de pantalla en todos los laptops corporativos, gestionados centralmente mediante MDM (Mobile Device Management).",
+      "Un retailer que entrega tablets al personal de tienda para gestión de inventario configura estos dispositivos para bloquear la instalación de aplicaciones no autorizadas.",
+      "Una empresa de insumos médicos restringe el acceso a los sistemas de trazabilidad solo desde dispositivos corporativos gestionados, prohibiendo el uso de equipos personales (BYOD) para esa función.",
+      "Una empresa de software habilita el borrado remoto de datos corporativos en caso de pérdida o robo de un dispositivo móvil asignado a un empleado."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles tecnológicos)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.10",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 3°, letra c) (principio de proporcionalidad); Art. 7° (derecho de supresión)",
+    "title": "Eliminación de información",
+    "description": "Eliminar la información almacenada en sistemas de información, dispositivos o cualquier otro medio de almacenamiento cuando ya no sea requerida.",
+    "ejemplos": [
+      "Una empresa de insumos médicos elimina de forma segura los datos de pacientes que ya cumplieron el periodo legal de conservación, siguiendo un procedimiento documentado.",
+      "Un retailer configura la eliminación automática de datos de tarjetas de pago una vez procesada la transacción, conforme a los requisitos de PCI DSS.",
+      "Una empresa tecnológica purga periódicamente los datos de prueba y logs antiguos de sus entornos de desarrollo que ya no son necesarios.",
+      "Una empresa de software elimina las cuentas y datos asociados de clientes que solicitan la baja del servicio, dentro del plazo comprometido contractualmente."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.11",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra a) (seudonimización de datos personales)",
+    "title": "Enmascaramiento de datos",
+    "description": "Usar enmascaramiento de datos de acuerdo con la política de control de acceso de la organización y otros requisitos relacionados, para limitar la exposición de datos sensibles.",
+    "ejemplos": [
+      "Una empresa de insumos médicos enmascara los identificadores de pacientes en los ambientes de prueba de su sistema de trazabilidad, usando datos ficticios en vez de reales.",
+      "Un retailer enmascara los números de tarjeta de pago en los recibos y reportes internos, mostrando solo los últimos cuatro dígitos.",
+      "Una empresa tecnológica anonimiza los datos de usuarios reales antes de usarlos para entrenar o probar modelos internos.",
+      "Una empresa de software aplica enmascaramiento dinámico a los campos de datos personales cuando el personal de soporte accede a la base de datos para resolver un ticket."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.12",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.DS-02",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies (evitar filtración, pérdida o acceso no autorizado)",
+    "title": "Prevención de fuga de datos",
+    "description": "Aplicar medidas de prevención de fuga de datos a los sistemas, redes y otros dispositivos que procesan, almacenan o transmiten información sensible.",
+    "ejemplos": [
+      "Un retailer implementa una herramienta DLP que bloquea automáticamente el envío por correo de archivos que contienen números de tarjeta de pago sin cifrar.",
+      "Una empresa de insumos médicos restringe la copia de datos de pacientes a dispositivos USB desde los equipos que acceden al sistema de trazabilidad.",
+      "Una empresa tecnológica monitorea intentos de subir código fuente propietario a servicios de almacenamiento en la nube no aprobados, bloqueando la acción.",
+      "Una empresa de software exige autorización del responsable de datos antes de permitir una exportación masiva de información de clientes desde su base de datos."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (8-12-data-leakage-prevention-2022 y how-to-implement...control-8-12)",
+      "infoproteccion.com/iso-27001/implementacion-control-a-8-12",
+      "hard2bit.com/glosario-ciberseguridad/dlp"
+    ]
+  },
+  {
+    "control_id": "ISO_8.13",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra c) (capacidad de restaurar disponibilidad y acceso)",
+    "title": "Copias de seguridad de la información",
+    "description": "Mantener y probar regularmente copias de seguridad de información, software y sistemas, de acuerdo con la política de respaldo acordada.",
+    "ejemplos": [
+      "Una empresa de insumos médicos respalda diariamente los datos de trazabilidad de lotes, con copias almacenadas en una ubicación geográficamente separada.",
+      "Un retailer prueba trimestralmente la restauración efectiva de sus copias de seguridad del sistema de inventario, para verificar que realmente sean recuperables.",
+      "Una empresa tecnológica mantiene copias de seguridad cifradas de sus bases de datos de producción, con retención acorde a sus requisitos legales y de negocio.",
+      "Una empresa de software automatiza los respaldos de su código fuente y configuración de infraestructura, verificando la integridad de cada copia generada."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre continuidad y respaldo)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.14",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra b) (disponibilidad y resiliencia permanentes)",
+    "title": "Redundancia de instalaciones de procesamiento de información",
+    "description": "Implementar instalaciones de procesamiento de información con suficiente redundancia para cumplir los requisitos de disponibilidad.",
+    "ejemplos": [
+      "Una empresa tecnológica despliega sus servicios críticos en múltiples zonas de disponibilidad de su proveedor cloud, para tolerar la caída de una de ellas sin interrumpir el servicio.",
+      "Un retailer con múltiples tiendas mantiene servidores locales de respaldo en cada tienda para seguir operando el punto de venta si se pierde la conexión con el sistema central.",
+      "Una empresa de insumos médicos mantiene un sitio de respaldo (disaster recovery) para sus sistemas críticos de trazabilidad, probado periódicamente.",
+      "Una empresa de software configura balanceadores de carga y réplicas de base de datos para asegurar continuidad del servicio ante la falla de un componente individual."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general sobre continuidad y disponibilidad)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.15",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Registro (logging)",
+    "description": "Producir, almacenar, proteger y analizar registros (logs) que documenten actividades, excepciones, fallas y otros eventos relevantes.",
+    "ejemplos": [
+      "Una empresa tecnológica centraliza los logs de acceso y actividad de todos sus sistemas críticos en un SIEM, con retención de al menos 12 meses.",
+      "Un retailer registra cada transacción y acceso administrativo en su sistema de punto de venta, con logs protegidos contra modificación.",
+      "Una empresa de insumos médicos mantiene logs detallados de quién accede a los registros de pacientes, cuándo y qué acción realizó, como evidencia de trazabilidad.",
+      "Una empresa de software registra todos los cambios realizados en producción (deployments), incluyendo quién los autorizó y ejecutó."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles de monitoreo)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.16",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "DE.CM-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra d) (verificación y evaluación regular de la eficacia)",
+    "title": "Actividades de monitoreo",
+    "description": "Monitorear las redes, sistemas y aplicaciones en busca de comportamientos anómalos y tomar las acciones apropiadas para evaluar posibles incidentes de seguridad de la información.",
+    "ejemplos": [
+      "Una empresa tecnológica opera un SOC (24/7 o en horario extendido) que monitorea alertas de seguridad en tiempo real y escala los eventos sospechosos según severidad.",
+      "Un retailer monitorea patrones anómalos de transacciones (ej. múltiples devoluciones desde una misma caja) como posible indicador de fraude interno.",
+      "Una empresa de insumos médicos monitorea accesos fuera de horario habitual a los sistemas de trazabilidad, generando alertas para revisión del equipo de seguridad.",
+      "Una empresa de software monitorea el tráfico de red hacia sus servidores de producción para detectar intentos de intrusión o tráfico inusual."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.17",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Sincronización de relojes",
+    "description": "Sincronizar los relojes de los sistemas de procesamiento de información relevantes según una fuente de referencia de tiempo acordada.",
+    "ejemplos": [
+      "Una empresa tecnológica sincroniza todos sus servidores con un servidor NTP corporativo, para que los timestamps de los logs sean consistentes entre sistemas.",
+      "Un retailer sincroniza los relojes de sus terminales POS en todas las tiendas para que los registros de transacciones sean comparables cronológicamente entre sucursales.",
+      "Una empresa de insumos médicos asegura que los sistemas de trazabilidad y control de calidad usen la misma fuente horaria, evitando discrepancias en la secuencia de eventos registrados.",
+      "Una empresa de software verifica que la sincronización horaria correcta sea un requisito previo para el análisis forense confiable en caso de incidente."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre sincronización de relojes)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.18",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.AA-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Uso de programas de utilidad privilegiados",
+    "description": "Restringir y controlar estrictamente el uso de programas de utilidad que podrían anular los controles del sistema y de la aplicación.",
+    "ejemplos": [
+      "Una empresa tecnológica restringe el uso de herramientas administrativas del sistema operativo (ej. editores de registro, herramientas de red de bajo nivel) solo al personal de infraestructura autorizado.",
+      "Un retailer bloquea el acceso a utilidades de línea de comandos en los terminales POS, para evitar que se puedan modificar configuraciones críticas fuera del proceso autorizado.",
+      "Una empresa de insumos médicos audita el uso de herramientas privilegiadas en los sistemas que gestionan datos de trazabilidad, registrando cada ejecución.",
+      "Una empresa de software limita el uso de scripts de administración de base de datos con privilegios elevados a un proceso de aprobación previa (change management)."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre control de utilidades privilegiadas)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.19",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Instalación de software en sistemas operativos",
+    "description": "Implementar procedimientos y medidas para gestionar de forma segura la instalación de software en sistemas operativos.",
+    "ejemplos": [
+      "Una empresa tecnológica restringe los permisos de instalación de software en los equipos corporativos, permitiendo solo aplicaciones incluidas en una lista blanca aprobada por TI.",
+      "Un retailer bloquea la instalación de cualquier software en los terminales POS fuera del canal oficial de actualización controlado por el proveedor del sistema.",
+      "Una empresa de insumos médicos exige aprobación de TI antes de instalar nuevo software en los equipos que controlan procesos de producción o trazabilidad.",
+      "Una empresa de software usa imágenes de servidor estandarizadas (golden images) para asegurar que solo software autorizado esté presente desde el despliegue inicial."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de software)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.2",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.AA-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Derechos de acceso privilegiado",
+    "description": "Restringir y gestionar la asignación y uso de derechos de acceso privilegiado.",
+    "ejemplos": [
+      "Una empresa tecnológica exige autenticación multifactor adicional y una cuenta separada (no la cuenta de uso diario) para cualquier acceso con privilegios administrativos a servidores de producción.",
+      "Un retailer limita el número de cuentas con privilegio de administrador en el sistema central de inventario a solo dos personas, con revisión trimestral de esa asignación.",
+      "Una empresa de insumos médicos otorga acceso privilegiado a los sistemas de trazabilidad de forma temporal y justificada (just-in-time), revocándolo automáticamente al finalizar la tarea.",
+      "Una empresa de software registra y audita toda acción realizada con cuentas privilegiadas en sus entornos de producción, para detectar uso indebido."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de accesos privilegiados)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.20",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Seguridad de redes",
+    "description": "Gestionar, controlar y proteger adecuadamente las redes y dispositivos de red para salvaguardar la información en los sistemas y aplicaciones.",
+    "ejemplos": [
+      "Una empresa tecnológica implementa firewalls perimetrales y de segmentación interna, con reglas revisadas periódicamente para minimizar la superficie de exposición.",
+      "Un retailer separa la red que soporta el sistema de pagos de la red wifi de invitados disponible en tienda, evitando accesos cruzados no autorizados.",
+      "Una empresa de insumos médicos protege la red que conecta sus equipos de trazabilidad con controles de acceso y monitoreo, distinta de la red administrativa general.",
+      "Una empresa de software implementa detección de intrusiones (IDS/IPS) en los puntos críticos de su red corporativa y de producción."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles de red)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.21",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Seguridad de los servicios de red",
+    "description": "Identificar, implementar y monitorear mecanismos de seguridad, niveles de servicio y requisitos de gestión de los servicios de red.",
+    "ejemplos": [
+      "Una empresa tecnológica exige a su proveedor de servicios de red (ISP o SD-WAN) niveles de seguridad y disponibilidad definidos contractualmente, con monitoreo del cumplimiento.",
+      "Un retailer verifica que el servicio de conectividad que soporta sus terminales POS en cada tienda cumpla con los requisitos mínimos de seguridad antes de contratarlo.",
+      "Una empresa de insumos médicos monitorea el desempeño y seguridad de los servicios de red que conectan sus plantas con los sistemas centrales de trazabilidad.",
+      "Una empresa de software revisa periódicamente los acuerdos de nivel de servicio (SLA) de seguridad con sus proveedores de red y conectividad."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre seguridad de servicios de red)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.22",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Segregación de redes",
+    "description": "Segregar grupos de servicios de información, usuarios y sistemas de información en las redes de la organización.",
+    "ejemplos": [
+      "Una empresa tecnológica separa la red de desarrollo de la red de producción mediante VLANs distintas, con reglas de firewall que limitan el tráfico entre ambas.",
+      "Un retailer segrega la red del sistema de pagos del resto de la red corporativa, cumpliendo con los requisitos de segmentación de PCI DSS.",
+      "Una empresa de insumos médicos separa la red de los sistemas de control de calidad y trazabilidad de la red de oficinas administrativas.",
+      "Una empresa de software aísla los entornos de clientes (multi-tenant) mediante segmentación de red, evitando que el tráfico de un cliente sea visible para otro."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre segmentación de redes)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.23",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Filtrado web",
+    "description": "Gestionar el acceso a sitios web externos para reducir la exposición a contenido malicioso.",
+    "ejemplos": [
+      "Una empresa tecnológica implementa filtrado web que bloquea automáticamente el acceso a dominios identificados como maliciosos o de phishing conocido.",
+      "Un retailer restringe el acceso a redes sociales y sitios de descarga de archivos desde los equipos que operan el sistema de punto de venta, reduciendo el riesgo de malware.",
+      "Una empresa de insumos médicos bloquea categorías de sitios de alto riesgo (streaming, descargas, juegos) en los equipos que tienen acceso a sistemas de trazabilidad.",
+      "Una empresa de software combina el filtrado web con inspección SSL para detectar intentos de exfiltración de datos hacia servicios no autorizados."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (8-23-web-filtering-2022)",
+      "hightable.io/iso27001-annex-a-8-23-web-filtering",
+      "infoproteccion.com/iso-27001/implementacion-control-a-8-23-filtrado-web",
+      "advisera.com/iso27001/control-8-23-web-filtering"
+    ]
+  },
+  {
+    "control_id": "ISO_8.24",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quinquies, letra a) (cifrado de datos personales)",
+    "title": "Uso de criptografía",
+    "description": "Definir y aplicar reglas para el uso efectivo de la criptografía, incluyendo la gestión de claves criptográficas.",
+    "ejemplos": [
+      "Una empresa tecnológica cifra los datos sensibles tanto en tránsito (TLS) como en reposo (cifrado de disco/base de datos), con una política formal de gestión de claves.",
+      "Un retailer cifra los datos de tarjetas de pago almacenados y en tránsito, conforme a los requisitos de PCI DSS, con rotación periódica de claves.",
+      "Una empresa de insumos médicos cifra la información de pacientes almacenada en sus sistemas de trazabilidad, restringiendo el acceso a las claves de cifrado a personal autorizado.",
+      "Una empresa de software define en su política qué algoritmos y longitudes de clave son aceptables, prohibiendo el uso de cifrados obsoletos o débiles."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre criptografía)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.25",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
+    "title": "Ciclo de vida de desarrollo seguro",
+    "description": "Establecer y aplicar reglas para el desarrollo seguro de software y sistemas, integrando la seguridad en cada fase del ciclo de vida.",
+    "ejemplos": [
+      "Una empresa de software integra revisión de seguridad en cada fase del SDLC: modelado de amenazas en diseño, revisión de código en desarrollo, y pruebas de penetración antes del lanzamiento.",
+      "Una empresa tecnológica exige que cada nueva funcionalidad pase por un análisis de superficie de ataque antes de escribir la primera línea de código.",
+      "Un retailer que desarrolla su propia app de e-commerce exige revisiones de seguridad de código como parte del proceso de aceptación antes de cada despliegue.",
+      "Una empresa de insumos médicos que desarrolla software interno de trazabilidad aplica controles básicos proporcionales a su tamaño: revisión de código entre pares y separación de entornos."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (8-25-secure-development-life-cycle-2022 y how-to-implement...control-8-25)",
+      "aikido.dev/blog/secure-sdlc",
+      "armor-aml.com (impacto SDLC)",
+      "legalauditors.es/control-8-25-de-iso-27001"
+    ]
+  },
+  {
+    "control_id": "ISO_8.26",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
+    "title": "Requisitos de seguridad de las aplicaciones",
+    "description": "Identificar, especificar y aprobar los requisitos de seguridad de la información al desarrollar o adquirir aplicaciones.",
+    "ejemplos": [
+      "Una empresa de software define requisitos de seguridad obligatorios (autenticación, cifrado, validación de entradas) antes de aprobar el diseño de una nueva aplicación.",
+      "Un retailer exige que su nueva plataforma de e-commerce cumpla requisitos específicos de seguridad de pagos antes de aprobar su lanzamiento.",
+      "Una empresa de insumos médicos incluye requisitos de protección de datos de pacientes como criterio obligatorio al evaluar software adquirido a terceros.",
+      "Una empresa tecnológica documenta los requisitos de seguridad no funcionales (rendimiento bajo ataque, resiliencia) como parte de la especificación de cada nuevo producto."
+    ],
+    "fuentes_referencia": [
+      "legalauditors.es/control-8-25-de-iso-27001 (contenido relacionado sobre requisitos de seguridad de aplicaciones)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.27",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
+    "title": "Principios de arquitectura e ingeniería de sistemas seguros",
+    "description": "Establecer, documentar, mantener y aplicar principios de ingeniería de sistemas seguros a las actividades de desarrollo de sistemas de información.",
+    "ejemplos": [
+      "Una empresa de software aplica el principio de defensa en profundidad en la arquitectura de sus productos, con controles redundantes en cada capa.",
+      "Una empresa tecnológica documenta principios de diseño seguro (mínimo privilegio, fallo seguro) que todo nuevo sistema debe seguir antes de su aprobación arquitectónica.",
+      "Un retailer aplica principios de segmentación y aislamiento al diseñar la arquitectura de su nueva plataforma de pagos, minimizando el impacto de un eventual compromiso.",
+      "Una empresa de insumos médicos incorpora principios de privacidad por diseño en la arquitectura de sus sistemas que procesan datos de pacientes."
+    ],
+    "fuentes_referencia": [
+      "armor-aml.com (contenido relacionado sobre modelado de amenazas y arquitectura segura)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.28",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Codificación segura",
+    "description": "Aplicar principios de codificación segura al desarrollo de software.",
+    "ejemplos": [
+      "Una empresa de software exige el uso de librerías de validación de entradas estandarizadas para prevenir vulnerabilidades como inyección SQL en todo su código.",
+      "Una empresa tecnológica capacita a sus desarrolladores en las prácticas del OWASP Top 10 y las incorpora como estándar de codificación obligatorio.",
+      "Un retailer exige que el código de su plataforma de pagos siga guías de codificación segura específicas para el manejo de datos financieros.",
+      "Una empresa de insumos médicos aplica estándares de codificación segura al desarrollar módulos internos que procesan datos de trazabilidad sensibles."
+    ],
+    "fuentes_referencia": [
+      "aikido.dev/blog/secure-sdlc (contenido relacionado sobre prácticas de codificación segura)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.29",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-06",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Pruebas de seguridad en desarrollo y aceptación",
+    "description": "Definir e implementar procesos de prueba de seguridad durante el ciclo de vida de desarrollo.",
+    "ejemplos": [
+      "Una empresa de software ejecuta análisis estático y dinámico de seguridad (SAST/DAST) de forma automatizada en cada pipeline de integración continua.",
+      "Una empresa tecnológica realiza pruebas de penetración antes de aprobar el paso a producción de cualquier sistema que procese datos sensibles.",
+      "Un retailer exige pruebas de seguridad específicas del módulo de pagos antes de aceptar cada nueva versión de su plataforma de e-commerce.",
+      "Una empresa de insumos médicos incluye pruebas de seguridad como criterio de aceptación obligatorio antes de poner en producción cambios en su sistema de trazabilidad."
+    ],
+    "fuentes_referencia": [
+      "aikido.dev/blog/secure-sdlc (contenido relacionado sobre pruebas de seguridad en el SDLC)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.3",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.AA-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Restricción de acceso a la información",
+    "description": "Restringir el acceso a la información y a otros activos asociados de acuerdo con la política de control de acceso establecida.",
+    "ejemplos": [
+      "Un retailer restringe el acceso a los reportes de ventas y márgenes solo al personal de gerencia, mientras que el personal de caja solo ve la información necesaria para procesar transacciones.",
+      "Una empresa de insumos médicos limita el acceso a los datos completos de pacientes solo al personal clínico autorizado, mostrando información parcial al personal administrativo.",
+      "Una empresa tecnológica implementa controles a nivel de aplicación para que un desarrollador solo pueda ver los datos de prueba, nunca los datos reales de clientes en producción.",
+      "Una empresa de software segmenta el acceso a su código fuente por repositorio, de forma que cada equipo solo accede a los módulos que le corresponden."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre control de acceso a la información)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.30",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "GV.SC-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 15 bis (tratamiento a través de tercero mandatario o encargado)",
+    "title": "Desarrollo subcontratado (externalizado)",
+    "description": "Dirigir, monitorear y revisar las actividades de desarrollo de sistemas subcontratado.",
+    "ejemplos": [
+      "Una empresa de software exige a sus proveedores de desarrollo subcontratado seguir los mismos estándares de codificación segura y revisión de código que su equipo interno.",
+      "Una empresa tecnológica audita periódicamente el código entregado por desarrolladores externos antes de integrarlo a sus sistemas de producción.",
+      "Un retailer que subcontrata el desarrollo de módulos de su e-commerce exige evidencia de pruebas de seguridad antes de aceptar la entrega del proveedor.",
+      "Una empresa de insumos médicos incluye cláusulas contractuales de seguridad y derecho a auditoría en los acuerdos con proveedores de desarrollo externo."
+    ],
+    "fuentes_referencia": [
+      "legalauditors.es/control-8-25-de-iso-27001 (contenido relacionado sobre supervisión de terceros en desarrollo)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.31",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Separación de entornos de desarrollo, prueba y producción",
+    "description": "Separar y proteger adecuadamente los entornos de desarrollo, prueba y producción.",
+    "ejemplos": [
+      "Una empresa de software mantiene entornos completamente separados con credenciales distintas para desarrollo, pruebas y producción, evitando que un desarrollador acceda directamente a datos reales.",
+      "Una empresa tecnológica restringe el acceso al entorno de producción solo al personal de operaciones, mientras los desarrolladores trabajan exclusivamente en entornos de prueba.",
+      "Un retailer prueba cada actualización de su sistema de punto de venta en un entorno de staging antes de desplegarla en las tiendas reales.",
+      "Una empresa de insumos médicos usa datos ficticios (no reales de pacientes) en su entorno de pruebas del sistema de trazabilidad, separado físicamente del entorno productivo."
+    ],
+    "fuentes_referencia": [
+      "legalauditors.es/control-8-25-de-iso-27001 (contenido relacionado sobre separación de entornos)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.32",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Gestión de cambios",
+    "description": "Sujetar los cambios en las instalaciones de procesamiento de información y los sistemas a procedimientos de gestión de cambios.",
+    "ejemplos": [
+      "Una empresa tecnológica exige que todo cambio en producción pase por un proceso formal de aprobación (change advisory board) antes de su implementación.",
+      "Un retailer documenta y aprueba formalmente cualquier cambio en la configuración de sus terminales POS antes de desplegarlo en tiendas.",
+      "Una empresa de insumos médicos evalúa el impacto en seguridad de cada cambio propuesto a sus sistemas de trazabilidad antes de aprobarlo.",
+      "Una empresa de software mantiene un registro auditable de cada cambio desplegado en producción, incluyendo quién lo solicitó, aprobó y ejecutó."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de cambios)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.33",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.DS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": "Art. 14 quáter, inciso 2° (minimización: solo datos estrictamente necesarios)",
+    "title": "Información de prueba",
+    "description": "Seleccionar, proteger y gestionar adecuadamente la información de prueba.",
+    "ejemplos": [
+      "Una empresa de software genera datos sintéticos (no reales) para usar en sus entornos de prueba, evitando exponer información real de clientes.",
+      "Una empresa de insumos médicos anonimiza los datos de pacientes antes de usarlos en pruebas de su sistema de trazabilidad, cuando no es posible usar datos completamente ficticios.",
+      "Un retailer prohíbe el uso de datos reales de tarjetas de pago en ambientes de prueba, usando en su lugar números de tarjeta de prueba proporcionados por el proveedor de pagos.",
+      "Una empresa tecnológica protege los datos de prueba con los mismos controles de acceso que los datos de producción cuando estos derivan de información real."
+    ],
+    "fuentes_referencia": [
+      "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.34",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Protección de sistemas de información durante las pruebas de auditoría",
+    "description": "Planificar y acordar cuidadosamente las pruebas de auditoría y otras actividades de aseguramiento que involucren la evaluación de sistemas operativos, para minimizar las interrupciones en los procesos empresariales.",
+    "ejemplos": [
+      "Una empresa tecnológica coordina con el equipo de operaciones la ventana horaria para ejecutar pruebas de penetración sobre sistemas productivos, minimizando el impacto en el servicio.",
+      "Un retailer programa las auditorías de cumplimiento PCI DSS sobre su sistema de pagos fuera de horarios de alta venta, para evitar afectar la operación.",
+      "Una empresa de insumos médicos limita el alcance de las pruebas de auditoría sobre sus sistemas de trazabilidad en producción, usando un entorno de prueba equivalente cuando es posible.",
+      "Una empresa de software exige que cualquier prueba de seguridad sobre producción sea aprobada previamente y monitoreada en tiempo real por el equipo de operaciones."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre auditoría y pruebas de sistemas)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.4",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.AA-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Acceso al código fuente",
+    "description": "Gestionar de forma adecuada el acceso de lectura y escritura al código fuente, herramientas de desarrollo y bibliotecas de software.",
+    "ejemplos": [
+      "Una empresa de software restringe el acceso de escritura a la rama principal (main/master) del repositorio, exigiendo revisión de código (pull request) antes de fusionar cambios.",
+      "Una empresa tecnológica revoca de inmediato el acceso a los repositorios de código cuando un desarrollador deja el equipo o la empresa.",
+      "Una empresa de insumos médicos que desarrolla software de trazabilidad interno protege su código fuente con autenticación multifactor y registra cada acceso al repositorio.",
+      "Un retailer que mantiene una app de e-commerce propia limita el acceso al código fuente de los módulos de pago solo al equipo de seguridad y a un grupo reducido de desarrolladores senior."
+    ],
+    "fuentes_referencia": [
+      "legalauditors.es/control-8-25 (contenido relacionado sobre gestión de repositorios de código)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.5",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.AA-03",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Autenticación segura",
+    "description": "Implementar tecnologías y procedimientos de autenticación segura de acuerdo con las restricciones de acceso a la información y la política de control de acceso.",
+    "ejemplos": [
+      "Una empresa tecnológica exige autenticación multifactor (MFA) para todo acceso remoto a sistemas corporativos, sin excepciones para ningún rol.",
+      "Un retailer implementa autenticación robusta para el acceso administrativo a su sistema de punto de venta, distinta de la autenticación simple usada por cajeros para operaciones básicas.",
+      "Una empresa de insumos médicos requiere autenticación de dos factores para acceder a los sistemas que contienen datos de pacientes, incluso desde la red interna.",
+      "Una empresa de software implementa inicio de sesión único (SSO) integrado con MFA para centralizar y fortalecer la autenticación en todas sus aplicaciones internas."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre autenticación segura)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.6",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.IR-04",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Gestión de capacidad",
+    "description": "Monitorear y ajustar el uso de recursos, y proyectar los requisitos de capacidad futura, para asegurar el rendimiento requerido del sistema.",
+    "ejemplos": [
+      "Un retailer monitorea la capacidad de su plataforma de e-commerce antes de campañas de alta demanda (ej. Cyber Monday) y escala recursos en la nube de forma anticipada.",
+      "Una empresa tecnológica establece alertas automáticas cuando el uso de almacenamiento o CPU de un servidor supera el 80%, para actuar antes de una degradación del servicio.",
+      "Una empresa de insumos médicos proyecta la capacidad de almacenamiento necesaria para su sistema de trazabilidad conforme crece el volumen de lotes gestionados.",
+      "Una empresa de software revisa mensualmente las métricas de capacidad de su base de datos de producción para planificar migraciones o mejoras antes de llegar a un límite crítico."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de capacidad)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.7",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-05",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Protección contra malware",
+    "description": "Implementar protección contra malware, respaldada por una adecuada concienciación del usuario.",
+    "ejemplos": [
+      "Una empresa tecnológica despliega EDR (Endpoint Detection and Response) en todos sus servidores y estaciones de trabajo, con monitoreo centralizado de alertas.",
+      "Un retailer instala antivirus corporativo en todos sus terminales POS y bloquea la ejecución de software no autorizado en esos equipos.",
+      "Una empresa de insumos médicos mantiene actualizado el antivirus en los equipos que controlan sus sistemas de producción y trazabilidad, con escaneo automático periódico.",
+      "Una empresa de software combina protección antimalware con filtrado de correo para bloquear adjuntos maliciosos antes de que lleguen a los usuarios."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre protección contra malware)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.8",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "ID.RA-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Gestión de vulnerabilidades técnicas",
+    "description": "Obtener información sobre vulnerabilidades técnicas de los sistemas de información en uso, evaluar la exposición de la organización y tomar medidas adecuadas.",
+    "ejemplos": [
+      "Una empresa tecnológica ejecuta escaneos de vulnerabilidades mensuales en su infraestructura y prioriza los parches según la criticidad (CVSS) de cada hallazgo.",
+      "Un retailer contrata pruebas de penetración anuales sobre su plataforma de pagos en línea, corrigiendo las vulnerabilidades críticas antes de la siguiente temporada alta.",
+      "Una empresa de insumos médicos monitorea alertas de vulnerabilidades específicas de los sistemas que gestionan sus equipos de trazabilidad y control de calidad.",
+      "Una empresa de software mantiene un programa de gestión de parches que aplica actualizaciones críticas de seguridad dentro de las 72 horas siguientes a su publicación."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de vulnerabilidades)"
+    ]
+  },
+  {
+    "control_id": "ISO_8.9",
+    "framework": "ISO 27001",
+    "domain": "Tecnológico",
+    "nist_mapping": "PR.PS-01",
+    "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
+    "ley_21719_ref": null,
+    "title": "Gestión de configuración",
+    "description": "Establecer, documentar, implementar, monitorear y revisar configuraciones de seguridad para hardware, software, servicios y redes.",
+    "ejemplos": [
+      "Una empresa tecnológica usa plantillas de configuración segura (hardening) estandarizadas para todos los servidores nuevos, evitando configuraciones por defecto inseguras.",
+      "Un retailer estandariza la configuración de seguridad de todos sus terminales POS en las distintas tiendas, para asegurar consistencia y facilitar la detección de desviaciones.",
+      "Una empresa de insumos médicos documenta la configuración base aprobada para los sistemas que gestionan datos de trazabilidad, revisándola tras cada actualización relevante.",
+      "Una empresa de software usa infraestructura como código (IaC) para desplegar configuraciones de seguridad consistentes y auditable en todos sus entornos cloud."
+    ],
+    "fuentes_referencia": [
+      "normaiso27001.es (contenido general sobre gestión de configuración)"
+    ]
+  }
+]

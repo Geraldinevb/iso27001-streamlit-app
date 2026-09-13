@@ -1,0 +1,15 @@
+# Credenciales - nunca deben subirse al repositorio
+.env
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Entorno virtual, si llegas a crear uno en esta carpeta
+venv/
+.venv/
+
+# NOTA: qdrant_data/ NO se excluye a propósito.
+# Esa carpeta contiene los vectores ya generados (sin credenciales)
+# y debe quedar incluida en el repositorio para que Streamlit Cloud
+# la tenga disponible al desplegar la app.
