@@ -1,0 +1,305 @@
+[
+  {
+    "id": "P1",
+    "dominio": "Gobernanza y políticas",
+    "texto_pregunta": "¿Cuentan con políticas de seguridad de la información y protección de datos, aprobadas y revisadas periódicamente por la dirección?",
+    "obligacion_ley_21719": "Principio de responsabilidad (accountability)",
+    "categoria_nist_csf": "GV.PO / GV.OV",
+    "controles_iso": [
+      "5.1",
+      "5.4",
+      "5.31",
+      "5.35",
+      "5.36",
+      "5.37"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "siempre",
+        "texto": "¿Cuentan con un Aviso de Privacidad público, dirigido a las personas cuyos datos tratan (distinto de su política interna de seguridad)?"
+      }
+    ]
+  },
+  {
+    "id": "P2",
+    "dominio": "Roles y responsabilidades",
+    "texto_pregunta": "¿Existe un responsable claro de seguridad de la información y de protección de datos (incluyendo un Delegado si corresponde), con funciones y deberes de confidencialidad definidos?",
+    "obligacion_ley_21719": "Delegado de Protección de Datos (DPD) / deber de confidencialidad",
+    "categoria_nist_csf": "GV.RR",
+    "controles_iso": [
+      "5.2",
+      "5.3",
+      "5.5",
+      "5.6",
+      "6.2",
+      "6.4",
+      "6.6"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Tienen designado formalmente un Delegado de Protección de Datos?"
+      }
+    ]
+  },
+  {
+    "id": "P3",
+    "dominio": "Inventario y clasificación de la información",
+    "texto_pregunta": "¿Mantienen un inventario actualizado de qué datos e información tratan, con qué finalidad y qué tan sensibles son?",
+    "obligacion_ley_21719": "Registro de Actividades de Tratamiento (RAT) / identificación de datos sensibles",
+    "categoria_nist_csf": "ID.AM",
+    "controles_iso": [
+      "5.9",
+      "5.10",
+      "5.11",
+      "5.12",
+      "5.13",
+      "5.32",
+      "5.33",
+      "5.34"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Ese inventario identifica específicamente los datos sensibles que tratan (salud, biométricos, datos de niños y niñas menores de 14 años, etc.)?"
+      },
+      {
+        "condicion": "siempre",
+        "texto": "¿Los datos que recolectan se limitan a lo estrictamente necesario para la finalidad declarada, sin recolectar de más?"
+      }
+    ]
+  },
+  {
+    "id": "P4",
+    "dominio": "Evaluación de riesgos",
+    "texto_pregunta": "¿Evalúan periódicamente los riesgos de seguridad y de impacto en los titulares antes de iniciar nuevos tratamientos o proyectos?",
+    "obligacion_ley_21719": "Evaluación de Impacto (DPIA) en tratamientos de alto riesgo",
+    "categoria_nist_csf": "ID.RA",
+    "controles_iso": [
+      "5.7",
+      "5.8",
+      "8.8",
+      "8.29"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Han identificado si alguno de sus tratamientos requiere una DPIA (datos sensibles a gran escala, perfilamiento, videovigilancia masiva)?"
+      }
+    ]
+  },
+  {
+    "id": "P5",
+    "dominio": "Control de acceso e identidad",
+    "texto_pregunta": "¿Controlan y revisan periódicamente quién tiene acceso a qué información, incluyendo altas, bajas y accesos privilegiados?",
+    "obligacion_ley_21719": "Principio de minimización",
+    "categoria_nist_csf": "PR.AA",
+    "controles_iso": [
+      "5.15",
+      "5.16",
+      "5.17",
+      "5.18",
+      "6.1",
+      "6.5",
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5",
+      "8.18"
+    ],
+    "subpreguntas": []
+  },
+  {
+    "id": "P6",
+    "dominio": "Protección técnica de los datos",
+    "texto_pregunta": "¿Aplican medidas técnicas como cifrado, eliminación segura y prevención de fuga de datos, con plazos definidos de conservación?",
+    "obligacion_ley_21719": "Medidas de seguridad apropiadas / derecho de supresión y plazos de conservación",
+    "categoria_nist_csf": "PR.DS",
+    "controles_iso": [
+      "5.14",
+      "7.10",
+      "7.14",
+      "8.10",
+      "8.11",
+      "8.12",
+      "8.24",
+      "8.33"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Tienen definido un plazo de conservación y un proceso formal de eliminación de datos? / ¿Transfieren datos personales fuera de Chile y bajo qué mecanismo legal?"
+      }
+    ]
+  },
+  {
+    "id": "P7",
+    "dominio": "Gestión de proveedores y cadena de suministro",
+    "texto_pregunta": "¿Sus contratos con proveedores que tratan datos en su nombre incluyen cláusulas de seguridad, notificación de incidentes y derecho de auditoría?",
+    "obligacion_ley_21719": "Encargados de tratamiento",
+    "categoria_nist_csf": "GV.SC",
+    "controles_iso": [
+      "5.19",
+      "5.20",
+      "5.21",
+      "5.22",
+      "5.23",
+      "8.30"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Cuentan con un listado de proveedores que tratan datos personales por cuenta de la organización?"
+      }
+    ]
+  },
+  {
+    "id": "P8",
+    "dominio": "Gestión de incidentes de seguridad",
+    "texto_pregunta": "¿Tienen un proceso definido para detectar, evaluar, contener y comunicar incidentes de seguridad?",
+    "obligacion_ley_21719": "Notificación de brechas a la Agencia dentro de 72 horas",
+    "categoria_nist_csf": "RS.MA / RS.AN / RS.MI / DE.CM / DE.AE",
+    "controles_iso": [
+      "5.24",
+      "5.25",
+      "5.26",
+      "5.27",
+      "5.28",
+      "6.8",
+      "8.15",
+      "8.16",
+      "8.17"
+    ],
+    "subpreguntas": [
+      {
+        "condicion": "siempre",
+        "texto": "¿Conocen el plazo legal de 72 horas para notificar una brecha a la Agencia de Protección de Datos?"
+      },
+      {
+        "condicion": "siempre",
+        "texto": "Si la vulneración involucra datos sensibles, de niños/niñas menores de 14 años, o financieros/bancarios, ¿saben que la ley exige notificar directamente a las personas afectadas, no solo a la Agencia?"
+      }
+    ]
+  },
+  {
+    "id": "P9",
+    "dominio": "Continuidad y recuperación",
+    "texto_pregunta": "¿Pueden recuperar sus sistemas y datos ante una interrupción grave (falla, ciberataque, desastre) dentro de plazos definidos?",
+    "obligacion_ley_21719": "Continuidad del tratamiento de datos (indirecto)",
+    "categoria_nist_csf": "RC.RP",
+    "controles_iso": [
+      "5.29",
+      "5.30",
+      "7.11",
+      "8.6",
+      "8.13",
+      "8.14"
+    ],
+    "subpreguntas": []
+  },
+  {
+    "id": "P10",
+    "dominio": "Seguridad física",
+    "texto_pregunta": "¿Existen controles de acceso físico y protección ambiental en los lugares donde se procesa o almacena información?",
+    "obligacion_ley_21719": "Medidas de seguridad apropiadas (indirecto)",
+    "categoria_nist_csf": "PR.PS",
+    "controles_iso": [
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5",
+      "7.6",
+      "7.7",
+      "7.8",
+      "7.9",
+      "7.12",
+      "7.13"
+    ],
+    "subpreguntas": []
+  },
+  {
+    "id": "P11",
+    "dominio": "Seguridad de redes e infraestructura",
+    "texto_pregunta": "¿Sus redes y sistemas cuentan con protección contra malware, segmentación y gestión de vulnerabilidades?",
+    "obligacion_ley_21719": "Medidas de seguridad apropiadas al riesgo",
+    "categoria_nist_csf": "PR.IR / PR.PS",
+    "controles_iso": [
+      "8.7",
+      "8.9",
+      "8.19",
+      "8.20",
+      "8.21",
+      "8.22",
+      "8.23"
+    ],
+    "subpreguntas": []
+  },
+  {
+    "id": "P12",
+    "dominio": "Desarrollo seguro y privacidad desde el diseño",
+    "texto_pregunta": "¿El desarrollo o adquisición de software incorpora seguridad y protección de datos desde el diseño, con ambientes de prueba separados de producción?",
+    "obligacion_ley_21719": "Privacidad desde el diseño",
+    "categoria_nist_csf": "PR.PS",
+    "controles_iso": [
+      "8.25",
+      "8.26",
+      "8.27",
+      "8.28",
+      "8.31",
+      "8.32",
+      "8.34"
+    ],
+    "subpreguntas": []
+  },
+  {
+    "id": "P13",
+    "dominio": "Formación y concienciación",
+    "texto_pregunta": "¿El personal recibe formación periódica en seguridad de la información y protección de datos personales?",
+    "obligacion_ley_21719": "Capacitación en protección de datos (buena práctica)",
+    "categoria_nist_csf": "PR.AT",
+    "controles_iso": [
+      "6.3",
+      "6.7"
+    ],
+    "subpreguntas": []
+  },
+  {
+    "id": "P14",
+    "dominio": "Derechos de las personas sobre sus datos",
+    "texto_pregunta": "¿Tienen un proceso definido para recibir y responder solicitudes de personas que piden acceder, corregir o eliminar sus datos personales, dentro de los plazos legales?",
+    "obligacion_ley_21719": "Derechos ARCO+ (acceso, rectificación, cancelación, oposición, portabilidad, bloqueo)",
+    "categoria_nist_csf": null,
+    "controles_iso": [],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Saben cuál es el plazo legal para responder este tipo de solicitudes?"
+      }
+    ]
+  },
+  {
+    "id": "P15",
+    "dominio": "Base legal del tratamiento",
+    "texto_pregunta": "¿Saben identificar, para cada tipo de dato que tratan, la razón legal por la que pueden hacerlo (ej. consentimiento de la persona, ejecución de un contrato, obligación legal)?",
+    "obligacion_ley_21719": "Bases de licitud del tratamiento (consentimiento, contrato, obligación legal, interés legítimo)",
+    "categoria_nist_csf": null,
+    "controles_iso": [],
+    "subpreguntas": []
+  },
+  {
+    "id": "P16",
+    "dominio": "Modelo de prevención de infracciones",
+    "texto_pregunta": "¿Cuentan con un modelo formal de prevención de infracciones a la Ley 21.719 (similar al modelo de prevención de delitos), con un encargado designado y componentes documentados?",
+    "obligacion_ley_21719": "Modelo de prevención de infracciones (Art. 47-53), certificable ante la Agencia",
+    "categoria_nist_csf": null,
+    "controles_iso": [],
+    "subpreguntas": [
+      {
+        "condicion": "parcial_no",
+        "texto": "¿Saben que contar con este modelo certificado puede atenuar o eximir sanciones administrativas ante una fiscalización?"
+      }
+    ]
+  }
+]

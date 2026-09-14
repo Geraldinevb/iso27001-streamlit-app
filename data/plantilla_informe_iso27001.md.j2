@@ -1,0 +1,188 @@
+{# ============================================================================
+   PLANTILLA: Informe Preliminar de Cumplimiento — ISO/IEC 27001:2022
+   (Anexo A — estilo Declaración de Aplicabilidad / SoA simplificada)
+
+   Formato: Jinja2 sobre Markdown. Misma librería que la plantilla de Ley
+   21.719 (plantilla_informe_ley21719.md.j2) — no se agrega dependencia nueva.
+
+   CÓMO SE RENDERIZA (en app.py o report_service.py):
+
+       from jinja2 import Template
+       with open("plantilla_informe_iso27001.md.j2", encoding="utf-8") as f:
+           tpl = Template(f.read(), trim_blocks=True, lstrip_blocks=True)
+       informe_md = tpl.render(**contexto_iso)
+
+   ESTRUCTURA DEL DICCIONARIO `contexto_iso` QUE ESPERA ESTA PLANTILLA:
+
+   {
+     "organizacion": str,
+     "alcance": str,                        # mismo texto libre que en el informe Ley 21.719
+     "fecha_generacion": str,
+     "nivel_madurez_global_iso": float,      # 0-100, promedio sobre los 93 controles
+     "madurez_por_dominio": {                # 0-100 por cada uno de los 4 dominios del Anexo A
+        "Organizacional": float, "Personas": float,
+        "Físicos": float, "Tecnológico": float
+     },
+     "controles_soa": [                      # 93 entradas — una por cada control del Anexo A,
+                                              # expandidas desde preguntas.json (control -> pregunta
+                                              # que lo agrupa -> respuesta de esa pregunta)
+        {
+          "codigo": "5.1",
+          "nombre": str,                     # viene de anexo_a_iso27001_2022_vectorizable.json (title)
+          "dominio": "Organizacional" | "Personas" | "Físicos" | "Tecnológico",
+          "estado": "Implementado" | "Parcialmente implementado" | "No implementado",
+          "pregunta_origen": "P1",           # trazabilidad: qué pregunta del formulario originó este estado
+        }, ...
+     ],
+     "gap_items_iso": [                      # subconjunto de controles_soa con estado != "Implementado"
+        { ...misma forma que arriba..., "severidad": "Alta" | "Media" | "Baja" }, ...
+     ],
+     "plan_de_accion_iso": [
+        { "control": str, "hallazgo": str, "medida_correctiva": str,
+          "responsable_sugerido": str, "plazo_sugerido": str }, ...
+     ],
+     "dictamen_final_iso": str,
+   }
+
+   NOTA IMPORTANTE: esta NO es una Declaración de Aplicabilidad (SoA) formal
+   en el sentido estricto de la norma — una SoA real permite excluir
+   controles no aplicables con justificación individual, revisada por un
+   auditor. Aquí se asume que los 93 controles son aplicables por defecto
+   (supuesto razonable para un pre-diagnóstico, ver disclaimer más abajo).
+============================================================================ #}
+
+# INFORME PRELIMINAR DE CUMPLIMIENTO NORMATIVO
+## Norma ISO/IEC 27001:2022 — Anexo A (Controles de Seguridad de la Información)
+
+**Organización evaluada:** {{ organizacion }}
+**Fecha de generación:** {{ fecha_generacion }}
+
+---
+
+> **⚠️ ADVERTENCIA IMPORTANTE — LEA ANTES DE CONTINUAR**
+>
+> Este documento es un **pre-diagnóstico automatizado**, generado a partir
+> de respuestas de autoevaluación entregadas por la propia organización.
+> **No constituye una Declaración de Aplicabilidad (SoA) formal, ni una
+> auditoría de certificación, ni un dictamen profesional.** Una
+> certificación ISO/IEC 27001 real requiere una auditoría realizada por un
+> organismo certificador acreditado, con revisión documental y evidencia
+> verificada control por control — este informe no reemplaza ese proceso.
+>
+> Además, este informe **asume que los 93 controles del Anexo A son
+> aplicables** a la organización evaluada. Una Declaración de Aplicabilidad
+> formal permite excluir controles no aplicables, con justificación
+> individual revisada por un profesional — ese análisis de aplicabilidad
+> no fue realizado aquí.
+
+---
+
+## 1. RESUMEN EJECUTIVO
+
+### 1.1. Propósito del informe
+
+Este informe entrega una **visión preliminar** del nivel de implementación
+de {{ organizacion }} respecto de los 93 controles del Anexo A de la norma
+ISO/IEC 27001:2022, agrupados en sus 4 dominios (Organizacionales,
+Personas, Físicos, Tecnológicos).
+
+Su objetivo es **identificar brechas** de seguridad de la información y
+priorizar acciones de mejora — no constituye evidencia suficiente para una
+certificación formal (ver advertencia anterior).
+
+### 1.2. Alcance
+
+{{ alcance }}
+
+### 1.3. Nivel global de madurez / Principales hallazgos
+
+| Indicador | Resultado |
+|---|---|
+| Madurez global ISO/IEC 27001 (Anexo A) | {{ nivel_madurez_global_iso }}% |
+| Controles evaluados | {{ controles_soa|length }} de 93 |
+| Controles con brecha (Parcial o No implementado) | {{ gap_items_iso|length }} |
+
+**Madurez por dominio:**
+
+| Dominio | Madurez |
+|---|---|
+| 5. Organizacionales | {{ madurez_por_dominio["Organizacional"] }}% |
+| 6. Personas | {{ madurez_por_dominio["Personas"] }}% |
+| 7. Físicos | {{ madurez_por_dominio["Físicos"] }}% |
+| 8. Tecnológicos | {{ madurez_por_dominio["Tecnológico"] }}% |
+
+---
+
+## 2. METODOLOGÍA DE EVALUACIÓN
+
+El nivel de implementación de cada uno de los 93 controles del Anexo A se
+infiere a partir de las respuestas al cuestionario de autoevaluación
+(16 preguntas maestras), cada una de las cuales agrupa un subconjunto de
+controles relacionados temáticamente. La respuesta dada a cada pregunta
+(Sí / Parcial / No) se traslada a todos los controles que agrupa:
+
+| Respuesta a la pregunta | Estado asignado al control |
+|---|---|
+| Sí | Implementado |
+| Parcial | Parcialmente implementado |
+| No | No implementado |
+
+Esta es una aproximación práctica para un diagnóstico rápido — no
+reemplaza la verificación individual de evidencia por control que exige
+una auditoría formal.
+
+---
+
+## 3. DECLARACIÓN DE APLICABILIDAD PRELIMINAR (SoA simplificada)
+
+{% for dominio in ["Organizacional", "Personas", "Físicos", "Tecnológico"] %}
+### 3.{{ loop.index }}. Dominio: {{ dominio }}
+
+| Código | Control | Estado | Pregunta de origen |
+|---|---|---|---|
+{% for c in controles_soa if c.dominio == dominio %}
+| {{ c.codigo }} | {{ c.nombre }} | {{ c.estado }} | {{ c.pregunta_origen }} |
+{% endfor %}
+
+{% endfor %}
+
+---
+
+## 4. HALLAZGOS Y BRECHAS DETECTADAS
+
+{% if gap_items_iso|length > 0 %}
+| Código | Control | Dominio | Estado | Severidad |
+|---|---|---|---|---|
+{% for item in gap_items_iso %}
+| {{ item.codigo }} | {{ item.nombre }} | {{ item.dominio }} | {{ item.estado }} | {{ item.severidad }} |
+{% endfor %}
+{% else %}
+No se detectaron brechas — todos los controles evaluados están
+implementados según las respuestas entregadas.
+{% endif %}
+
+---
+
+## 5. PLAN DE ACCIÓN PRIORIZADO
+
+{% if plan_de_accion_iso|length > 0 %}
+| Control | Hallazgo | Medida correctiva sugerida | Responsable sugerido | Plazo sugerido |
+|---|---|---|---|---|
+{% for accion in plan_de_accion_iso %}
+| {{ accion.control }} | {{ accion.hallazgo }} | {{ accion.medida_correctiva }} | {{ accion.responsable_sugerido }} | {{ accion.plazo_sugerido }} |
+{% endfor %}
+{% else %}
+No se generaron acciones correctivas — sin brechas priorizadas.
+{% endif %}
+
+---
+
+## 6. CONCLUSIÓN
+
+{{ dictamen_final_iso }}
+
+---
+
+*Informe generado automáticamente por una herramienta de pre-diagnóstico.
+No constituye una Declaración de Aplicabilidad formal ni sustituye una
+auditoría de certificación — ver advertencia al inicio de este documento.*

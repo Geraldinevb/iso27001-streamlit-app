@@ -1,0 +1,302 @@
+{# ============================================================================
+   PLANTILLA: Informe Preliminar de Cumplimiento — Ley N° 21.719
+   Formato: Jinja2 sobre Markdown. Requiere `pip install jinja2` (agregar a
+   requirements.txt junto con streamlit, groq, qdrant-client[fastembed]).
+
+   CÓMO SE RENDERIZA (en app.py o report_service.py):
+
+       from jinja2 import Template
+       with open("plantilla_informe_ley21719.md.j2", encoding="utf-8") as f:
+           tpl = Template(f.read(), trim_blocks=True, lstrip_blocks=True)
+       informe_md = tpl.render(**contexto)
+
+       # trim_blocks=True y lstrip_blocks=True son necesarios para que el
+       # Markdown de salida no quede con exceso de líneas en blanco
+       # alrededor de cada {% %} — sin esto, el informe se ve "esponjoso".
+
+   ESTRUCTURA DEL DICCIONARIO `contexto` QUE ESPERA ESTA PLANTILLA:
+
+   {
+     "organizacion": str,                  # nombre ingresado por el usuario ANTES del cuestionario (no es una de las 18 preguntas)
+     "alcance": str,                       # texto libre ingresado por el usuario (idem) — sistemas/áreas/procesos evaluados
+     "fecha_generacion": str,              # ej. "14 de septiembre de 2026"
+     "nivel_madurez_global": float,        # 0-100, promedio calculado sobre las 18 preguntas respondidas
+     "nivel_madurez_iso": float,           # 0-100, calculado SOLO sobre preguntas con controles_iso no vacío
+     "nivel_madurez_ley21719": float,      # 0-100, calculado ponderando por tipo_vinculo (Fuerte > Parcial > Estructural; "No aplica directo" no pondera)
+     "preguntas_respondidas": [            # una entrada por cada una de las 16-18 preguntas de preguntas.json
+        {
+          "id": "P1",
+          "dominio": str,
+          "texto_pregunta": str,
+          "respuesta": "Sí" | "Parcial" | "No",
+          "obligacion_ley_21719": str | None,
+          "subpreguntas_respondidas": [ {"texto": str, "respuesta": str}, ... ],
+          "controles_iso": [str, ...],      # códigos, ej. ["5.1","5.4",...]
+        }, ...
+     ],
+     "gap_items": [                        # subconjunto de preguntas_respondidas con respuesta != "Sí", ordenado por severidad
+        { ...misma forma que arriba..., "severidad": "Alta" | "Media" | "Baja" }, ...
+     ],
+     "plan_de_accion": [                   # gap_items priorizados, con campos adicionales para la hoja de ruta
+        { "hallazgo": str, "medida_correctiva": str, "responsable_sugerido": str, "plazo_sugerido": str }, ...
+     ],
+     "dictamen_final": str,                # 1-2 párrafos generados (o redactados por la app / IA) con el veredicto general
+   }
+
+   NOTA: "alcance" y "organizacion" NO forman parte del cuestionario de 18
+   preguntas — deben pedirse como 2 campos de texto libre en el Panel
+   Principal, ANTES de mostrar la primera pregunta.
+============================================================================ #}
+
+# INFORME PRELIMINAR DE CUMPLIMIENTO NORMATIVO
+## Ley N° 21.719 sobre Protección de Datos Personales (Chile)
+
+**Organización evaluada:** {{ organizacion }}
+**Fecha de generación:** {{ fecha_generacion }}
+
+---
+
+> **⚠️ ADVERTENCIA IMPORTANTE — LEA ANTES DE CONTINUAR**
+>
+> Este documento es un **pre-diagnóstico automatizado**, generado a partir de
+> respuestas de autoevaluación entregadas por la propia organización. **No
+> constituye asesoría legal, auditoría de cumplimiento, ni dictamen
+> profesional certificado.** Sus resultados son orientativos y están
+> sujetos al nivel de conocimiento y honestidad de quien respondió el
+> cuestionario — no fueron verificados de forma independiente.
+>
+> Para una evaluación completa, vinculante y defendible ante la Agencia de
+> Protección de Datos Personales, se requiere una auditoría realizada por
+> un profesional cualificado, con revisión documental y evidencia
+> verificada caso a caso.
+
+---
+
+## 1. RESUMEN EJECUTIVO
+
+### 1.1. Propósito del informe
+
+Este informe entrega una **visión preliminar** del nivel de cumplimiento de
+{{ organizacion }} respecto de las obligaciones establecidas en la Ley N°
+21.719 sobre Protección de Datos Personales, y de forma complementaria,
+respecto de los controles de seguridad de la información del Anexo A de la
+norma ISO/IEC 27001:2022 que se relacionan con dichas obligaciones.
+
+Su objetivo es **identificar brechas** (*gaps*) y priorizar acciones de
+mejora — no reemplaza el análisis caso a caso que exige la ley, ni la
+auditoría profesional mencionada en la advertencia anterior.
+
+### 1.2. Alcance
+
+{{ alcance }}
+
+### 1.3. Nivel global de madurez / Principales hallazgos
+
+| Indicador | Resultado |
+|---|---|
+| Madurez global (ISO 27001 + Ley 21.719 combinado) | {{ nivel_madurez_global }}% |
+| Madurez específica — Ley 21.719 | {{ nivel_madurez_ley21719 }}% |
+| Madurez específica — controles ISO 27001 (Anexo A) | {{ nivel_madurez_iso }}% |
+| Brechas identificadas | {{ gap_items|length }} de {{ preguntas_respondidas|length }} preguntas evaluadas |
+
+{% if gap_items|length > 0 %}
+**Hallazgos más relevantes** (ver detalle completo en Sección 8.1):
+{% for item in gap_items[:3] %}
+- **{{ item.dominio }}** ({{ item.id }}): {{ item.texto_pregunta }} — respuesta: *{{ item.respuesta }}*
+{% endfor %}
+{% else %}
+No se identificaron brechas en las preguntas evaluadas.
+{% endif %}
+
+---
+
+## 2. MARCO REGULATORIO Y GOBERNANZA
+
+### 2.1. Normativa aplicable
+
+- **Ley N° 21.719**, que Regula la Protección y el Tratamiento de los Datos
+  Personales y crea la Agencia de Protección de Datos Personales.
+  Publicada el 13 de diciembre de 2024, con entrada en vigencia plena el
+  **1 de diciembre de 2026**.
+- Complementariamente, se evalúan controles del **Anexo A de la norma
+  ISO/IEC 27001:2022**, como referencia de buenas prácticas de seguridad
+  de la información aplicables a la protección de datos personales.
+
+### 2.2. Roles organizacionales (Designación del Oficial de Cumplimiento / DPD)
+
+{% set p2 = preguntas_respondidas | selectattr("id", "equalto", "P2") | first %}
+{% if p2 %}
+**Pregunta evaluada:** {{ p2.texto_pregunta }}
+**Respuesta:** {{ p2.respuesta }}
+{% for sub in p2.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+---
+
+## 3. REGISTRO DE ACTIVIDADES DE TRATAMIENTO (RAT)
+
+{% set p3 = preguntas_respondidas | selectattr("id", "equalto", "P3") | first %}
+{% if p3 %}
+### 3.1. Inventario de bases de datos y flujos de información
+
+**Respuesta:** {{ p3.respuesta }}
+
+### 3.2. Determinación de categorías de datos (datos generales vs. sensibles/biométricos)
+
+{% for sub in p3.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+### 3.3. Identificación de Encargados del Tratamiento y terceros receptores
+
+{% set p7 = preguntas_respondidas | selectattr("id", "equalto", "P7") | first %}
+{% if p7 %}
+**Respuesta:** {{ p7.respuesta }}
+{% for sub in p7.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+---
+
+## 4. EVALUACIÓN DE PRINCIPIOS Y BASES DE LICITUD
+
+### 4.1. Análisis de bases legales (Consentimiento, Interés Legítimo, Ejecución Contractual, etc.)
+
+{% set p15 = preguntas_respondidas | selectattr("id", "equalto", "P15") | first %}
+{% if p15 %}
+**Respuesta:** {{ p15.respuesta }}
+{% endif %}
+
+### 4.2. Principio de Minimización y Limitación de la Finalidad
+
+{% if p3 %}
+{% for sub in p3.subpreguntas_respondidas %}
+{% if "finalidad" in sub.texto or "estrictamente necesario" in sub.texto %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+### 4.3. Mecanismos de Transparencia y Deber de Información (Avisos de Privacidad)
+
+{% set p1 = preguntas_respondidas | selectattr("id", "equalto", "P1") | first %}
+{% if p1 %}
+{% for sub in p1.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+---
+
+## 5. MODELO DE ATENCIÓN DE DERECHOS ARCO
+
+{% set p14 = preguntas_respondidas | selectattr("id", "equalto", "P14") | first %}
+{% if p14 %}
+### 5.1. Procedimientos internos para recepción, validación y respuesta
+
+**Pregunta evaluada:** {{ p14.texto_pregunta }}
+**Respuesta:** {{ p14.respuesta }}
+
+### 5.2. Tiempos de respuesta y canalización de solicitudes
+
+{% for sub in p14.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+---
+
+## 6. ANÁLISIS DE RIESGOS Y MEDIDAS DE SEGURIDAD
+
+{% set p4 = preguntas_respondidas | selectattr("id", "equalto", "P4") | first %}
+### 6.1. Identificación y clasificación de riesgos para los titulares
+
+{% if p4 %}**Respuesta:** {{ p4.respuesta }}{% endif %}
+
+### 6.2. Evaluaciones de Impacto (EIPD / DPIA) realizadas (si aplica)
+
+{% if p4 %}
+{% for sub in p4.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+### 6.3. Medidas técnicas y organizativas (controles de ciberseguridad, ISO/IEC 27001)
+
+{% set preguntas_iso = preguntas_respondidas | selectattr("controles_iso") | list %}
+| Dominio | Pregunta | Respuesta | N° controles ISO relacionados |
+|---|---|---|---|
+{% for p in preguntas_iso %}
+| {{ p.dominio }} | {{ p.texto_pregunta }} | {{ p.respuesta }} | {{ p.controles_iso|length }} |
+{% endfor %}
+
+### 6.4. Protocolo de Gestión y Notificación de Brechas de Seguridad
+
+{% set p8 = preguntas_respondidas | selectattr("id", "equalto", "P8") | first %}
+{% if p8 %}
+**Respuesta:** {{ p8.respuesta }}
+{% for sub in p8.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+---
+
+## 7. MODELO DE PREVENCIÓN DE INFRACCIONES Y AUDITORÍA
+
+{% set p16 = preguntas_respondidas | selectattr("id", "equalto", "P16") | first %}
+### 7.1. Mecanismos de supervisión periódica y actualización del modelo
+
+{% if p16 %}
+**Respuesta:** {{ p16.respuesta }}
+{% for sub in p16.subpreguntas_respondidas %}
+- {{ sub.texto }} → {{ sub.respuesta }}
+{% endfor %}
+{% endif %}
+
+### 7.2. Plan de Capacitación continua al personal
+
+{% set p13 = preguntas_respondidas | selectattr("id", "equalto", "P13") | first %}
+{% if p13 %}**Respuesta:** {{ p13.respuesta }}{% endif %}
+
+---
+
+## 8. PLAN DE ACCIÓN Y CONCLUSIONES
+
+### 8.1. Brechas detectadas (GAP Analysis)
+
+{% if gap_items|length > 0 %}
+| Dominio | Hallazgo | Respuesta | Obligación Ley 21.719 asociada |
+|---|---|---|---|
+{% for item in gap_items %}
+| {{ item.dominio }} | {{ item.texto_pregunta }} | {{ item.respuesta }} | {{ item.obligacion_ley_21719 or "—" }} |
+{% endfor %}
+{% else %}
+No se detectaron brechas en las preguntas evaluadas.
+{% endif %}
+
+### 8.2. Hoja de ruta priorizada (medidas correctivas, responsables y plazos)
+
+{% if plan_de_accion|length > 0 %}
+| Hallazgo | Medida correctiva sugerida | Responsable sugerido | Plazo sugerido |
+|---|---|---|---|
+{% for accion in plan_de_accion %}
+| {{ accion.hallazgo }} | {{ accion.medida_correctiva }} | {{ accion.responsable_sugerido }} | {{ accion.plazo_sugerido }} |
+{% endfor %}
+{% else %}
+No se generaron acciones correctivas — sin brechas priorizadas.
+{% endif %}
+
+### 8.3. Dictamen final de cumplimiento
+
+{{ dictamen_final }}
+
+---
+
+*Informe generado automáticamente por una herramienta de pre-diagnóstico.
+No sustituye asesoría legal ni auditoría profesional — ver advertencia al
+inicio de este documento.*

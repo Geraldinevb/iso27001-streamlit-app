@@ -1,0 +1,94 @@
+n,codigo_iso,control,dominio,obligacion_ley21719,tipo_vinculo,nota_explicativa
+1,5.1,Políticas de seguridad de la información,5. Organizacionales,Principio de responsabilidad (accountability),Parcial,Política formal es evidencia de gobernanza; la ley no exige una política con ese nombre pero sí demostrar diligencia
+2,5.2,Roles y responsabilidades de seguridad de la información,5. Organizacionales,Delegado de Protección de Datos (DPD),Parcial,"Roles generales de seguridad son la base organizacional, pero no sustituyen el rol legal específico del DPD"
+3,5.3,Segregación de funciones,5. Organizacionales,Medidas de seguridad apropiadas al riesgo,Estructural,"Contribuye como buena práctica general, sin cláusula legal específica"
+4,5.4,Responsabilidades de la dirección,5. Organizacionales,Principio de responsabilidad (accountability),Parcial,Compromiso de la alta dirección como evidencia de gobernanza del tratamiento
+5,5.5,Contacto con autoridades,5. Organizacionales,Relación con la Agencia de Protección de Datos (APDP),Fuerte,Canal necesario para notificar brechas y atender fiscalización de la APDP
+6,5.6,Contacto con grupos de interés especial,5. Organizacionales,—,Estructural,Sin vínculo legal directo; aporta a la mejora continua del programa de seguridad
+7,5.7,Inteligencia de amenazas,5. Organizacionales,Base para evaluación de riesgo (DPIA),Parcial,Insumo técnico para identificar riesgos que pueden derivar en DPIA
+8,5.8,Seguridad de la información en la gestión de proyectos,5. Organizacionales,Privacidad desde el diseño,Parcial,Integrar seguridad en proyectos apoya (no sustituye) el enfoque de privacidad por diseño
+9,5.9,Inventario de información y otros activos asociados,5. Organizacionales,Registro de Actividades de Tratamiento (RAT),Fuerte,Insumo técnico directo para completar categorías de datos y activos del RAT
+10,5.10,Uso aceptable de la información y otros activos asociados,5. Organizacionales,Principio de finalidad,Parcial,Define límites de uso que deben alinearse con la finalidad declarada al titular
+11,5.11,Devolución de activos,5. Organizacionales,Eliminación de datos al término de la relación,Parcial,Relevante cuando los activos devueltos contienen datos personales
+12,5.12,Clasificación de la información,5. Organizacionales,Identificación de datos sensibles,Fuerte,Presupuesto necesario para aplicar el régimen reforzado de datos sensibles de la ley
+13,5.13,Etiquetado de la información,5. Organizacionales,Identificación de datos sensibles,Parcial,Complementa la clasificación para trazabilidad de datos sensibles
+14,5.14,Transferencia de información,5. Organizacionales,Transferencias internacionales de datos,Fuerte,Control técnico de transferencia debe verificar el mecanismo legal habilitante
+15,5.15,Control de acceso,5. Organizacionales,Principio de minimización,Parcial,Restringir accesos apoya el principio de necesidad de conocer
+16,5.16,Gestión de identidad,5. Organizacionales,Medidas de seguridad apropiadas al riesgo,Estructural,Buena práctica general sin cláusula legal específica
+17,5.17,Información de autenticación,5. Organizacionales,Medidas de seguridad apropiadas al riesgo,Estructural,Buena práctica general sin cláusula legal específica
+18,5.18,Derechos de acceso,5. Organizacionales,Principio de minimización,Parcial,Gestión formal de permisos apoya el acceso restringido a datos personales
+19,5.19,Seguridad de la información en las relaciones con proveedores,5. Organizacionales,Encargados de tratamiento,Fuerte,Base del régimen de responsabilidad de los encargados de tratamiento
+20,5.20,Tratamiento de la seguridad de la información en los acuerdos con proveedores,5. Organizacionales,"Cláusulas contractuales con encargados (auditoría, notificación de brechas)",Fuerte,Corresponde casi 1:1 con las exigencias contractuales mínimas de la ley
+21,5.21,Gestión de la seguridad de la información en la cadena de suministro de TIC,5. Organizacionales,Subencargados de tratamiento,Parcial,Relevante cuando el proveedor subcontrata a otros que también tratan datos
+22,5.22,"Monitoreo, revisión y gestión de cambios de los servicios de proveedores",5. Organizacionales,Derecho de auditoría sobre encargados,Fuerte,Corresponde directamente a la facultad de verificar cumplimiento del proveedor
+23,5.23,Seguridad de la información para el uso de servicios en la nube,5. Organizacionales,Transferencias internacionales,Parcial,Relevante si el proveedor cloud aloja datos fuera de Chile
+24,5.24,Planificación y preparación de la gestión de incidentes de seguridad,5. Organizacionales,Procedimiento de notificación de brechas,Fuerte,Es el proceso operativo que sostiene el cumplimiento del plazo legal de notificación
+25,5.25,Evaluación y decisión sobre eventos de seguridad de la información,5. Organizacionales,Evaluación de si una brecha implica alto riesgo para notificar a titulares,Fuerte,Corresponde al análisis que la ley exige para decidir si se notifica a los titulares
+26,5.26,Respuesta a incidentes de seguridad de la información,5. Organizacionales,Notificación de brechas a la Agencia dentro de 72 horas,Fuerte,Ejecuta materialmente el cumplimiento del plazo legal de notificación
+27,5.27,Aprendizaje de los incidentes de seguridad de la información,5. Organizacionales,—,Estructural,Mejora continua sin exigencia legal puntual
+28,5.28,Recopilación de evidencia,5. Organizacionales,Registro de incidentes ante la Agencia,Parcial,Sustenta la trazabilidad exigible ante una fiscalización
+29,5.29,Seguridad de la información durante la disrupción,5. Organizacionales,—,Estructural,Continuidad operativa sin cláusula legal específica
+30,5.30,Preparación de las TIC para la continuidad del negocio,5. Organizacionales,—,Estructural,Continuidad operativa sin cláusula legal específica
+31,5.31,"Requisitos legales, estatutarios, reglamentarios y contractuales",5. Organizacionales,Cumplimiento del marco general de la Ley 21.719,Fuerte,Es el control que formaliza el mapeo regulatorio de la organización
+32,5.32,Derechos de propiedad intelectual,5. Organizacionales,—,No aplica directo,Sin vínculo con la normativa de protección de datos
+33,5.33,Protección de los registros,5. Organizacionales,Plazos de conservación del RAT,Parcial,Apoya la integridad y disponibilidad de los registros exigidos por la ley
+34,5.34,Privacidad y protección de datos personales,5. Organizacionales,Núcleo de la Ley 21.719 (licitud y protección de datos personales),Fuerte,Es el control que declara explícitamente el cumplimiento de normativa de privacidad
+35,5.35,Revisión independiente de la seguridad de la información,5. Organizacionales,Auditorías de cumplimiento como evidencia ante la Agencia,Parcial,"Aporta evidencia de diligencia, no reemplaza una auditoría de cumplimiento legal"
+36,5.36,"Cumplimiento de políticas, normas y estándares de seguridad de la información",5. Organizacionales,Principio de responsabilidad (accountability),Parcial,Verificación interna que sostiene la capacidad de acreditar cumplimiento
+37,5.37,Procedimientos operativos documentados,5. Organizacionales,Evidencia documental exigida por la ley,Parcial,La documentación operativa es parte del estándar de accountability exigido
+38,6.1,Selección de personal,6. Personas,—,Parcial,Relevante solo para roles con acceso a datos sensibles o de alto volumen
+39,6.2,Términos y condiciones de empleo,6. Personas,Deber de confidencialidad,Parcial,Las cláusulas de confidencialidad laboral respaldan el deber de secreto
+40,6.3,"Concienciación, educación y formación en seguridad de la información",6. Personas,Capacitación en protección de datos,Parcial,"Buena práctica que refuerza la cultura de cumplimiento, no siempre exigida expresamente"
+41,6.4,Proceso disciplinario,6. Personas,—,No aplica directo,Sin vínculo directo con obligaciones específicas de la ley
+42,6.5,Responsabilidades tras la finalización o cambio de empleo,6. Personas,Eliminación de datos y accesos al término de la relación,Parcial,Relevante cuando el término de la relación implica revocar acceso a datos personales
+43,6.6,Acuerdos de confidencialidad o no divulgación,6. Personas,Deber de confidencialidad y secreto,Fuerte,Corresponde directamente al deber de confidencialidad que impone la ley
+44,6.7,Trabajo remoto,6. Personas,Medidas de seguridad en tratamiento remoto,Estructural,Buena práctica general sin cláusula legal específica
+45,6.8,Reporte de eventos de seguridad de la información,6. Personas,Reporte interno previo a la notificación de brechas,Fuerte,Es el primer eslabón que permite cumplir el plazo legal de 72 horas
+46,7.1,Perímetros de seguridad física,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+47,7.2,Entrada física,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+48,7.3,"Seguridad de oficinas, despachos e instalaciones",7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+49,7.4,Monitoreo de la seguridad física,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+50,7.5,Protección contra amenazas físicas y ambientales,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+51,7.6,Trabajo en áreas seguras,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+52,7.7,Escritorio y pantalla limpios,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+53,7.8,Emplazamiento y protección de equipos,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+54,7.9,Seguridad de los activos fuera de las instalaciones,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+55,7.10,Medios de almacenamiento,7. Físicos,Eliminación segura de soportes con datos personales,Parcial,Relevante cuando el soporte contiene datos personales que deben eliminarse de forma segura
+56,7.11,Servicios de suministro,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+57,7.12,Seguridad del cableado,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+58,7.13,Mantenimiento de equipos,7. Físicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+59,7.14,Eliminación o reutilización segura de equipos,7. Físicos,Derecho de supresión / eliminación segura de datos,Parcial,Relevante cuando el equipo dado de baja contenía datos personales
+60,8.1,Dispositivos de punto final de usuario,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+61,8.2,Derechos de acceso privilegiado,8. Tecnológicos,Principio de minimización,Parcial,Restringir accesos privilegiados es relevante para datos sensibles y evaluaciones de riesgo (DPIA)
+62,8.3,Restricción de acceso a la información,8. Tecnológicos,Principio de minimización,Parcial,Apoya el acceso restringido a datos personales según necesidad de conocer
+63,8.4,Acceso al código fuente,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+64,8.5,Autenticación segura,8. Tecnológicos,Medidas de seguridad apropiadas al riesgo,Estructural,Buena práctica general sin cláusula legal específica
+65,8.6,Gestión de capacidad,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+66,8.7,Protección contra malware,8. Tecnológicos,Medidas de seguridad apropiadas al riesgo,Estructural,Buena práctica general sin cláusula legal específica
+67,8.8,Gestión de vulnerabilidades técnicas,8. Tecnológicos,Medidas de seguridad apropiadas al riesgo,Parcial,La ley exige medidas proporcionales al riesgo; la gestión de vulnerabilidades es evidencia directa
+68,8.9,Gestión de la configuración,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+69,8.10,Eliminación de información,8. Tecnológicos,Derecho de supresión y plazos de conservación,Fuerte,Corresponde directamente a la obligación de eliminar datos al vencer el plazo o ante solicitud del titular
+70,8.11,Enmascaramiento de datos,8. Tecnológicos,Principio de minimización / seudonimización,Fuerte,Técnica reconocida por la ley para reducir riesgo en el tratamiento de datos personales
+71,8.12,Prevención de fuga de datos,8. Tecnológicos,Prevención de brechas de seguridad,Fuerte,Control técnico directamente orientado a evitar el escenario que dispara la obligación de notificar
+72,8.13,Respaldo de la información,8. Tecnológicos,Disponibilidad de datos ante solicitudes de titulares,Parcial,Relevante para responder oportunamente a solicitudes de acceso o portabilidad
+73,8.14,Redundancia de las instalaciones de procesamiento de información,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+74,8.15,Registro de eventos (logging),8. Tecnológicos,Trazabilidad para investigación de brechas,Parcial,Los registros de actividad son clave para reconstruir el alcance de una brecha
+75,8.16,Actividades de monitoreo,8. Tecnológicos,Detección temprana de brechas,Fuerte,"Determinante para cumplir el plazo de 72 horas, que corre desde el conocimiento del incidente"
+76,8.17,Sincronización de relojes,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+77,8.18,Uso de programas de utilidad privilegiados,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+78,8.19,Instalación de software en sistemas operativos,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+79,8.20,Seguridad de las redes,8. Tecnológicos,Medidas de seguridad apropiadas al riesgo,Estructural,Buena práctica general sin cláusula legal específica
+80,8.21,Seguridad de los servicios de red,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+81,8.22,Segregación de redes,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+82,8.23,Filtrado web,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+83,8.24,Uso de criptografía,8. Tecnológicos,Medidas de seguridad apropiadas a la naturaleza de los datos,Fuerte,Ejemplo explícito de medida técnica proporcional al riesgo del tratamiento
+84,8.25,Ciclo de vida de desarrollo seguro,8. Tecnológicos,Privacidad desde el diseño,Fuerte,Corresponde al enfoque de incorporar la protección de datos desde el diseño del sistema
+85,8.26,Requisitos de seguridad de las aplicaciones,8. Tecnológicos,Privacidad desde el diseño,Parcial,"Apoya, junto con 8.25, el cumplimiento de privacidad por diseño"
+86,8.27,Arquitectura y principios de ingeniería de sistemas seguros,8. Tecnológicos,Privacidad desde el diseño,Parcial,"Apoya, junto con 8.25, el cumplimiento de privacidad por diseño"
+87,8.28,Codificación segura,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+88,8.29,Pruebas de seguridad en desarrollo y aceptación,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+89,8.30,Desarrollo externalizado,8. Tecnológicos,Encargados de tratamiento,Parcial,Relevante cuando el desarrollador externo accede a datos personales de producción
+90,8.31,"Separación de entornos de desarrollo, prueba y producción",8. Tecnológicos,Minimización de datos reales en ambientes de prueba,Parcial,Evita exponer datos personales reales en entornos no productivos
+91,8.32,Gestión de cambios,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
+92,8.33,Información de prueba,8. Tecnológicos,Uso de datos reales en pruebas (riesgo de exposición),Parcial,La ley exige minimizar el uso de datos reales de titulares fuera de la finalidad original
+93,8.34,Protección de los sistemas de información durante las pruebas de auditoría,8. Tecnológicos,—,Estructural,Contribuye a las medidas de seguridad generales sin cláusula legal específica
