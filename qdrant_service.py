@@ -74,7 +74,8 @@ def buscar_controles(pregunta_usuario: str, top_k: int = 3) -> list[dict]:
     Retorna una lista de dicts, cada uno con:
       - score: similitud (más cerca de 1.0 = más relevante)
       - control_id, framework, domain, title, description, ejemplos,
-        nist_mapping, nist_mapping_status, ley_21719_ref, fuentes_referencia
+        nist_mapping, nist_mapping_status, ley_21719_obligacion,
+        ley_21719_tipo_vinculo, ley_21719_nota, fuentes_referencia
     """
     if not pregunta_usuario or not pregunta_usuario.strip():
         return []
@@ -116,8 +117,13 @@ def formatear_contexto(resultados: list[dict]) -> str:
         if r.get("ejemplos"):
             ejemplos_txt = " | ".join(r["ejemplos"])
             partes.append(f"Ejemplos prácticos: {ejemplos_txt}")
-        if r.get("ley_21719_ref"):
-            partes.append(f"Referencia Ley 21.719: {r['ley_21719_ref']}")
+        if r.get("ley_21719_tipo_vinculo"):
+            linea_ley = f"Vínculo con Ley 21.719: {r['ley_21719_tipo_vinculo']}"
+            if r.get("ley_21719_obligacion"):
+                linea_ley += f" — {r['ley_21719_obligacion']}"
+            partes.append(linea_ley)
+            if r.get("ley_21719_nota"):
+                partes.append(f"Nota: {r['ley_21719_nota']}")
         if r.get("nist_mapping"):
             partes.append(
                 f"Referencia NIST CSF 2.0 (no oficial): {r['nist_mapping']}"

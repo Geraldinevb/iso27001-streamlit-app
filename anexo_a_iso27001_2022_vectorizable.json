@@ -5,7 +5,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.PO-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 ter (deber de información y transparencia: política publicada)",
     "title": "Políticas de seguridad de la información",
     "description": "Establecer una dirección de gestión y apoyo para la seguridad de la información, alineada con los requisitos del negocio, leyes y regulaciones, aprobada por la alta dirección y comunicada a todo el personal.",
     "ejemplos": [
@@ -17,7 +16,10 @@
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5, dominios organizacionales)",
       "iso27000.es (estructura de la norma)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de responsabilidad (accountability)",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Política formal es evidencia de gobernanza; la ley no exige una política con ese nombre pero sí demostrar diligencia"
   },
   {
     "control_id": "ISO_5.10",
@@ -25,7 +27,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.PO-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Uso aceptable de la información y otros activos asociados",
     "description": "Identificar, documentar e implementar reglas para el uso aceptable de la información y de los activos asociados a la información.",
     "ejemplos": [
@@ -36,7 +37,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre uso aceptable de activos)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de finalidad",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Define límites de uso que deben alinearse con la finalidad declarada al titular"
   },
   {
     "control_id": "ISO_5.11",
@@ -44,7 +48,6 @@
     "domain": "Organizacional",
     "nist_mapping": "ID.AM-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Devolución de activos",
     "description": "Asegurar que el personal y otras partes interesadas devuelvan todos los activos de la organización que estén en su posesión al finalizar su empleo, contrato o acuerdo.",
     "ejemplos": [
@@ -55,7 +58,10 @@
     ],
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5, vinculado a A.6.5)"
-    ]
+    ],
+    "ley_21719_obligacion": "Eliminación de datos al término de la relación",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante cuando los activos devueltos contienen datos personales"
   },
   {
     "control_id": "ISO_5.12",
@@ -63,7 +69,6 @@
     "domain": "Organizacional",
     "nist_mapping": "ID.AM-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 16 y 16 bis (régimen de datos sensibles)",
     "title": "Clasificación de la información",
     "description": "Clasificar la información según las necesidades de confidencialidad, integridad y disponibilidad de la organización, y sus requisitos legales, regulatorios y contractuales.",
     "ejemplos": [
@@ -74,7 +79,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre clasificación de la información)"
-    ]
+    ],
+    "ley_21719_obligacion": "Identificación de datos sensibles",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Presupuesto necesario para aplicar el régimen reforzado de datos sensibles de la ley"
   },
   {
     "control_id": "ISO_5.13",
@@ -82,7 +90,6 @@
     "domain": "Organizacional",
     "nist_mapping": "ID.AM-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Etiquetado de la información",
     "description": "Desarrollar e implementar un conjunto adecuado de procedimientos para el etiquetado de la información, según el esquema de clasificación adoptado por la organización.",
     "ejemplos": [
@@ -93,7 +100,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre etiquetado de la información)"
-    ]
+    ],
+    "ley_21719_obligacion": "Identificación de datos sensibles",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Complementa la clasificación para trazabilidad de datos sensibles"
   },
   {
     "control_id": "ISO_5.14",
@@ -101,7 +111,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.DS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 15 (cesión de datos personales); Art. 27-28 (transferencia internacional)",
     "title": "Transferencia de información",
     "description": "Establecer reglas, procedimientos o acuerdos apropiados para proteger la información transferida dentro de la organización y entre la organización y terceros.",
     "ejemplos": [
@@ -112,7 +121,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre transferencia de información)"
-    ]
+    ],
+    "ley_21719_obligacion": "Transferencias internacionales de datos",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Control técnico de transferencia debe verificar el mecanismo legal habilitante"
   },
   {
     "control_id": "ISO_5.15",
@@ -120,7 +132,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.AA-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Control de acceso",
     "description": "Establecer e implementar reglas para controlar el acceso físico y lógico a la información y otros activos asociados, según los requisitos del negocio y de seguridad.",
     "ejemplos": [
@@ -131,7 +142,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es/a9-control-de-acceso (contenido general sobre control de acceso)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de minimización",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Restringir accesos apoya el principio de necesidad de conocer"
   },
   {
     "control_id": "ISO_5.16",
@@ -139,7 +153,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.AA-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Gestión de identidad",
     "description": "Gestionar el ciclo de vida completo de las identidades para permitir la identificación única de personas y sistemas, y habilitar la asignación adecuada de derechos de acceso.",
     "ejemplos": [
@@ -150,7 +163,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de identidad y acceso)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Buena práctica general sin cláusula legal específica"
   },
   {
     "control_id": "ISO_5.17",
@@ -158,7 +174,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.AA-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Información de autenticación",
     "description": "Controlar la asignación y gestión de la información de autenticación mediante un proceso de gestión, incluyendo asesoramiento al personal sobre su manejo adecuado.",
     "ejemplos": [
@@ -169,7 +184,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de credenciales)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Buena práctica general sin cláusula legal específica"
   },
   {
     "control_id": "ISO_5.18",
@@ -177,7 +195,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.AA-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Derechos de acceso",
     "description": "Otorgar, revisar, modificar y eliminar los derechos de acceso a la información y otros activos asociados de acuerdo con la política de control de acceso de la organización.",
     "ejemplos": [
@@ -188,7 +205,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es/a9-control-de-acceso (contenido general sobre revisión de derechos de acceso)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de minimización",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Gestión formal de permisos apoya el acceso restringido a datos personales"
   },
   {
     "control_id": "ISO_5.19",
@@ -196,7 +216,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.SC-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 15 bis (tratamiento a través de tercero mandatario o encargado)",
     "title": "Seguridad de la información en las relaciones con proveedores",
     "description": "Definir e implementar procesos y procedimientos para gestionar los riesgos de seguridad de la información asociados con el uso de productos o servicios de proveedores.",
     "ejemplos": [
@@ -207,7 +226,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre relaciones con proveedores, vinculado a A.5.20-5.22)"
-    ]
+    ],
+    "ley_21719_obligacion": "Encargados de tratamiento",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Base del régimen de responsabilidad de los encargados de tratamiento"
   },
   {
     "control_id": "ISO_5.2",
@@ -215,7 +237,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.RR-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Roles y responsabilidades de seguridad de la información",
     "description": "Definir y asignar roles y responsabilidades de seguridad de la información de acuerdo con las necesidades de la organización.",
     "ejemplos": [
@@ -226,7 +247,10 @@
     ],
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5)"
-    ]
+    ],
+    "ley_21719_obligacion": "Delegado de Protección de Datos (DPD)",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Roles generales de seguridad son la base organizacional, pero no sustituyen el rol legal específico del DPD"
   },
   {
     "control_id": "ISO_5.20",
@@ -234,7 +258,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.SC-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 15 bis, inciso 3° (contrato con el encargado del tratamiento)",
     "title": "Abordar la seguridad de la información dentro de los acuerdos con proveedores",
     "description": "Establecer y acordar con cada proveedor los requisitos de seguridad de la información relevantes según el tipo de relación con dicho proveedor.",
     "ejemplos": [
@@ -245,7 +268,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 5.19-5.22)"
-    ]
+    ],
+    "ley_21719_obligacion": "Cláusulas contractuales con encargados (auditoría, notificación de brechas)",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Corresponde casi 1:1 con las exigencias contractuales mínimas de la ley"
   },
   {
     "control_id": "ISO_5.21",
@@ -253,7 +279,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.SC-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Gestión de la seguridad de la información en la cadena de suministro de TIC",
     "description": "Gestionar los riesgos de seguridad de la información asociados con la cadena de suministro de productos y servicios TIC.",
     "ejemplos": [
@@ -264,7 +289,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 5.19-5.22)"
-    ]
+    ],
+    "ley_21719_obligacion": "Subencargados de tratamiento",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante cuando el proveedor subcontrata a otros que también tratan datos"
   },
   {
     "control_id": "ISO_5.22",
@@ -272,7 +300,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.SC-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 15 bis, inciso 4° (deber del encargado de reportar vulneraciones al responsable)",
     "title": "Monitoreo, revisión y gestión de cambios de servicios de proveedores",
     "description": "Monitorear, revisar, evaluar y gestionar regularmente los cambios en las prácticas de seguridad de la información de los proveedores y en la prestación del servicio.",
     "ejemplos": [
@@ -283,7 +310,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 5.19-5.22)"
-    ]
+    ],
+    "ley_21719_obligacion": "Derecho de auditoría sobre encargados",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Corresponde directamente a la facultad de verificar cumplimiento del proveedor"
   },
   {
     "control_id": "ISO_5.23",
@@ -291,7 +321,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.PS-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 15 bis (tratamiento a través de tercero mandatario o encargado, aplicable a proveedores cloud)",
     "title": "Seguridad de la información para el uso de servicios en la nube",
     "description": "Especificar y gestionar los requisitos de seguridad de la información para la adquisición, uso, gestión y salida de servicios en la nube.",
     "ejemplos": [
@@ -305,7 +334,10 @@
       "hightable.io/iso-27001-annex-a-5-23",
       "grc360.cl/blog/seguridad-nube-controles-iso-27001",
       "infoproteccion.com/iso-27001/implementacion-control-a-5-23"
-    ]
+    ],
+    "ley_21719_obligacion": "Transferencias internacionales",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante si el proveedor cloud aloja datos fuera de Chile"
   },
   {
     "control_id": "ISO_5.24",
@@ -313,7 +345,6 @@
     "domain": "Organizacional",
     "nist_mapping": "RS.MA-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 sexies; Art. 49, letra f) (mecanismos de reporte a la Agencia)",
     "title": "Planificación y preparación de la gestión de incidentes de seguridad de la información",
     "description": "Planificar y preparar la gestión de incidentes de seguridad de la información definiendo roles, responsabilidades y procedimientos.",
     "ejemplos": [
@@ -324,7 +355,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
-    ]
+    ],
+    "ley_21719_obligacion": "Procedimiento de notificación de brechas",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Es el proceso operativo que sostiene el cumplimiento del plazo legal de notificación"
   },
   {
     "control_id": "ISO_5.25",
@@ -332,7 +366,6 @@
     "domain": "Organizacional",
     "nist_mapping": "RS.MA-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 sexies, inciso 1° (riesgo razonable como criterio para reportar)",
     "title": "Evaluación y decisión sobre eventos de seguridad de la información",
     "description": "Evaluar los eventos de seguridad de la información y decidir si deben clasificarse como incidentes de seguridad de la información.",
     "ejemplos": [
@@ -343,7 +376,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
-    ]
+    ],
+    "ley_21719_obligacion": "Evaluación de si una brecha implica alto riesgo para notificar a titulares",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Corresponde al análisis que la ley exige para decidir si se notifica a los titulares"
   },
   {
     "control_id": "ISO_5.26",
@@ -351,7 +387,6 @@
     "domain": "Organizacional",
     "nist_mapping": "RS.MI-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 sexies (deber de reportar vulneraciones a las medidas de seguridad)",
     "title": "Respuesta a incidentes de seguridad de la información",
     "description": "Responder a los incidentes de seguridad de la información de acuerdo con procedimientos documentados.",
     "ejemplos": [
@@ -362,7 +397,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
-    ]
+    ],
+    "ley_21719_obligacion": "Notificación de brechas a la Agencia dentro de 72 horas",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Ejecuta materialmente el cumplimiento del plazo legal de notificación"
   },
   {
     "control_id": "ISO_5.27",
@@ -370,7 +408,6 @@
     "domain": "Organizacional",
     "nist_mapping": "ID.IM-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 sexies, inciso 2° (medidas adoptadas para precaver incidentes futuros)",
     "title": "Aprender de los incidentes de seguridad de la información",
     "description": "Usar el conocimiento obtenido de los incidentes de seguridad de la información para fortalecer y mejorar los controles de seguridad.",
     "ejemplos": [
@@ -381,7 +418,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Mejora continua sin exigencia legal puntual"
   },
   {
     "control_id": "ISO_5.28",
@@ -389,7 +429,6 @@
     "domain": "Organizacional",
     "nist_mapping": "RS.AN-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Recopilación de evidencia",
     "description": "Establecer e implementar procedimientos para la identificación, recolección, adquisición y preservación de evidencia relacionada con eventos de seguridad de la información.",
     "ejemplos": [
@@ -400,7 +439,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre gestión de incidentes, A.5.24-5.28)"
-    ]
+    ],
+    "ley_21719_obligacion": "Registro de incidentes ante la Agencia",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Sustenta la trazabilidad exigible ante una fiscalización"
   },
   {
     "control_id": "ISO_5.29",
@@ -408,7 +450,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.IR-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra c) (capacidad de restaurar disponibilidad y acceso)",
     "title": "Seguridad de la información durante la interrupción",
     "description": "Planificar cómo mantener la seguridad de la información en el nivel apropiado durante una interrupción del negocio.",
     "ejemplos": [
@@ -419,7 +460,10 @@
     ],
     "fuentes_referencia": [
       "sprinto.com/es/iso-27001/business-continuity (contenido general A.5.29-5.30)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Continuidad operativa sin cláusula legal específica"
   },
   {
     "control_id": "ISO_5.3",
@@ -427,7 +471,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.RR-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Segregación de funciones",
     "description": "Separar funciones y áreas de responsabilidad en conflicto para reducir el riesgo de acceso no autorizado, modificación indebida o uso incorrecto de los activos de la organización.",
     "ejemplos": [
@@ -438,7 +481,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre segregación de funciones)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye como buena práctica general, sin cláusula legal específica"
   },
   {
     "control_id": "ISO_5.30",
@@ -446,7 +492,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.IR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra b) y c) (disponibilidad y resiliencia de los sistemas)",
     "title": "Preparación de las TIC para la continuidad del negocio",
     "description": "Planificar, implementar, mantener y probar la preparación de las TIC según los objetivos de continuidad del negocio y los requisitos de continuidad de las TIC.",
     "ejemplos": [
@@ -459,7 +504,10 @@
       "es.isms.online (5-30-readiness-for-business-continuity-2022, control-5-30-ict-readiness-for-business-continuity)",
       "dqsglobal.com/es-ar/aprenda/blog/seguridad-tic-para-la-continuidad-del-negocio",
       "sprinto.com/es/iso-27001/business-continuity"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Continuidad operativa sin cláusula legal específica"
   },
   {
     "control_id": "ISO_5.31",
@@ -467,7 +515,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.OC-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 1° (objeto y ámbito de aplicación); Art. 3° (principios)",
     "title": "Requisitos legales, estatutarios, reglamentarios y contractuales",
     "description": "Identificar, documentar y mantener actualizados los requisitos legales, estatutarios, reglamentarios y contractuales relevantes para la seguridad de la información.",
     "ejemplos": [
@@ -478,7 +525,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre cumplimiento legal)"
-    ]
+    ],
+    "ley_21719_obligacion": "Cumplimiento del marco general de la Ley 21.719",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Es el control que formaliza el mapeo regulatorio de la organización"
   },
   {
     "control_id": "ISO_5.32",
@@ -486,7 +536,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.OC-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Derechos de propiedad intelectual",
     "description": "Implementar procedimientos adecuados para proteger los derechos de propiedad intelectual, propios y de terceros.",
     "ejemplos": [
@@ -497,7 +546,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre propiedad intelectual)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "No aplica directo",
+    "ley_21719_nota": "Sin vínculo con la normativa de protección de datos"
   },
   {
     "control_id": "ISO_5.33",
@@ -505,7 +557,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 3°, letra c) (principio de proporcionalidad: plazo de conservación)",
     "title": "Protección de registros",
     "description": "Proteger los registros contra pérdida, destrucción, falsificación, acceso no autorizado y divulgación no autorizada, de acuerdo con los requisitos legales, regulatorios, contractuales y de negocio.",
     "ejemplos": [
@@ -516,7 +567,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de registros)"
-    ]
+    ],
+    "ley_21719_obligacion": "Plazos de conservación del RAT",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Apoya la integridad y disponibilidad de los registros exigidos por la ley"
   },
   {
     "control_id": "ISO_5.34",
@@ -524,7 +578,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 3° (principios) y Art. 14 a 14 septies (obligaciones del responsable) en su integridad",
     "title": "Privacidad y protección de datos personales (PII)",
     "description": "Identificar y cumplir los requisitos relacionados con la preservación de la privacidad y la protección de datos personales, según las leyes, regulaciones y requisitos contractuales aplicables.",
     "ejemplos": [
@@ -535,7 +588,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre privacidad y protección de datos)"
-    ]
+    ],
+    "ley_21719_obligacion": "Núcleo de la Ley 21.719 (licitud y protección de datos personales)",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Es el control que declara explícitamente el cumplimiento de normativa de privacidad"
   },
   {
     "control_id": "ISO_5.35",
@@ -543,7 +599,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.OV-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 51 (certificación, registro y supervisión del modelo de prevención de infracciones)",
     "title": "Revisión independiente de la seguridad de la información",
     "description": "Revisar de forma independiente el enfoque de la organización para gestionar la seguridad de la información y su implementación, a intervalos planificados o cuando ocurran cambios significativos.",
     "ejemplos": [
@@ -554,7 +609,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre auditoría interna e independiente)"
-    ]
+    ],
+    "ley_21719_obligacion": "Auditorías de cumplimiento como evidencia ante la Agencia",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Aporta evidencia de diligencia, no reemplaza una auditoría de cumplimiento legal"
   },
   {
     "control_id": "ISO_5.36",
@@ -562,7 +620,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.OV-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 48 (prevención de infracciones); Art. 49 (modelo de prevención)",
     "title": "Cumplimiento de políticas, reglas y estándares de seguridad de la información",
     "description": "Revisar regularmente el cumplimiento de la política de seguridad de la información de la organización, las políticas específicas por tema, reglas y estándares.",
     "ejemplos": [
@@ -573,7 +630,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre cumplimiento normativo interno)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de responsabilidad (accountability)",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Verificación interna que sostiene la capacidad de acreditar cumplimiento"
   },
   {
     "control_id": "ISO_5.37",
@@ -581,7 +641,6 @@
     "domain": "Organizacional",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Procedimientos operativos documentados",
     "description": "Documentar y poner a disposición del personal que los necesite los procedimientos operativos para las actividades de procesamiento de información.",
     "ejemplos": [
@@ -592,7 +651,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre procedimientos documentados)"
-    ]
+    ],
+    "ley_21719_obligacion": "Evidencia documental exigida por la ley",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "La documentación operativa es parte del estándar de accountability exigido"
   },
   {
     "control_id": "ISO_5.4",
@@ -600,7 +662,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.RR-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Responsabilidades de gestión",
     "description": "Exigir a la dirección que el personal y contratistas apliquen la seguridad de la información conforme a las políticas y procedimientos establecidos.",
     "ejemplos": [
@@ -611,7 +672,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general Anexo A 5)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de responsabilidad (accountability)",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Compromiso de la alta dirección como evidencia de gobernanza del tratamiento"
   },
   {
     "control_id": "ISO_5.5",
@@ -619,7 +683,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.OC-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Contacto con autoridades",
     "description": "Establecer y mantener contactos apropiados con autoridades relevantes (policiales, reguladoras, de protección de datos) para agilizar la respuesta ante incidentes o requerimientos legales.",
     "ejemplos": [
@@ -630,7 +693,10 @@
     ],
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5)"
-    ]
+    ],
+    "ley_21719_obligacion": "Relación con la Agencia de Protección de Datos (APDP)",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Canal necesario para notificar brechas y atender fiscalización de la APDP"
   },
   {
     "control_id": "ISO_5.6",
@@ -638,7 +704,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.OC-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Contacto con grupos de interés especial",
     "description": "Mantener contacto con grupos de interés especial, foros de seguridad y asociaciones profesionales para estar al tanto de buenas prácticas y nuevas amenazas.",
     "ejemplos": [
@@ -649,7 +714,10 @@
     ],
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Sin vínculo legal directo; aporta a la mejora continua del programa de seguridad"
   },
   {
     "control_id": "ISO_5.7",
@@ -657,7 +725,6 @@
     "domain": "Organizacional",
     "nist_mapping": "ID.RA-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Inteligencia de amenazas",
     "description": "Recopilar y analizar información sobre amenazas a la seguridad de la información para producir inteligencia procesable que permita anticipar y mitigar riesgos.",
     "ejemplos": [
@@ -669,7 +736,10 @@
     "fuentes_referencia": [
       "es.isms.online (5-7-threat-intelligence-2022 y how-to-implement...control-5-7)",
       "infoproteccion.com/iso-27001/implementacion-control-a-5-7-inteligencia-de-amenazas"
-    ]
+    ],
+    "ley_21719_obligacion": "Base para evaluación de riesgo (DPIA)",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Insumo técnico para identificar riesgos que pueden derivar en DPIA"
   },
   {
     "control_id": "ISO_5.8",
@@ -677,7 +747,6 @@
     "domain": "Organizacional",
     "nist_mapping": "GV.PO-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
     "title": "Seguridad de la información en la gestión de proyectos",
     "description": "Integrar la seguridad de la información en la gestión de proyectos, sin importar el tipo de proyecto, para asegurar que los riesgos se identifiquen y traten a tiempo.",
     "ejemplos": [
@@ -688,7 +757,10 @@
     ],
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5)"
-    ]
+    ],
+    "ley_21719_obligacion": "Privacidad desde el diseño",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Integrar seguridad en proyectos apoya (no sustituye) el enfoque de privacidad por diseño"
   },
   {
     "control_id": "ISO_5.9",
@@ -696,7 +768,6 @@
     "domain": "Organizacional",
     "nist_mapping": "ID.AM-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 ter, letra d) (categorías de datos tratados)",
     "title": "Inventario de información y otros activos asociados",
     "description": "Identificar los activos de información y otros activos asociados de la organización, y mantener un inventario apropiado de ellos.",
     "ejemplos": [
@@ -707,7 +778,10 @@
     ],
     "fuentes_referencia": [
       "grc360.cl (contenido general Anexo A 5)"
-    ]
+    ],
+    "ley_21719_obligacion": "Registro de Actividades de Tratamiento (RAT)",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Insumo técnico directo para completar categorías de datos y activos del RAT"
   },
   {
     "control_id": "ISO_6.1",
@@ -715,7 +789,6 @@
     "domain": "Personas",
     "nist_mapping": "GV.RR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Selección",
     "description": "Verificar que el personal, contratistas y terceros sean idóneos y confiables para el rol antes de darles acceso a información sensible, de forma proporcional al riesgo del cargo.",
     "ejemplos": [
@@ -728,7 +801,10 @@
       "es.isms.online (6-1-screening-2022)",
       "kymatio.com/es/blog/iso-27001-controles-humanos-anexo-a6-nis2",
       "pmg-ssi.com/2015/05/iso-27001-seleccion-del-personal"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante solo para roles con acceso a datos sensibles o de alto volumen"
   },
   {
     "control_id": "ISO_6.2",
@@ -736,7 +812,6 @@
     "domain": "Personas",
     "nist_mapping": "GV.RR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 bis, inciso 3° (deber de secreto extendido a dependientes)",
     "title": "Términos y condiciones de empleo",
     "description": "Dejar establecidas contractualmente, desde el inicio de la relación laboral, las responsabilidades del trabajador y de la organización en materia de seguridad de la información.",
     "ejemplos": [
@@ -749,7 +824,10 @@
       "es.isms.online (6-2-terms-and-conditions-of-employment-2022)",
       "escuelaeuropeaexcelencia.com/2020/03",
       "isotools.org/2022/08/19"
-    ]
+    ],
+    "ley_21719_obligacion": "Deber de confidencialidad",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Las cláusulas de confidencialidad laboral respaldan el deber de secreto"
   },
   {
     "control_id": "ISO_6.3",
@@ -757,7 +835,6 @@
     "domain": "Personas",
     "nist_mapping": "PR.AT-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 50, letra d) (formación permanente, función del delegado de protección de datos)",
     "title": "Concienciación, educación y capacitación en seguridad de la información",
     "description": "Asegurar que todo el personal reciba formación adecuada a su función y actualizada sobre políticas de seguridad, para reducir el error humano como vector de incidentes.",
     "ejemplos": [
@@ -770,7 +847,10 @@
       "smartfense.com/blog/iso-27001-2022-control-6-3-concienciacion",
       "guardey.com/es/iso27001-security-awareness-training",
       "blog.usecure.io/es/iso-27001-security-awareness-training"
-    ]
+    ],
+    "ley_21719_obligacion": "Capacitación en protección de datos",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Buena práctica que refuerza la cultura de cumplimiento, no siempre exigida expresamente"
   },
   {
     "control_id": "ISO_6.4",
@@ -778,7 +858,6 @@
     "domain": "Personas",
     "nist_mapping": "GV.RR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 49, letra g) (sanciones administrativas internas del modelo de prevención)",
     "title": "Proceso disciplinario",
     "description": "Contar con un procedimiento formal, conocido por el personal, para responder de forma proporcional y documentada ante infracciones a la política de seguridad de la información.",
     "ejemplos": [
@@ -791,7 +870,10 @@
       "es.isms.online (6-4-disciplinary-process-2022)",
       "isotools.org/2022/08/19",
       "normaiso27001.es/a7-seguridad-relativa-a-los-recursos"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "No aplica directo",
+    "ley_21719_nota": "Sin vínculo directo con obligaciones específicas de la ley"
   },
   {
     "control_id": "ISO_6.5",
@@ -799,7 +881,6 @@
     "domain": "Personas",
     "nist_mapping": "PR.AA-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 bis, inciso 1° (deber de secreto subsiste tras concluida la relación)",
     "title": "Responsabilidades después de la terminación o cambio de empleo",
     "description": "Evitar el acceso residual a información y sistemas una vez que finaliza o cambia la relación laboral o contractual.",
     "ejemplos": [
@@ -812,7 +893,10 @@
       "es.isms.online (6-5-responsibilities-after-termination-change-of-employment-2022 y checklist/annex-a-6-5-checklist)",
       "hightable.io/iso-27001-annex-a-6-5",
       "checkflow.io/blog/hr-offboarding-checklist"
-    ]
+    ],
+    "ley_21719_obligacion": "Eliminación de datos y accesos al término de la relación",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante cuando el término de la relación implica revocar acceso a datos personales"
   },
   {
     "control_id": "ISO_6.6",
@@ -820,7 +904,6 @@
     "domain": "Personas",
     "nist_mapping": "PR.AT-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 bis (deber de secreto o confidencialidad)",
     "title": "Acuerdos de confidencialidad o no divulgación",
     "description": "Proteger la información confidencial que personal, socios y proveedores conocen en el marco de su relación con la organización, mediante compromisos exigibles de no divulgación.",
     "ejemplos": [
@@ -832,7 +915,10 @@
     "fuentes_referencia": [
       "es.isms.online (6-6-confidentiality-or-non-disclosure-agreements-2022 y how-to-implement...control-6-6)",
       "upguard.com/compliance/iso-27001/6-6"
-    ]
+    ],
+    "ley_21719_obligacion": "Deber de confidencialidad y secreto",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Corresponde directamente al deber de confidencialidad que impone la ley"
   },
   {
     "control_id": "ISO_6.7",
@@ -840,7 +926,6 @@
     "domain": "Personas",
     "nist_mapping": "PR.AA-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Trabajo remoto",
     "description": "Garantizar que la información se proteja con el mismo nivel de seguridad quien trabaja fuera de las instalaciones de la organización que dentro de ellas.",
     "ejemplos": [
@@ -853,7 +938,10 @@
       "es.isms.online (control-6-7-remote-working)",
       "edorteam.com/iso-27001-teletrabajo-seguro",
       "escuelaeuropeaexcelencia.com/2019/10/politica-de-acceso-remoto-iso-27001"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad en tratamiento remoto",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Buena práctica general sin cláusula legal específica"
   },
   {
     "control_id": "ISO_6.8",
@@ -861,7 +949,6 @@
     "domain": "Personas",
     "nist_mapping": "RS.CO-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 sexies; Art. 49, letra f) (mecanismos de reporte interno)",
     "title": "Reporte de eventos de seguridad de la información",
     "description": "Asegurar que el personal informe con rapidez y por un canal conocido cualquier evento o debilidad de seguridad detectada, sin temor a represalias, para permitir una respuesta temprana.",
     "ejemplos": [
@@ -874,7 +961,10 @@
       "es.isms.online (6-8-information-security-event-reporting-2022)",
       "kymatio.com/es/blog/iso-27001-controles-humanos-anexo-a6-nis2",
       "isotools.us/2025/05/06"
-    ]
+    ],
+    "ley_21719_obligacion": "Reporte interno previo a la notificación de brechas",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Es el primer eslabón que permite cumplir el plazo legal de 72 horas"
   },
   {
     "control_id": "ISO_7.1",
@@ -882,7 +972,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Perímetros de seguridad física",
     "description": "Definir y usar perímetros de seguridad para proteger las áreas que contienen información y otros activos, evitando el acceso físico no autorizado.",
     "ejemplos": [
@@ -895,7 +984,10 @@
       "es.isms.online (7-2-physical-entry-2022)",
       "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.10",
@@ -903,7 +995,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies (evitar alteración, destrucción, pérdida o acceso no autorizado)",
     "title": "Medios de almacenamiento",
     "description": "Gestionar de forma segura los medios de almacenamiento durante todo su ciclo de vida (adquisición, uso, transporte y eliminación) para evitar la divulgación, modificación, eliminación o destrucción no autorizada de información.",
     "ejemplos": [
@@ -914,7 +1005,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (7-10-storage-media-2022 y how-to-implement...control-7-10-storage-media)"
-    ]
+    ],
+    "ley_21719_obligacion": "Eliminación segura de soportes con datos personales",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante cuando el soporte contiene datos personales que deben eliminarse de forma segura"
   },
   {
     "control_id": "ISO_7.11",
@@ -922,7 +1016,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.IR-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Servicios de soporte",
     "description": "Proteger la información y los activos frente a fallas en servicios de soporte esenciales como energía eléctrica, telecomunicaciones, suministro de agua o climatización.",
     "ejemplos": [
@@ -934,7 +1027,10 @@
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 7)",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.12",
@@ -942,7 +1038,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.IR-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Seguridad del cableado",
     "description": "Proteger el cableado de energía y telecomunicaciones que transporta datos o soporta servicios de información frente a intercepción, interferencia o daño.",
     "ejemplos": [
@@ -954,7 +1049,10 @@
     "fuentes_referencia": [
       "iso27000.es/iso27002_11.html",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.13",
@@ -962,7 +1060,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Mantenimiento de equipos",
     "description": "Mantener correctamente los equipos para asegurar su disponibilidad, integridad y confidencialidad continuas de la información que procesan.",
     "ejemplos": [
@@ -974,7 +1071,10 @@
     "fuentes_referencia": [
       "iso27000.es/iso27002_11.html",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.14",
@@ -982,7 +1082,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 3°, letra c) (principio de proporcionalidad: supresión al cumplir el fin)",
     "title": "Eliminación segura o reutilización de equipos",
     "description": "Verificar que los equipos que contienen medios de almacenamiento sean revisados antes de su eliminación o reutilización, para asegurar que los datos sensibles y el software con licencia hayan sido eliminados o sobrescritos de forma segura.",
     "ejemplos": [
@@ -993,7 +1092,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (7-14-secure-disposal-or-re-use-of-equipment-2022)"
-    ]
+    ],
+    "ley_21719_obligacion": "Derecho de supresión / eliminación segura de datos",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante cuando el equipo dado de baja contenía datos personales"
   },
   {
     "control_id": "ISO_7.2",
@@ -1001,7 +1103,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Entrada física",
     "description": "Asegurar que las áreas seguras estén protegidas con controles de entrada apropiados, de modo que solo el personal autorizado pueda ingresar.",
     "ejemplos": [
@@ -1014,7 +1115,10 @@
       "es.isms.online (7-2-physical-entry-2022)",
       "linkedin.com/pulse/control-de-acceso-orientación-para-la-aplicación-iso-27001-mereles",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.3",
@@ -1022,7 +1126,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Seguridad de oficinas, salas e instalaciones",
     "description": "Diseñar y aplicar medidas de seguridad física adecuadas para oficinas, salas e instalaciones donde se procesa información sensible.",
     "ejemplos": [
@@ -1035,7 +1138,10 @@
       "es.isms.online (control-7-3, contenido general Anexo A 7)",
       "isotools.org/2022/08/26/controles-fisicos-en-iso-iec-270022022",
       "normaiso27001.es/a11-seguridad-fisica-y-del-entorno"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.4",
@@ -1043,7 +1149,6 @@
     "domain": "Físicos",
     "nist_mapping": "DE.CM-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Monitoreo de seguridad física",
     "description": "Supervisar continuamente las instalaciones para detectar y disuadir accesos físicos no autorizados u otras amenazas.",
     "ejemplos": [
@@ -1056,7 +1161,10 @@
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles",
       "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
       "isotools.org/2022/08/26/controles-fisicos-en-iso-iec-270022022"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.5",
@@ -1064,7 +1172,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.IR-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Protección contra amenazas físicas y ambientales",
     "description": "Diseñar y aplicar protección física contra desastres naturales, ataques maliciosos o accidentes que puedan afectar la información y los activos.",
     "ejemplos": [
@@ -1077,7 +1184,10 @@
       "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles",
       "iso27000.es/iso27002_11.html"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.6",
@@ -1085,7 +1195,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Trabajo en áreas seguras",
     "description": "Diseñar y aplicar procedimientos para el trabajo que se realiza dentro de áreas seguras, minimizando el riesgo de exposición de información sensible.",
     "ejemplos": [
@@ -1098,7 +1207,10 @@
       "normaiso27001.es/a11-seguridad-fisica-y-del-entorno",
       "iso27000.es/iso27002_11.html",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.7",
@@ -1106,7 +1218,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.AT-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Escritorio limpio y pantalla limpia",
     "description": "Reducir el riesgo de acceso no autorizado, pérdida o daño de información exigiendo que los escritorios y pantallas no queden con información sensible expuesta.",
     "ejemplos": [
@@ -1118,7 +1229,10 @@
     "fuentes_referencia": [
       "isotools.org/2022/08/26/controles-fisicos-en-iso-iec-270022022",
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.8",
@@ -1126,7 +1240,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Ubicación y protección de equipos",
     "description": "Ubicar y proteger los equipos para reducir los riesgos derivados de amenazas y peligros ambientales, y las oportunidades de acceso no autorizado.",
     "ejemplos": [
@@ -1138,7 +1251,10 @@
     "fuentes_referencia": [
       "grc360.cl/blog/seguridad-fisica-iso-27001-controles",
       "iso27000.es/iso27002_11.html"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_7.9",
@@ -1146,7 +1262,6 @@
     "domain": "Físicos",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Seguridad de los activos fuera de las instalaciones",
     "description": "Proteger los activos que se utilizan o almacenan fuera de las instalaciones de la organización frente a pérdida, daño, robo o compromiso.",
     "ejemplos": [
@@ -1158,7 +1273,10 @@
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 7)",
       "iso27000.es/iso27002_11.html"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.1",
@@ -1166,7 +1284,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Dispositivos terminales de usuario",
     "description": "Proteger la información almacenada, procesada o accesible a través de dispositivos terminales de usuario (laptops, móviles, tablets).",
     "ejemplos": [
@@ -1177,7 +1294,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles tecnológicos)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.10",
@@ -1185,7 +1305,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 3°, letra c) (principio de proporcionalidad); Art. 7° (derecho de supresión)",
     "title": "Eliminación de información",
     "description": "Eliminar la información almacenada en sistemas de información, dispositivos o cualquier otro medio de almacenamiento cuando ya no sea requerida.",
     "ejemplos": [
@@ -1196,7 +1315,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
-    ]
+    ],
+    "ley_21719_obligacion": "Derecho de supresión y plazos de conservación",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Corresponde directamente a la obligación de eliminar datos al vencer el plazo o ante solicitud del titular"
   },
   {
     "control_id": "ISO_8.11",
@@ -1204,7 +1326,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra a) (seudonimización de datos personales)",
     "title": "Enmascaramiento de datos",
     "description": "Usar enmascaramiento de datos de acuerdo con la política de control de acceso de la organización y otros requisitos relacionados, para limitar la exposición de datos sensibles.",
     "ejemplos": [
@@ -1215,7 +1336,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de minimización / seudonimización",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Técnica reconocida por la ley para reducir riesgo en el tratamiento de datos personales"
   },
   {
     "control_id": "ISO_8.12",
@@ -1223,7 +1347,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.DS-02",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies (evitar filtración, pérdida o acceso no autorizado)",
     "title": "Prevención de fuga de datos",
     "description": "Aplicar medidas de prevención de fuga de datos a los sistemas, redes y otros dispositivos que procesan, almacenan o transmiten información sensible.",
     "ejemplos": [
@@ -1236,7 +1359,10 @@
       "es.isms.online (8-12-data-leakage-prevention-2022 y how-to-implement...control-8-12)",
       "infoproteccion.com/iso-27001/implementacion-control-a-8-12",
       "hard2bit.com/glosario-ciberseguridad/dlp"
-    ]
+    ],
+    "ley_21719_obligacion": "Prevención de brechas de seguridad",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Control técnico directamente orientado a evitar el escenario que dispara la obligación de notificar"
   },
   {
     "control_id": "ISO_8.13",
@@ -1244,7 +1370,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra c) (capacidad de restaurar disponibilidad y acceso)",
     "title": "Copias de seguridad de la información",
     "description": "Mantener y probar regularmente copias de seguridad de información, software y sistemas, de acuerdo con la política de respaldo acordada.",
     "ejemplos": [
@@ -1255,7 +1380,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre continuidad y respaldo)"
-    ]
+    ],
+    "ley_21719_obligacion": "Disponibilidad de datos ante solicitudes de titulares",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante para responder oportunamente a solicitudes de acceso o portabilidad"
   },
   {
     "control_id": "ISO_8.14",
@@ -1263,7 +1391,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra b) (disponibilidad y resiliencia permanentes)",
     "title": "Redundancia de instalaciones de procesamiento de información",
     "description": "Implementar instalaciones de procesamiento de información con suficiente redundancia para cumplir los requisitos de disponibilidad.",
     "ejemplos": [
@@ -1274,7 +1401,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general sobre continuidad y disponibilidad)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.15",
@@ -1282,7 +1412,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Registro (logging)",
     "description": "Producir, almacenar, proteger y analizar registros (logs) que documenten actividades, excepciones, fallas y otros eventos relevantes.",
     "ejemplos": [
@@ -1293,7 +1422,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles de monitoreo)"
-    ]
+    ],
+    "ley_21719_obligacion": "Trazabilidad para investigación de brechas",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Los registros de actividad son clave para reconstruir el alcance de una brecha"
   },
   {
     "control_id": "ISO_8.16",
@@ -1301,7 +1433,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "DE.CM-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra d) (verificación y evaluación regular de la eficacia)",
     "title": "Actividades de monitoreo",
     "description": "Monitorear las redes, sistemas y aplicaciones en busca de comportamientos anómalos y tomar las acciones apropiadas para evaluar posibles incidentes de seguridad de la información.",
     "ejemplos": [
@@ -1312,7 +1443,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
-    ]
+    ],
+    "ley_21719_obligacion": "Detección temprana de brechas",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Determinante para cumplir el plazo de 72 horas, que corre desde el conocimiento del incidente"
   },
   {
     "control_id": "ISO_8.17",
@@ -1320,7 +1454,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Sincronización de relojes",
     "description": "Sincronizar los relojes de los sistemas de procesamiento de información relevantes según una fuente de referencia de tiempo acordada.",
     "ejemplos": [
@@ -1331,7 +1464,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre sincronización de relojes)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.18",
@@ -1339,7 +1475,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.AA-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Uso de programas de utilidad privilegiados",
     "description": "Restringir y controlar estrictamente el uso de programas de utilidad que podrían anular los controles del sistema y de la aplicación.",
     "ejemplos": [
@@ -1350,7 +1485,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre control de utilidades privilegiadas)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.19",
@@ -1358,7 +1496,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Instalación de software en sistemas operativos",
     "description": "Implementar procedimientos y medidas para gestionar de forma segura la instalación de software en sistemas operativos.",
     "ejemplos": [
@@ -1369,7 +1506,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de software)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.2",
@@ -1377,7 +1517,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.AA-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Derechos de acceso privilegiado",
     "description": "Restringir y gestionar la asignación y uso de derechos de acceso privilegiado.",
     "ejemplos": [
@@ -1388,7 +1527,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de accesos privilegiados)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de minimización",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Restringir accesos privilegiados es relevante para datos sensibles y evaluaciones de riesgo (DPIA)"
   },
   {
     "control_id": "ISO_8.20",
@@ -1396,7 +1538,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Seguridad de redes",
     "description": "Gestionar, controlar y proteger adecuadamente las redes y dispositivos de red para salvaguardar la información en los sistemas y aplicaciones.",
     "ejemplos": [
@@ -1407,7 +1548,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles de red)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Buena práctica general sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.21",
@@ -1415,7 +1559,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Seguridad de los servicios de red",
     "description": "Identificar, implementar y monitorear mecanismos de seguridad, niveles de servicio y requisitos de gestión de los servicios de red.",
     "ejemplos": [
@@ -1426,7 +1569,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre seguridad de servicios de red)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.22",
@@ -1434,7 +1580,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Segregación de redes",
     "description": "Segregar grupos de servicios de información, usuarios y sistemas de información en las redes de la organización.",
     "ejemplos": [
@@ -1445,7 +1590,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre segmentación de redes)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.23",
@@ -1453,7 +1601,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Filtrado web",
     "description": "Gestionar el acceso a sitios web externos para reducir la exposición a contenido malicioso.",
     "ejemplos": [
@@ -1467,7 +1614,10 @@
       "hightable.io/iso27001-annex-a-8-23-web-filtering",
       "infoproteccion.com/iso-27001/implementacion-control-a-8-23-filtrado-web",
       "advisera.com/iso27001/control-8-23-web-filtering"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.24",
@@ -1475,7 +1625,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quinquies, letra a) (cifrado de datos personales)",
     "title": "Uso de criptografía",
     "description": "Definir y aplicar reglas para el uso efectivo de la criptografía, incluyendo la gestión de claves criptográficas.",
     "ejemplos": [
@@ -1486,7 +1635,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre criptografía)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas a la naturaleza de los datos",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Ejemplo explícito de medida técnica proporcional al riesgo del tratamiento"
   },
   {
     "control_id": "ISO_8.25",
@@ -1494,7 +1646,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
     "title": "Ciclo de vida de desarrollo seguro",
     "description": "Establecer y aplicar reglas para el desarrollo seguro de software y sistemas, integrando la seguridad en cada fase del ciclo de vida.",
     "ejemplos": [
@@ -1508,7 +1659,10 @@
       "aikido.dev/blog/secure-sdlc",
       "armor-aml.com (impacto SDLC)",
       "legalauditors.es/control-8-25-de-iso-27001"
-    ]
+    ],
+    "ley_21719_obligacion": "Privacidad desde el diseño",
+    "ley_21719_tipo_vinculo": "Fuerte",
+    "ley_21719_nota": "Corresponde al enfoque de incorporar la protección de datos desde el diseño del sistema"
   },
   {
     "control_id": "ISO_8.26",
@@ -1516,7 +1670,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
     "title": "Requisitos de seguridad de las aplicaciones",
     "description": "Identificar, especificar y aprobar los requisitos de seguridad de la información al desarrollar o adquirir aplicaciones.",
     "ejemplos": [
@@ -1527,7 +1680,10 @@
     ],
     "fuentes_referencia": [
       "legalauditors.es/control-8-25-de-iso-27001 (contenido relacionado sobre requisitos de seguridad de aplicaciones)"
-    ]
+    ],
+    "ley_21719_obligacion": "Privacidad desde el diseño",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Apoya, junto con 8.25, el cumplimiento de privacidad por diseño"
   },
   {
     "control_id": "ISO_8.27",
@@ -1535,7 +1691,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quáter (protección desde el diseño y por defecto)",
     "title": "Principios de arquitectura e ingeniería de sistemas seguros",
     "description": "Establecer, documentar, mantener y aplicar principios de ingeniería de sistemas seguros a las actividades de desarrollo de sistemas de información.",
     "ejemplos": [
@@ -1546,7 +1701,10 @@
     ],
     "fuentes_referencia": [
       "armor-aml.com (contenido relacionado sobre modelado de amenazas y arquitectura segura)"
-    ]
+    ],
+    "ley_21719_obligacion": "Privacidad desde el diseño",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Apoya, junto con 8.25, el cumplimiento de privacidad por diseño"
   },
   {
     "control_id": "ISO_8.28",
@@ -1554,7 +1712,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Codificación segura",
     "description": "Aplicar principios de codificación segura al desarrollo de software.",
     "ejemplos": [
@@ -1565,7 +1722,10 @@
     ],
     "fuentes_referencia": [
       "aikido.dev/blog/secure-sdlc (contenido relacionado sobre prácticas de codificación segura)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.29",
@@ -1573,7 +1733,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-06",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Pruebas de seguridad en desarrollo y aceptación",
     "description": "Definir e implementar procesos de prueba de seguridad durante el ciclo de vida de desarrollo.",
     "ejemplos": [
@@ -1584,7 +1743,10 @@
     ],
     "fuentes_referencia": [
       "aikido.dev/blog/secure-sdlc (contenido relacionado sobre pruebas de seguridad en el SDLC)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.3",
@@ -1592,7 +1754,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.AA-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Restricción de acceso a la información",
     "description": "Restringir el acceso a la información y a otros activos asociados de acuerdo con la política de control de acceso establecida.",
     "ejemplos": [
@@ -1603,7 +1764,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre control de acceso a la información)"
-    ]
+    ],
+    "ley_21719_obligacion": "Principio de minimización",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Apoya el acceso restringido a datos personales según necesidad de conocer"
   },
   {
     "control_id": "ISO_8.30",
@@ -1611,7 +1775,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "GV.SC-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 15 bis (tratamiento a través de tercero mandatario o encargado)",
     "title": "Desarrollo subcontratado (externalizado)",
     "description": "Dirigir, monitorear y revisar las actividades de desarrollo de sistemas subcontratado.",
     "ejemplos": [
@@ -1622,7 +1785,10 @@
     ],
     "fuentes_referencia": [
       "legalauditors.es/control-8-25-de-iso-27001 (contenido relacionado sobre supervisión de terceros en desarrollo)"
-    ]
+    ],
+    "ley_21719_obligacion": "Encargados de tratamiento",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Relevante cuando el desarrollador externo accede a datos personales de producción"
   },
   {
     "control_id": "ISO_8.31",
@@ -1630,7 +1796,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Separación de entornos de desarrollo, prueba y producción",
     "description": "Separar y proteger adecuadamente los entornos de desarrollo, prueba y producción.",
     "ejemplos": [
@@ -1641,7 +1806,10 @@
     ],
     "fuentes_referencia": [
       "legalauditors.es/control-8-25-de-iso-27001 (contenido relacionado sobre separación de entornos)"
-    ]
+    ],
+    "ley_21719_obligacion": "Minimización de datos reales en ambientes de prueba",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "Evita exponer datos personales reales en entornos no productivos"
   },
   {
     "control_id": "ISO_8.32",
@@ -1649,7 +1817,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Gestión de cambios",
     "description": "Sujetar los cambios en las instalaciones de procesamiento de información y los sistemas a procedimientos de gestión de cambios.",
     "ejemplos": [
@@ -1660,7 +1827,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de cambios)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.33",
@@ -1668,7 +1838,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.DS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": "Art. 14 quáter, inciso 2° (minimización: solo datos estrictamente necesarios)",
     "title": "Información de prueba",
     "description": "Seleccionar, proteger y gestionar adecuadamente la información de prueba.",
     "ejemplos": [
@@ -1679,7 +1848,10 @@
     ],
     "fuentes_referencia": [
       "es.isms.online (contenido general Anexo A 8, controles nuevos 2022)"
-    ]
+    ],
+    "ley_21719_obligacion": "Uso de datos reales en pruebas (riesgo de exposición)",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "La ley exige minimizar el uso de datos reales de titulares fuera de la finalidad original"
   },
   {
     "control_id": "ISO_8.34",
@@ -1687,7 +1859,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Protección de sistemas de información durante las pruebas de auditoría",
     "description": "Planificar y acordar cuidadosamente las pruebas de auditoría y otras actividades de aseguramiento que involucren la evaluación de sistemas operativos, para minimizar las interrupciones en los procesos empresariales.",
     "ejemplos": [
@@ -1698,7 +1869,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre auditoría y pruebas de sistemas)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.4",
@@ -1706,7 +1880,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.AA-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Acceso al código fuente",
     "description": "Gestionar de forma adecuada el acceso de lectura y escritura al código fuente, herramientas de desarrollo y bibliotecas de software.",
     "ejemplos": [
@@ -1717,7 +1890,10 @@
     ],
     "fuentes_referencia": [
       "legalauditors.es/control-8-25 (contenido relacionado sobre gestión de repositorios de código)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.5",
@@ -1725,7 +1901,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.AA-03",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Autenticación segura",
     "description": "Implementar tecnologías y procedimientos de autenticación segura de acuerdo con las restricciones de acceso a la información y la política de control de acceso.",
     "ejemplos": [
@@ -1736,7 +1911,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre autenticación segura)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Buena práctica general sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.6",
@@ -1744,7 +1922,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.IR-04",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Gestión de capacidad",
     "description": "Monitorear y ajustar el uso de recursos, y proyectar los requisitos de capacidad futura, para asegurar el rendimiento requerido del sistema.",
     "ejemplos": [
@@ -1755,7 +1932,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de capacidad)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.7",
@@ -1763,7 +1943,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-05",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Protección contra malware",
     "description": "Implementar protección contra malware, respaldada por una adecuada concienciación del usuario.",
     "ejemplos": [
@@ -1774,7 +1953,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre protección contra malware)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Buena práctica general sin cláusula legal específica"
   },
   {
     "control_id": "ISO_8.8",
@@ -1782,7 +1964,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "ID.RA-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Gestión de vulnerabilidades técnicas",
     "description": "Obtener información sobre vulnerabilidades técnicas de los sistemas de información en uso, evaluar la exposición de la organización y tomar medidas adecuadas.",
     "ejemplos": [
@@ -1793,7 +1974,10 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de vulnerabilidades)"
-    ]
+    ],
+    "ley_21719_obligacion": "Medidas de seguridad apropiadas al riesgo",
+    "ley_21719_tipo_vinculo": "Parcial",
+    "ley_21719_nota": "La ley exige medidas proporcionales al riesgo; la gestión de vulnerabilidades es evidencia directa"
   },
   {
     "control_id": "ISO_8.9",
@@ -1801,7 +1985,6 @@
     "domain": "Tecnológico",
     "nist_mapping": "PR.PS-01",
     "nist_mapping_status": "referencia propia no oficial, sujeta a validación contra NIST OLIR",
-    "ley_21719_ref": null,
     "title": "Gestión de configuración",
     "description": "Establecer, documentar, implementar, monitorear y revisar configuraciones de seguridad para hardware, software, servicios y redes.",
     "ejemplos": [
@@ -1812,6 +1995,9 @@
     ],
     "fuentes_referencia": [
       "normaiso27001.es (contenido general sobre gestión de configuración)"
-    ]
+    ],
+    "ley_21719_obligacion": null,
+    "ley_21719_tipo_vinculo": "Estructural",
+    "ley_21719_nota": "Contribuye a las medidas de seguridad generales sin cláusula legal específica"
   }
 ]

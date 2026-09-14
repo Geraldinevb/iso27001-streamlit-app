@@ -100,7 +100,9 @@ for i, (control, vector) in enumerate(zip(controles, embeddings)):
         "ejemplos": control["ejemplos"],
         "nist_mapping": control.get("nist_mapping"),
         "nist_mapping_status": control.get("nist_mapping_status"),
-        "ley_21719_ref": control.get("ley_21719_ref"),
+        "ley_21719_obligacion": control.get("ley_21719_obligacion"),
+        "ley_21719_tipo_vinculo": control.get("ley_21719_tipo_vinculo"),
+        "ley_21719_nota": control.get("ley_21719_nota"),
         "fuentes_referencia": control.get("fuentes_referencia", []),
     }
     puntos.append(
