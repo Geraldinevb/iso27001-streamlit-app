@@ -21,6 +21,8 @@ de resultados).
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
@@ -196,8 +198,12 @@ def _grafico_severidad(gap_items: list) -> go.Figure:
     return fig
 
 
+APP_DIR = Path(__file__).parent
+
+
 def _render_informe_md(template_filename: str, contexto: dict) -> str:
-    with open(template_filename, encoding="utf-8") as f:
+    ruta_plantilla = APP_DIR / template_filename
+    with open(ruta_plantilla, encoding="utf-8") as f:
         tpl = Template(f.read(), trim_blocks=True, lstrip_blocks=True)
     return tpl.render(**contexto)
 
