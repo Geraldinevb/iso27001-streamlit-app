@@ -35,7 +35,7 @@ Markdown.
 | Interfaz | [Streamlit](https://streamlit.io) | Formulario + panel de resultados + chatbot en sidebar |
 | Base vectorial | [Qdrant](https://qdrant.tech) (local, embebido) | `QdrantClient(path="./qdrant_data")` — **no** Qdrant Cloud. Los datos vectorizados se versionan directamente en el repositorio (carpeta `qdrant_data/`), no como un servicio externo |
 | Embeddings | [fastembed](https://github.com/qdrant/fastembed) | Modelo `intfloat/multilingual-e5-small`, registrado manualmente vía `add_custom_model()` a partir de la conversión ONNX `Xenova/multilingual-e5-small` (no viene soportado por defecto en fastembed). Se eligió fastembed en vez de `sentence-transformers` específicamente para evitar la dependencia de `torch` |
-| Generación (chatbot) | [Groq API](https://console.groq.com) | Modelo configurable en `groq_service.py` (`GROQ_MODEL`). Actualmente `openai/gpt-oss-120b` — Groq retira modelos con relativa frecuencia; si ves un error `model_not_found`, revisa [console.groq.com/docs/models](https://console.groq.com/docs/models) y actualiza esa constante |
+| Generación (chatbot) | [Groq API](https://console.groq.com) | Modelo configurable en `groq_service.py` (`GROQ_MODEL`). Actualmente `openai/gpt-oss-120b` — Groq retira modelos con relativa frecuencia; si se ve un error `model_not_found`, revisar [console.groq.com/docs/models](https://console.groq.com/docs/models) y actualiza esa constante |
 | Informes | [Jinja2](https://jinja.palletsprojects.com) sobre Markdown | Plantillas `.md.j2` — se prefirió Markdown/Jinja sobre CSV porque permite tablas y secciones condicionales |
 
 ## Estructura del repositorio
@@ -130,15 +130,7 @@ python seed_qdrant.py
 
 ## Configuración de variables de entorno
 
-Crea un archivo `.env` en la raíz del proyecto (nunca se sube a git — ya
-está en `.gitignore`) con:
-
-```
-GROQ_API_KEY=tu_api_key_de_groq
-```
-
-Consíguela en [console.groq.com/keys](https://console.groq.com/keys) si
-todavía no la tienes.
+Archivo `.env` en la raíz del proyecto (ya está en `.gitignore`con la APIkey)
 
 ## Ejecución
 
@@ -147,8 +139,7 @@ streamlit run app.py
 ```
 
 Esto abre la app en `http://localhost:8501`. El chatbot del sidebar
-funciona apenas cargue la app (usa la `GROQ_API_KEY` del `.env`); el
-cuestionario y los informes no dependen de Groq en absoluto — solo el chat.
+funciona apenas carga la app; el cuestionario y los informes no dependen de Groq en absoluto — solo el chat.
 
 ## Supuestos metodológicos
 
@@ -171,22 +162,15 @@ Estas reglas son ajustables — están aisladas en constantes al inicio de
 
 ## Despliegue en Streamlit Community Cloud
 
-1. Conecta este repositorio desde [share.streamlit.io](https://share.streamlit.io).
-2. Selecciona `app.py` como archivo principal.
-3. En **Settings → Secrets**, agrega (formato TOML):
-   ```toml
-   GROQ_API_KEY = "tu_api_key_de_groq"
-   ```
-   (el `.env` local no viaja al despliegue — Streamlit Cloud usa Secrets en
-   su lugar; `groq_service.py` ya soporta ambos).
-4. Deploy. La base vectorial (`qdrant_data/`) ya está versionada en el
-   repo, así que el chatbot debería funcionar sin pasos adicionales.
+1. Se conectó este repositorio desde [share.streamlit.io](https://share.streamlit.io).
+2. `app.py` como archivo principal.
+3. Deploy.
 
 ## Roadmap
 
-- [x] Cuestionario dinámico + expansión a 93 controles
-- [x] Cálculo de madurez e informes descargables
-- [x] Chatbot RAG (Groq + Qdrant local)
-- [ ] Despliegue en Streamlit Community Cloud
-- [ ] Glosario/tooltips con lenguaje sencillo para términos técnicos del
+-  Cuestionario dinámico + expansión a 93 controles
+-  Cálculo de madurez e informes descargables
+-  Chatbot RAG (Groq + Qdrant local)
+-  Despliegue en Streamlit Community Cloud
+-  Glosario/tooltips con lenguaje sencillo para términos técnicos del
       cuestionario (DPIA, cifrado, etc.)
