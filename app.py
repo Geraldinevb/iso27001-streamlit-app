@@ -43,6 +43,87 @@ st.set_page_config(
 
 RESPUESTA_OPCIONES = ["Sí", "Parcial", "No"]
 
+# Glosario legal para subpreguntas con términos técnicos. Clave: (id_pregunta, índice_subpregunta).
+# "termino": substring exacto dentro del texto de la subpregunta que se envuelve con el
+# ícono de ayuda ⓘ y la burbuja de tooltip al pasar el cursor.
+# Fuente: Ley N° 21.719 sobre Protección de Datos Personales (Chile).
+GLOSARIO_SUBPREGUNTAS: dict[tuple[str, int], dict[str, str]] = {
+    ("P1", 0): {
+        "termino": "Aviso de Privacidad",
+        "explicacion": (
+            "<strong>Aviso de Privacidad</strong>: documento público (política de tratamiento "
+            "de datos) que la organización debe mantener disponible —normalmente en su sitio "
+            "web u otro medio equivalente— explicando qué datos trata, con qué finalidad, sus "
+            "bases legales, las medidas de seguridad adoptadas y cómo ejercer los derechos "
+            "ARCO+. Es el deber de información y transparencia que exige el "
+            "<strong>artículo 14 ter</strong> de la Ley N° 21.719, distinto de una política "
+            "interna de seguridad dirigida solo a los trabajadores."
+        ),
+    },
+    ("P2", 0): {
+        "termino": "Delegado de Protección de Datos",
+        "explicacion": (
+            "<strong>Delegado de Protección de Datos (DPD)</strong>: persona, interna o "
+            "externa, responsable de supervisar el cumplimiento de la protección de datos, "
+            "asesorar en evaluaciones de impacto (DPIA) y ser el punto de contacto con la "
+            "Agencia de Protección de Datos Personales. La Ley N° 21.719 exige su designación "
+            "en ciertos casos (organismos públicos y tratamientos de alto riesgo o a gran "
+            "escala) — si tu organización está obligada depende de cómo se clasifique cada "
+            "tratamiento; conviene validarlo con asesoría legal."
+        ),
+    },
+    ("P4", 0): {
+        "termino": "DPIA",
+        "explicacion": (
+            "<strong>DPIA (Evaluación de Impacto en la Protección de Datos)</strong>: análisis "
+            "documentado de los riesgos que un tratamiento específico representa para los "
+            "titulares, y de las medidas para mitigarlos. El <strong>artículo 15 ter</strong> "
+            "de la Ley N° 21.719 la exige <em>antes</em> de iniciar tratamientos de alto "
+            "riesgo — por ejemplo, datos sensibles a gran escala, perfilamiento automatizado "
+            "o videovigilancia masiva."
+        ),
+    },
+}
+
+_TOOLTIP_CSS = """
+<style>
+.glosario-tooltip { position: relative; display: inline-block; cursor: help; }
+.glosario-tooltip .glosario-icono {
+    display: inline-block; width: 15px; height: 15px; line-height: 15px;
+    text-align: center; border-radius: 50%; background: #14304d; color: #ffffff;
+    font-size: 10px; font-weight: bold; margin-left: 3px; vertical-align: super;
+}
+.glosario-tooltip .glosario-burbuja {
+    visibility: hidden; opacity: 0; transition: opacity 0.15s ease-in-out;
+    position: absolute; z-index: 1000; bottom: 130%; left: 50%; transform: translateX(-50%);
+    background: #14304d; color: #ffffff; text-align: left; padding: 10px 12px;
+    border-radius: 6px; width: 320px; font-size: 0.82rem; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.28); font-weight: normal;
+}
+.glosario-tooltip .glosario-burbuja::after {
+    content: ""; position: absolute; top: 100%; left: 50%; margin-left: -6px;
+    border-width: 6px; border-style: solid;
+    border-color: #14304d transparent transparent transparent;
+}
+.glosario-tooltip:hover .glosario-burbuja { visibility: visible; opacity: 1; }
+</style>
+"""
+
+
+def _texto_con_tooltip(texto: str, pregunta_id: str, indice: int) -> str:
+    """Envuelve el término del glosario (si aplica a esta subpregunta) con el ícono ⓘ
+    y la burbuja de explicación legal, en HTML."""
+    entrada = GLOSARIO_SUBPREGUNTAS.get((pregunta_id, indice))
+    if not entrada or entrada["termino"] not in texto:
+        return texto
+    envuelto = (
+        f'<span class="glosario-tooltip">{entrada["termino"]}'
+        f'<span class="glosario-icono">?</span>'
+        f'<span class="glosario-burbuja">{entrada["explicacion"]}</span>'
+        f"</span>"
+    )
+    return texto.replace(entrada["termino"], envuelto, 1)
+
 
 # ---------------------------------------------------------------------------
 # Estado
@@ -65,6 +146,7 @@ def _reiniciar() -> None:
 # ---------------------------------------------------------------------------
 
 def _renderizar_cuestionario() -> None:
+    st.markdown(_TOOLTIP_CSS, unsafe_allow_html=True)
     st.title("🛡️ Diagnóstico de cumplimiento")
     st.caption("ISO/IEC 27001:2022 (Anexo A) + Ley N° 21.719 sobre Protección de Datos Personales")
 
@@ -110,12 +192,14 @@ def _renderizar_cuestionario() -> None:
                 condicion == "parcial_no" and respuesta in ("Parcial", "No")
             )
             if aplica:
+                st.markdown(f"↳ {_texto_con_tooltip(sub['texto'], p['id'], i)}", unsafe_allow_html=True)
                 sub_resp = st.radio(
-                    f"↳ {sub['texto']}",
+                    sub["texto"],
                     ["Sí", "No"],
                     key=f"resp_{p['id']}_sub{i}",
                     horizontal=True,
                     index=None,
+                    label_visibility="collapsed",
                 )
                 sub_respuestas.append(sub_resp)
             else:
