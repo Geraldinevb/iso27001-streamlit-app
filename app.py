@@ -21,13 +21,16 @@ de resultados).
 
 from __future__ import annotations
 
+import io
 from pathlib import Path
 
+import markdown as md_lib
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
 from jinja2 import Template
+from xhtml2pdf import pisa
 
 from report_service import cargar_preguntas, generar_contextos
 from groq_service import responder_chat
@@ -200,12 +203,42 @@ def _grafico_severidad(gap_items: list) -> go.Figure:
 
 APP_DIR = Path(__file__).parent
 
+_PDF_CSS = """
+<style>
+    @page { size: A4; margin: 2cm; }
+    body { font-family: Helvetica, sans-serif; font-size: 10pt; color: #1a1a1a; line-height: 1.4; }
+    h1 { font-size: 18pt; color: #14304d; border-bottom: 2px solid #14304d; padding-bottom: 6px; }
+    h2 { font-size: 14pt; color: #14304d; margin-top: 18px; }
+    h3 { font-size: 12pt; color: #2c5282; margin-top: 14px; }
+    table { width: 100%; margin: 10px 0; }
+    th { background-color: #14304d; color: #ffffff; padding: 5px; font-size: 9pt; text-align: left; }
+    td { border: 0.5px solid #cccccc; padding: 5px; font-size: 9pt; }
+    tr:nth-child(even) { background-color: #f4f6f8; }
+    blockquote { border-left: 3px solid #999999; padding-left: 10px; color: #555555; font-style: italic; }
+    hr { border: none; border-top: 1px solid #cccccc; margin: 16px 0; }
+    code { font-family: Courier, monospace; background-color: #f0f0f0; }
+</style>
+"""
+
 
 def _render_informe_md(template_filename: str, contexto: dict) -> str:
     ruta_plantilla = APP_DIR / template_filename
     with open(ruta_plantilla, encoding="utf-8") as f:
         tpl = Template(f.read(), trim_blocks=True, lstrip_blocks=True)
     return tpl.render(**contexto)
+
+
+def _markdown_a_pdf(texto_markdown: str) -> bytes:
+    """Convierte el Markdown ya renderizado por Jinja2 a PDF (vía HTML + xhtml2pdf/reportlab,
+    100% Python puro -- sin dependencias de sistema, para que funcione tal cual en
+    Streamlit Community Cloud)."""
+    html_cuerpo = md_lib.markdown(texto_markdown, extensions=["tables", "fenced_code"])
+    html_completo = f"<html><head>{_PDF_CSS}</head><body>{html_cuerpo}</body></html>"
+    buffer = io.BytesIO()
+    resultado = pisa.CreatePDF(html_completo, dest=buffer, encoding="utf-8")
+    if resultado.err:
+        raise RuntimeError(f"No se pudo generar el PDF ({resultado.err} error(es) de conversión).")
+    return buffer.getvalue()
 
 
 def _renderizar_resultados() -> None:
@@ -253,23 +286,32 @@ def _renderizar_resultados() -> None:
     informe_ley_md = _render_informe_md("plantilla_informe_ley21719.md.j2", contexto)
     informe_iso_md = _render_informe_md("plantilla_informe_iso27001.md.j2", contexto_iso)
 
+    nombre_org = contexto["organizacion"].strip().replace(" ", "_")
     dcol1, dcol2 = st.columns(2)
     with dcol1:
-        st.download_button(
-            "⬇️ Informe Ley N° 21.719 (.md)",
-            data=informe_ley_md,
-            file_name=f"informe_ley21719_{contexto['organizacion'].strip().replace(' ', '_')}.md",
-            mime="text/markdown",
-            use_container_width=True,
-        )
+        try:
+            pdf_ley = _markdown_a_pdf(informe_ley_md)
+            st.download_button(
+                "⬇️ Informe Ley N° 21.719 (.pdf)",
+                data=pdf_ley,
+                file_name=f"informe_ley21719_{nombre_org}.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+        except RuntimeError as e:
+            st.error(f"No se pudo generar el PDF del informe Ley 21.719: {e}")
     with dcol2:
-        st.download_button(
-            "⬇️ Informe ISO/IEC 27001 — SoA simplificada (.md)",
-            data=informe_iso_md,
-            file_name=f"informe_iso27001_{contexto['organizacion'].strip().replace(' ', '_')}.md",
-            mime="text/markdown",
-            use_container_width=True,
-        )
+        try:
+            pdf_iso = _markdown_a_pdf(informe_iso_md)
+            st.download_button(
+                "⬇️ Informe ISO/IEC 27001 — SoA simplificada (.pdf)",
+                data=pdf_iso,
+                file_name=f"informe_iso27001_{nombre_org}.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+        except RuntimeError as e:
+            st.error(f"No se pudo generar el PDF del informe ISO 27001: {e}")
 
     st.divider()
     if st.button("🔄 Reiniciar diagnóstico", use_container_width=True):
