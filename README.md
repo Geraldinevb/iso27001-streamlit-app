@@ -1,176 +1,84 @@
-# Diagnóstico ISO/IEC 27001:2022 + Ley N° 21.719 (Chile)
+# Diagnóstico de Cumplimiento: ISO/IEC 27001:2022 + Ley N° 21.719
 
-MVP en Streamlit que diagnostica el nivel de cumplimiento de una organización
-frente al **Anexo A de ISO/IEC 27001:2022** y la **Ley N° 21.719** de
-Protección de Datos Personales de Chile, a través de un cuestionario corto
-(16 preguntas), un chatbot RAG de apoyo, y dos informes descargables en
-Markdown.
+**Una herramienta que traduce dos marcos normativos densos — un estándar
+internacional de seguridad de la información y la nueva ley chilena de
+protección de datos — en un cuestionario de 16 preguntas que cualquier
+organización puede responder en menos de 20 minutos.**
 
-> ⚠️ **Este es un pre-diagnóstico orientativo.** No reemplaza una auditoría
-> de cumplimiento formal, una Declaración de Aplicabilidad certificada, ni
-> asesoría legal profesional. Ver el descargo de responsabilidad al inicio
-> de cada informe generado.
+🔗 [Ver la aplicación en funcionamiento](https://iso27001-tracker.streamlit.app/)
 
 ---
 
-## Índice
+## El problema
 
-- [Arquitectura](#arquitectura)
-- [Estructura del repositorio](#estructura-del-repositorio)
-- [Cómo funciona el diagnóstico](#cómo-funciona-el-diagnóstico)
-- [Flujo del chatbot (RAG)](#flujo-del-chatbot-rag)
-- [Instalación](#instalación)
-- [Configuración de variables de entorno](#configuración-de-variables-de-entorno)
-- [Ejecución](#ejecución)
-- [Supuestos metodológicos](#supuestos-metodológicos)
-- [Despliegue en Streamlit Community Cloud](#despliegue-en-streamlit-community-cloud)
-- [Roadmap](#roadmap)
+En Chile, la entrada en vigencia de la Ley N° 21.719 obliga a las
+organizaciones a repensar cómo tratan datos personales — pero muchas ya
+vienen implementando (o intentando implementar) controles de seguridad de
+la información bajo ISO/IEC 27001. En la práctica, **son dos ejercicios de
+cumplimiento que casi nadie conecta entre sí**, a pesar de que se
+superponen en un porcentaje importante.
+
+Esa superposición fue el punto de partida: construir un crosswalk
+propio entre los 93 controles del Anexo A de ISO 27001 y las obligaciones
+de la Ley 21.719, y convertirlo en una herramienta de autodiagnóstico que
+cualquier organización —sin equipo legal ni de seguridad dedicado— pueda
+usar para saber, en una primera aproximación, dónde está parada.
+
+## Qué hace
+
+1. Un cuestionario corto (16 preguntas, con su lenguaje ya traducido a
+   algo entendible sin formación legal ni técnica previa) recoge el estado
+   real de la organización.
+2. Esas respuestas se expanden automáticamente contra los 93 controles del
+   Anexo A, ponderando cada uno según su vínculo real con la Ley 21.719
+   (no todos los controles pesan igual frente a la ley — esa ponderación
+   es, en el fondo, análisis legal convertido en regla de negocio).
+3. Se generan dos informes descargables en PDF — uno con enfoque legal
+   (estructura inspirada en los informes de evaluación de impacto tipo
+   AEPD/GDPR) y otro con enfoque ISO (una Declaración de Aplicabilidad
+   simplificada) — con brechas priorizadas y un plan de acción sugerido.
+4. Un asistente conversacional (RAG) resuelve dudas puntuales sobre los
+   controles y los términos técnicos del cuestionario mientras se responde.
+
+## Mi rol en este proyecto
+
+Este proyecto nace de mi trabajo como abogada: el crosswalk entre los 93
+controles ISO y la Ley 21.719, la lógica de ponderación (qué controles
+son un vínculo "fuerte" con la ley y cuáles solo estructural), la
+redacción de las plantillas de informe y todos los supuestos
+metodológicos del diagnóstico son análisis legal propio.
+
+La implementación técnica la construí con asistencia de IA (Claude, de
+Anthropic), dirigiendo el desarrollo de principio a fin: definí la
+arquitectura de la solución, tomé las decisiones de producto en cada
+paso, probé cada funcionalidad, y resolví yo misma el despliegue
+completo — incluyendo la configuración de la nube, el control de
+versiones con Git/GitHub, y la depuración de errores en producción. No
+soy ingeniera de software, pero este proyecto refleja algo que creo cada
+vez más relevante en el mundo legal-tech: **la capacidad de traducir
+criterio legal en un producto funcional real**, usando las herramientas
+de IA disponibles hoy para cerrar la brecha con la implementación técnica.
+
+## Sobre mí
+
+Soy abogada, con Diplomado en Protección de Datos Personales y cursos en
+Ciberseguridad e Inteligencia Artificial y actualmente trabajo como legal
+solutions architect. Este proyecto es mi forma de explorar en la práctica
+la intersección entre esas tres áreas — no como ejercicio académico, sino
+como una herramienta que organizaciones reales podrían usar.
+
+## Cómo está construido
+
+Streamlit + Qdrant (búsqueda semántica local) + Groq (modelo de lenguaje
+para el chatbot) + Jinja2 (generación de informes). El detalle completo de
+arquitectura, instalación y ejecución está en [`README_TECNICO.md`](./README_TECNICO.md).
+
+## Aviso
+
+Esta es una herramienta de **pre-diagnóstico orientativo**. No reemplaza
+una auditoría de cumplimiento formal, una certificación ISO, ni asesoría
+legal profesional caso a caso.
 
 ---
 
-## Arquitectura
-
-| Componente | Herramienta | Notas |
-|---|---|---|
-| Interfaz | [Streamlit](https://streamlit.io) | Formulario + panel de resultados + chatbot en sidebar |
-| Base vectorial | [Qdrant](https://qdrant.tech) (local, embebido) | `QdrantClient(path="./qdrant_data")` — **no** Qdrant Cloud. Los datos vectorizados se versionan directamente en el repositorio (carpeta `qdrant_data/`), no como un servicio externo |
-| Embeddings | [fastembed](https://github.com/qdrant/fastembed) | Modelo `intfloat/multilingual-e5-small`, registrado manualmente vía `add_custom_model()` a partir de la conversión ONNX `Xenova/multilingual-e5-small` (no viene soportado por defecto en fastembed). Se eligió fastembed en vez de `sentence-transformers` específicamente para evitar la dependencia de `torch` |
-| Generación (chatbot) | [Groq API](https://console.groq.com) | Modelo configurable en `groq_service.py` (`GROQ_MODEL`). Actualmente `openai/gpt-oss-120b` — Groq retira modelos con relativa frecuencia; si se ve un error `model_not_found`, revisar [console.groq.com/docs/models](https://console.groq.com/docs/models) y actualiza esa constante |
-| Informes | [Jinja2](https://jinja.palletsprojects.com) sobre Markdown | Plantillas `.md.j2` — se prefirió Markdown/Jinja sobre CSV porque permite tablas y secciones condicionales |
-
-## Estructura del repositorio
-
-```
-iso27001-streamlit-app/
-├── app.py                                   # Interfaz Streamlit: formulario, resultados, chatbot
-├── report_service.py                        # Expande las 16 respuestas a los 93 controles, calcula
-│                                             # madurez y genera los contextos para las plantillas
-├── groq_service.py                          # Conecta qdrant_service.py con la API de Groq (chatbot RAG)
-├── qdrant_service.py                        # Capa de consulta semántica sobre Qdrant
-├── seed_qdrant.py                           # Script de carga única: vectoriza los 93 controles
-├── preguntas.json                           # Las 16 preguntas del cuestionario (fuente única)
-├── anexo_a_iso27001_2022_vectorizable.json  # Los 93 controles del Anexo A + crosswalk con Ley 21.719
-├── crosswalk_iso27001_ley21719.csv          # Los 93 controles clasificados frente a la Ley 21.719
-├── plantilla_informe_ley21719.md.j2         # Plantilla del informe legal (estilo AEPD/GDPR)
-├── plantilla_informe_iso27001.md.j2         # Plantilla del informe ISO (SoA simplificada)
-├── qdrant_data/                             # Base vectorial de Qdrant, ya poblada (versionada en git)
-├── requirements.txt
-├── .env                                     # Variables de entorno locales — NO se versiona (ver .gitignore)
-└── .gitignore
-```
-
-## Cómo funciona el diagnóstico
-
-1. El usuario ingresa el **nombre de la organización** y el **alcance** de
-   la evaluación (texto libre — no son parte de las 16 preguntas).
-2. Responde el cuestionario dinámico de 16 preguntas (`preguntas.json`),
-   cada una con `Sí` / `Parcial` / `No`. Algunas incluyen subpreguntas de
-   seguimiento que solo aparecen según la respuesta principal (condición
-   `siempre` o `parcial_no`).
-3. `report_service.py` expande esas 16 respuestas a los **93 controles**
-   del Anexo A: el estado de cada control se infiere de la pregunta que lo
-   agrupa (`Sí` → Implementado, `Parcial` → Parcialmente implementado,
-   `No` → No implementado).
-4. Se calculan tres indicadores de madurez (global, ISO, Ley 21.719 — este
-   último ponderado por `tipo_vinculo`), se generan las brechas priorizadas
-   por severidad y un plan de acción sugerido.
-5. Se renderizan dos informes en Markdown (vía Jinja2) y quedan disponibles
-   para descarga directa desde la app.
-
-## Flujo del chatbot (RAG)
-
-El chatbot del sidebar (disponible en todo momento) responde preguntas
-sobre los controles del Anexo A y su relación con la Ley 21.719:
-
-```
-Pregunta del usuario
-        │
-        ▼
-qdrant_service.buscar_controles()      # búsqueda semántica (fastembed + Qdrant local)
-        │  top-k controles más relevantes
-        ▼
-qdrant_service.formatear_contexto()    # arma el bloque de contexto en texto plano
-        │
-        ▼
-groq_service.responder_chat()          # arma el prompt (system + contexto + historial)
-        │  y llama a la API de Groq (streaming)
-        ▼
-Respuesta mostrada en el chat, en español, citando los códigos de control
-```
-
-El `system prompt` instruye al modelo a responder **únicamente** en base al
-contexto recuperado y a decir explícitamente cuando no tiene información
-suficiente, para minimizar alucinaciones — no se le pide "conocimiento
-general" sobre ISO 27001 o la Ley 21.719 fuera de lo recuperado.
-
-## Instalación
-
-Requiere Python 3.11+.
-
-```bash
-git clone https://github.com/Geraldinevb/iso27001-streamlit-app.git
-cd iso27001-streamlit-app
-
-python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # macOS / Linux
-
-pip install -r requirements.txt
-```
-
-La base vectorial (`qdrant_data/`) ya viene poblada y versionada en el
-repositorio — **no** es necesario correr `seed_qdrant.py` en una instalación
-normal. Solo se vuelve a correr si cambias el contenido de
-`anexo_a_iso27001_2022_vectorizable.json` y necesitas re-vectorizar los
-controles:
-
-```bash
-python seed_qdrant.py
-```
-
-## Configuración de variables de entorno
-
-Archivo `.env` en la raíz del proyecto (ya está en `.gitignore`con la APIkey)
-
-## Ejecución
-
-```bash
-streamlit run app.py
-```
-
-Esto abre la app en `http://localhost:8501`. El chatbot del sidebar
-funciona apenas carga la app; el cuestionario y los informes no dependen de Groq en absoluto — solo el chat.
-
-## Supuestos metodológicos
-
-Documentados en detalle en el docstring de `report_service.py`; en resumen:
-
-- El estado de cada uno de los 93 controles se infiere de la respuesta a
-  la pregunta que lo agrupa (no se evalúa control por control de forma
-  independiente).
-- La madurez frente a la Ley 21.719 pondera cada control por su
-  `tipo_vinculo` (Fuerte=1.0, Parcial=0.5, Estructural=0.25, "No aplica
-  directo"=excluido). Las preguntas sin controles ISO asociados (derechos
-  ARCO+, base legal del tratamiento, modelo de prevención de infracciones)
-  se ponderan con peso pleno, al ser obligaciones puramente legales.
-- La severidad de una brecha es "Alta" si la respuesta es "No", o si es
-  "Parcial" pero está vinculada a un control "Fuerte" (o es una obligación
-  puramente legal sin control ISO asociado).
-
-Estas reglas son ajustables — están aisladas en constantes al inicio de
-`report_service.py` (`PESO_POR_TIPO_VINCULO`, `PLAZO_POR_SEVERIDAD`, etc.).
-
-## Despliegue en Streamlit Community Cloud
-
-1. Se conectó este repositorio desde [share.streamlit.io](https://share.streamlit.io).
-2. `app.py` como archivo principal.
-3. Deploy.
-
-## Roadmap
-
--  Cuestionario dinámico + expansión a 93 controles
--  Cálculo de madurez e informes descargables
--  Chatbot RAG (Groq + Qdrant local)
--  Despliegue en Streamlit Community Cloud
--  Glosario/tooltips con lenguaje sencillo para términos técnicos del
-      cuestionario (DPIA, cifrado, etc.)
+📬 ¿Preguntas o comentarios sobre el proyecto? [abogada.gbarrientos@gmail.com](mailto:abogada.gbarrientos@gmail.com)
